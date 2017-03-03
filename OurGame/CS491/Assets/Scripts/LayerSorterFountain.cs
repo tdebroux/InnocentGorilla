@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LayerSorterTree : MonoBehaviour {
+public class LayerSorterFountain : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {

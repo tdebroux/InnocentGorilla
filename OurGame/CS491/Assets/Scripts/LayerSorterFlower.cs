@@ -8,9 +8,4 @@ public class LayerSorterFlower : MonoBehaviour {
 	void Start () {
         GetComponent<SpriteRenderer>().sortingOrder = (Mathf.RoundToInt((transform.position.y) * 100f) + 50) * -1;
     }
-
-    // Update is called once per frame
-    void Update () {
-        
-    }
 }
