@@ -44,6 +44,9 @@ TagManager:
   - name: back
     uniqueID: 1375254123
     locked: 0
+  - name: RugsNClocks
+    uniqueID: 2753751891
+    locked: 0
   - name: dynamic
     uniqueID: 3784082559
     locked: 0
