@@ -12,7 +12,7 @@ public class Movement : MonoBehaviour {
     Animator animator; 
     float moveVelocityX;
     float moveVelocityY;
-   
+    public bool canMove;
 
     // Use this for initialization
     void Start () {
@@ -21,6 +21,10 @@ public class Movement : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        if (!canMove)
+        {
+            return;
+        }
         moveVelocityX = 0;
         moveVelocityY = 0;
         GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocityX, moveVelocityY);
