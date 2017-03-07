@@ -29,7 +29,7 @@ public class ScreenFader : MonoBehaviour
         // Lerp the colour of the image between itself and transparent.
         FadeImg.color = Color.Lerp(Color.black, Color.clear, fadeSpeed);
         if (fadeSpeed < 1)
-            fadeSpeed += (Time.deltaTime/(duration))*(fadeSpeed*10 + 2);
+            fadeSpeed += (Time.deltaTime/(duration)) * (fadeSpeed * 10 + 2);
     }
 
 
@@ -45,9 +45,8 @@ public class ScreenFader : MonoBehaviour
     void StartScene()
     {
         // Fade the texture to clear.
-        do
-        {
-            fadeSpeed = 0;
+       // do
+       // {
             FadeToBlack();
             // If the texture is almost clear...
             print("ALPHA " + FadeImg.color.a);
@@ -59,9 +58,9 @@ public class ScreenFader : MonoBehaviour
 
                 // The scene is no longer starting.
                 sceneStarting = false;
-                break;
+                //break;
             }
-        } while (true);
+        //} while (true);
         EndScene(1);
     }
 
