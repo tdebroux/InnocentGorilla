@@ -9,6 +9,7 @@ public class ScreenFader : MonoBehaviour
     public float fadeSpeed;
     public bool sceneStarting = true;
     private float duration = 10;
+    bool inFirst = false;
 
     void Awake()
     {
@@ -27,9 +28,9 @@ public class ScreenFader : MonoBehaviour
     void FadeToClear()
     {
         // Lerp the colour of the image between itself and transparent.
-        FadeImg.color = Color.Lerp(Color.black, Color.clear, fadeSpeed);
+        FadeImg.color = Color.Lerp(Color.black,Color.clear, fadeSpeed);
         if (fadeSpeed < 1)
-            fadeSpeed += (Time.deltaTime/(duration)) * (fadeSpeed * 10 + 2);
+            fadeSpeed += (Time.deltaTime/(duration)) * (fadeSpeed*0.5f + 2);
     }
 
 
@@ -40,28 +41,36 @@ public class ScreenFader : MonoBehaviour
         if (fadeSpeed < 1)
             fadeSpeed += (Time.deltaTime / (duration)) * (fadeSpeed * 10 + 2);
     }
-
-
     void StartScene()
     {
-        // Fade the texture to clear.
-       // do
-       // {
-            FadeToBlack();
-            // If the texture is almost clear...
-            print("ALPHA " + FadeImg.color.a);
-            if (FadeImg.color.a >= 0.95f)
-            {
-                // ... set the colour to clear and disable the RawImage.
-                FadeImg.color = Color.black;
-                FadeImg.enabled = false;
+        //FadeImg.color = Color.clear;
+        //StartCoroutine("StartSceneRoutine", 1);
+        StartCoroutine("EndSceneRoutine", 1);
+    }
 
-                // The scene is no longer starting.
-                sceneStarting = false;
-                //break;
-            }
-        //} while (true);
-        EndScene(1);
+    public IEnumerator StartSceneRoutine(int SceneNumber)
+    {
+        // Fade the texture to clear.
+            while (inFirst)
+                yield return new WaitForSeconds(0.1f);
+            //FadeImg.color = Color.black;
+            fadeSpeed = 0.01f;
+            do {
+                // If the texture is almost clear...
+                FadeToBlack();
+                if (FadeImg.color.a >= 0.95f)
+                {
+                    // ... set the colour to clear and disable the RawImage.
+                    FadeImg.color = Color.black;
+                    // The scene is no longer starting.
+                    sceneStarting = false;
+                    yield break;
+                } else
+                {
+                    yield return null;
+                }
+            } while (true);
+        
     }
 
 
@@ -69,6 +78,7 @@ public class ScreenFader : MonoBehaviour
     {
         // Make sure the RawImage is enabled.
         //FadeImg.enabled = true;
+        inFirst = true;
         do
         {
             // Start fading towards black.
@@ -77,12 +87,11 @@ public class ScreenFader : MonoBehaviour
             if (FadeImg.color.a <= 0.05f)
             {
                 FadeImg.color = Color.clear;
-                // ... reload the level
-                //SceneManager.LoadScene(SceneNumber);
                 yield break;
             }
             else
             {
+                inFirst = false;
                 yield return null;
             }
         } while (true);
