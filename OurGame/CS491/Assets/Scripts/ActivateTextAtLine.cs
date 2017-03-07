@@ -16,7 +16,6 @@ public class ActivateTextAtLine : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         // theTextBox = FindObjectOfType<TextBoxManager>();
-        print(GameObject.Find("ShoutZone"));
         theTextBox = GameObject.Find("/Canvas/Panel/SpriteHead").GetComponent<TextBoxManager>();
 
 	}

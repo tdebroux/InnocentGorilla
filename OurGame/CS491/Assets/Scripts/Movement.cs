@@ -21,16 +21,18 @@ public class Movement : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (!canMove)
-        {
-            return;
-        }
         moveVelocityX = 0;
         moveVelocityY = 0;
+        
         GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocityX, moveVelocityY);
         isMoving = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D);
         animator.SetBool("isMoving", isMoving);
-
+        if (!canMove)
+        {
+            animator.enabled = false;
+            return;
+        }
+        animator.enabled = true;
         if (Input.GetKey(KeyCode.W))
         {
             currentDir = 0;
