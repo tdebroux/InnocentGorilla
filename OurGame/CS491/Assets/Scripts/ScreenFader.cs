@@ -6,8 +6,9 @@ using UnityEngine.SceneManagement;
 public class ScreenFader : MonoBehaviour
 {
     public Image FadeImg;
-    public float fadeSpeed = 1.5f;
+    public float fadeSpeed;
     public bool sceneStarting = true;
+    private float duration = 10;
 
     void Awake()
     {
@@ -26,49 +27,59 @@ public class ScreenFader : MonoBehaviour
     void FadeToClear()
     {
         // Lerp the colour of the image between itself and transparent.
-        FadeImg.color = Color.Lerp(FadeImg.color, Color.clear, fadeSpeed * Time.deltaTime);
+        FadeImg.color = Color.Lerp(Color.black, Color.clear, fadeSpeed);
+        if (fadeSpeed < 1)
+            fadeSpeed += (Time.deltaTime/(duration))*(fadeSpeed*10 + 2);
     }
 
 
     void FadeToBlack()
     {
         // Lerp the colour of the image between itself and black.
-        FadeImg.color = Color.Lerp(FadeImg.color, Color.black, fadeSpeed * Time.deltaTime);
+        FadeImg.color = Color.Lerp(Color.clear, Color.black, fadeSpeed);
+        if (fadeSpeed < 1)
+            fadeSpeed += (Time.deltaTime / (duration)) * (fadeSpeed * 10 + 2);
     }
 
 
     void StartScene()
     {
         // Fade the texture to clear.
-        FadeToClear();
-
-        // If the texture is almost clear...
-        if (FadeImg.color.a <= 0.05f)
+        do
         {
-            // ... set the colour to clear and disable the RawImage.
-            FadeImg.color = Color.clear;
-            FadeImg.enabled = false;
+            fadeSpeed = 0;
+            FadeToBlack();
+            // If the texture is almost clear...
+            print("ALPHA " + FadeImg.color.a);
+            if (FadeImg.color.a >= 0.95f)
+            {
+                // ... set the colour to clear and disable the RawImage.
+                FadeImg.color = Color.black;
+                FadeImg.enabled = false;
 
-            // The scene is no longer starting.
-            sceneStarting = false;
-        }
+                // The scene is no longer starting.
+                sceneStarting = false;
+                break;
+            }
+        } while (true);
+        EndScene(1);
     }
 
 
     public IEnumerator EndSceneRoutine(int SceneNumber)
     {
         // Make sure the RawImage is enabled.
-        FadeImg.enabled = true;
+        //FadeImg.enabled = true;
         do
         {
             // Start fading towards black.
-            FadeToBlack();
-
+            FadeToClear();
             // If the screen is almost black...
-            if (FadeImg.color.a >= 0.95f)
+            if (FadeImg.color.a <= 0.05f)
             {
+                FadeImg.color = Color.clear;
                 // ... reload the level
-                SceneManager.LoadScene(SceneNumber);
+                //SceneManager.LoadScene(SceneNumber);
                 yield break;
             }
             else
