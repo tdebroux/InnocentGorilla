@@ -69,6 +69,7 @@ public class ScreenFader : MonoBehaviour
                   FadeImg.color = Color.black;
                   // The scene is no longer starting.
                   sceneStarting = false;
+                yield return new WaitForSeconds(0.5f);
                 StartCoroutine("EndSceneRoutine", 1);
                 yield break;
               } else {
@@ -84,6 +85,8 @@ public class ScreenFader : MonoBehaviour
         // Make sure the RawImage is enabled.
         //FadeImg.enabled = true;
         inFirst = true;
+        fadeSpeed = 0.01f;
+
         do
         {
             // Start fading towards black.
