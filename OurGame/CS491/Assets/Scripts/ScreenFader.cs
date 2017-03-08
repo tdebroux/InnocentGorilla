@@ -14,23 +14,26 @@ public class ScreenFader : MonoBehaviour
     void Awake()
     {
         FadeImg.rectTransform.localScale = new Vector2(Screen.width, Screen.height);
+        StartScene();
     }
 
     void Update()
     {
         // If the scene is starting...
-        if (sceneStarting)
+       // if (sceneStarting)
             // ... call the StartScene function.
-            StartScene();
+            //StartScene();
     }
 
 
     void FadeToClear()
     {
         // Lerp the colour of the image between itself and transparent.
+        print("PRE ALPHA " + FadeImg.color.a);
         FadeImg.color = Color.Lerp(Color.black,Color.clear, fadeSpeed);
+        print("POST ALPHA " + FadeImg.color.a);
         if (fadeSpeed < 1)
-            fadeSpeed += (Time.deltaTime/(duration)) * (fadeSpeed*0.5f + 2);
+            fadeSpeed += (Time.deltaTime/(duration)) * (fadeSpeed*20 + 2);
     }
 
 
@@ -39,43 +42,45 @@ public class ScreenFader : MonoBehaviour
         // Lerp the colour of the image between itself and black.
         FadeImg.color = Color.Lerp(Color.clear, Color.black, fadeSpeed);
         if (fadeSpeed < 1)
-            fadeSpeed += (Time.deltaTime / (duration)) * (fadeSpeed * 10 + 2);
+            fadeSpeed += (Time.deltaTime / (duration)) * (fadeSpeed * 20 + 2);
     }
     void StartScene()
     {
         //FadeImg.color = Color.clear;
-        //StartCoroutine("StartSceneRoutine", 1);
-        StartCoroutine("EndSceneRoutine", 1);
+        StartCoroutine("StartSceneRoutine", 1);
+        print("StartDone");
+        
+        //StartCoroutine("EndSceneRoutine", 1);
     }
 
     public IEnumerator StartSceneRoutine(int SceneNumber)
     {
         // Fade the texture to clear.
-            while (inFirst)
-                yield return new WaitForSeconds(0.1f);
-            //FadeImg.color = Color.black;
-            fadeSpeed = 0.01f;
-            do {
-                // If the texture is almost clear...
-                FadeToBlack();
-                if (FadeImg.color.a >= 0.95f)
-                {
+         while (inFirst)
+            yield return new WaitForSeconds(0.1f);
+        //FadeImg.color = Color.black;
+        fadeSpeed = 0.01f;
+        do {
+              // If the texture is almost black...
+              FadeToBlack();
+              if (FadeImg.color.a >= 0.95f)
+              {
                     // ... set the colour to clear and disable the RawImage.
-                    FadeImg.color = Color.black;
-                    // The scene is no longer starting.
-                    sceneStarting = false;
-                    yield break;
-                } else
-                {
-                    yield return null;
-                }
-            } while (true);
-        
+                  FadeImg.color = Color.black;
+                  // The scene is no longer starting.
+                  sceneStarting = false;
+                StartCoroutine("EndSceneRoutine", 1);
+                yield break;
+              } else {
+                  yield return null;
+              }
+          } while (true);
     }
 
 
     public IEnumerator EndSceneRoutine(int SceneNumber)
     {
+        
         // Make sure the RawImage is enabled.
         //FadeImg.enabled = true;
         inFirst = true;
