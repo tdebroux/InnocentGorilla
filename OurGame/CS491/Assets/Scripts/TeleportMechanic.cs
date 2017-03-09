@@ -21,7 +21,7 @@ public class TeleportMechanic : MonoBehaviour {
     {
         if(other.name == "MainCharacter")
         {
-            fadeScr.EndScene(1);
+            fadeScr.EndScene();
             other.transform.position = TeleportPosition;
         }
     }

@@ -29,11 +29,9 @@ public class ScreenFader : MonoBehaviour
     void FadeToClear()
     {
         // Lerp the colour of the image between itself and transparent.
-        print("PRE ALPHA " + FadeImg.color.a);
-        FadeImg.color = Color.Lerp(Color.black,Color.clear, fadeSpeed);
-        print("POST ALPHA " + FadeImg.color.a);
+        FadeImg.color = Color.Lerp(Color.black, Color.clear, fadeSpeed);
         if (fadeSpeed < 1)
-            fadeSpeed += (Time.deltaTime/(duration)) * (fadeSpeed*20 + 2);
+            fadeSpeed += (Time.deltaTime / (duration)) * (fadeSpeed * 20 + 2);
     }
 
 
@@ -47,18 +45,15 @@ public class ScreenFader : MonoBehaviour
     void StartScene()
     {
         //FadeImg.color = Color.clear;
-        StartCoroutine("StartSceneRoutine", 1);
-        print("StartDone");
-        
+        StartCoroutine("StartSceneRoutine");
         //StartCoroutine("EndSceneRoutine", 1);
     }
 
-    public IEnumerator StartSceneRoutine(int SceneNumber)
+    public IEnumerator StartSceneRoutine()
     {
         // Fade the texture to clear.
          while (inFirst)
             yield return new WaitForSeconds(0.1f);
-        //FadeImg.color = Color.black;
         fadeSpeed = 0.01f;
         do {
               // If the texture is almost black...
@@ -70,7 +65,7 @@ public class ScreenFader : MonoBehaviour
                   // The scene is no longer starting.
                   sceneStarting = false;
                 yield return new WaitForSeconds(0.5f);
-                StartCoroutine("EndSceneRoutine", 1);
+                StartCoroutine("EndSceneRoutine");
                 yield break;
               } else {
                   yield return null;
@@ -79,11 +74,9 @@ public class ScreenFader : MonoBehaviour
     }
 
 
-    public IEnumerator EndSceneRoutine(int SceneNumber)
+    public IEnumerator EndSceneRoutine()
     {
-        
         // Make sure the RawImage is enabled.
-        //FadeImg.enabled = true;
         inFirst = true;
         fadeSpeed = 0.01f;
 
@@ -105,9 +98,9 @@ public class ScreenFader : MonoBehaviour
         } while (true);
     }
 
-    public void EndScene(int SceneNumber)
+    public void EndScene()
     {
         sceneStarting = false;
-        StartCoroutine("EndSceneRoutine", SceneNumber);
+        StartCoroutine("EndSceneRoutine");
     }
 }
