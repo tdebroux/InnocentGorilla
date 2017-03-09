@@ -33,11 +33,7 @@ public class ScreenFader : MonoBehaviour
         FadeImg.color = Color.Lerp(Color.black,Color.clear, fadeSpeed);
         print("POST ALPHA " + FadeImg.color.a);
         if (fadeSpeed < 1)
-<<<<<<< HEAD
-            fadeSpeed += (Time.deltaTime/(duration)) * (fadeSpeed * 0.5f + 2);
-=======
             fadeSpeed += (Time.deltaTime/(duration)) * (fadeSpeed*20 + 2);
->>>>>>> origin/master
     }
 
 
@@ -46,11 +42,7 @@ public class ScreenFader : MonoBehaviour
         // Lerp the colour of the image between itself and black.
         FadeImg.color = Color.Lerp(Color.clear, Color.black, fadeSpeed);
         if (fadeSpeed < 1)
-<<<<<<< HEAD
-            fadeSpeed += (Time.deltaTime / (duration)) * (fadeSpeed * 50 + 2);
-=======
             fadeSpeed += (Time.deltaTime / (duration)) * (fadeSpeed * 20 + 2);
->>>>>>> origin/master
     }
     void StartScene()
     {
