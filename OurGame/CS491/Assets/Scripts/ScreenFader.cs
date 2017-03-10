@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class ScreenFader : MonoBehaviour
 {
-    public TeleportMechanic tp;
     public Image FadeImg;
     public float fadeSpeed;
     public bool sceneStarting = true;
@@ -15,9 +14,7 @@ public class ScreenFader : MonoBehaviour
     void Awake()
     {
         FadeImg.rectTransform.localScale = new Vector2(Screen.width, Screen.height);
-        FadeImg.color = Color.clear;
-        tp = FindObjectOfType<TeleportMechanic>();
-        //StartScene();
+        StartScene();
     }
 
     void Update()
@@ -45,7 +42,7 @@ public class ScreenFader : MonoBehaviour
         if (fadeSpeed < 1)
             fadeSpeed += (Time.deltaTime / (duration)) * (fadeSpeed * 20 + 2);
     }
-    public void StartScene()
+    void StartScene()
     {
         //FadeImg.color = Color.clear;
         StartCoroutine("StartSceneRoutine");
@@ -68,7 +65,6 @@ public class ScreenFader : MonoBehaviour
                   // The scene is no longer starting.
                   sceneStarting = false;
                 yield return new WaitForSeconds(0.5f);
-                tp.teleport();
                 StartCoroutine("EndSceneRoutine");
                 yield break;
               } else {
@@ -83,7 +79,7 @@ public class ScreenFader : MonoBehaviour
         // Make sure the RawImage is enabled.
         inFirst = true;
         fadeSpeed = 0.01f;
-        print("END");
+
         do
         {
             // Start fading towards black.

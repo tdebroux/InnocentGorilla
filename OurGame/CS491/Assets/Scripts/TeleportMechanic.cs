@@ -7,15 +7,13 @@ using UnityEngine.UI;
 public class TeleportMechanic : MonoBehaviour {
     public float x;
     public float y;
-    //float otherX;
-    //float otherY;
     ScreenFader fadeScr;
     private Vector2 TeleportPosition;
-    public Movement player;
-    Collider2D character;
+    Movement player;
+
     // Use this for initialization
     void Start () {
-        player = FindObjectOfType<Movement>();
+        player = GameObject.FindObjectOfType<Movement>();
         TeleportPosition = new Vector2(x, y);
         fadeScr = GameObject.FindObjectOfType<ScreenFader>();
     }
@@ -23,23 +21,15 @@ public class TeleportMechanic : MonoBehaviour {
 	// Update is called once per frame
     void OnTriggerEnter2D(Collider2D other)
     {
-        print("X " + x + " Y " + y);
-        //otherX = x;
-       // otherY = y;
-        //TeleportPosition = new Vector2(x, y);
-        if (other.name == "MainCharacter")
+        if(other.name == "MainCharacter")
         {
             player.canMove = false;
-            fadeScr.StartScene();
-            //other.transform.position = TeleportPosition;
-            //fadeScr.EndScene();
+            print("False");
+            fadeScr.EndScene();
+            other.transform.position = TeleportPosition;
             player.canMove = true;
+            print("True");
         }
-    }
-    public void teleport()
-    {
-        print("X " + x + " Y " + y);
-        player.transform.position = TeleportPosition;
     }
     void Awake()
     {
