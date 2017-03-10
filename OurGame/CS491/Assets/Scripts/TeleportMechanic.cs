@@ -9,9 +9,11 @@ public class TeleportMechanic : MonoBehaviour {
     public float y;
     ScreenFader fadeScr;
     private Vector2 TeleportPosition;
+    Movement player;
 
     // Use this for initialization
     void Start () {
+        player = GameObject.FindObjectOfType<Movement>();
         TeleportPosition = new Vector2(x, y);
         fadeScr = GameObject.FindObjectOfType<ScreenFader>();
     }
@@ -21,8 +23,12 @@ public class TeleportMechanic : MonoBehaviour {
     {
         if(other.name == "MainCharacter")
         {
+            player.canMove = false;
+            print("False");
             fadeScr.EndScene();
             other.transform.position = TeleportPosition;
+            player.canMove = true;
+            print("True");
         }
     }
     void Awake()
