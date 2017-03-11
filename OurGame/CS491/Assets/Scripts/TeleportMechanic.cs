@@ -24,11 +24,9 @@ public class TeleportMechanic : MonoBehaviour {
         if(other.name == "MainCharacter")
         {
             player.canMove = false;
-            print("False");
             fadeScr.EndScene();
             other.transform.position = TeleportPosition;
             player.canMove = true;
-            print("True");
         }
     }
     void Awake()
