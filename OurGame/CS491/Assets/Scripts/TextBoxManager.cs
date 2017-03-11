@@ -111,7 +111,10 @@ public class TextBoxManager : MonoBehaviour {
         {
             player.canMove = false;
         }
-        StartCoroutine(TextScroll(textLines[currentLine]));
+        if (currentLine < textLines.Length)
+        {
+            StartCoroutine(TextScroll(textLines[currentLine]));
+        }
     }
 
     public void DisableTextBox()
