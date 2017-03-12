@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TextBoxManager : MonoBehaviour {
+public class TextBoxManager : MonoBehaviour
+{
 
     public GameObject textBox;
 
@@ -29,7 +30,7 @@ public class TextBoxManager : MonoBehaviour {
     void Start()
     {
         player = FindObjectOfType<Movement>();
-        
+
         if (textFile != null)
         {
             textLines = (textFile.text.Split('\n'));
@@ -39,8 +40,8 @@ public class TextBoxManager : MonoBehaviour {
         {
             endAtLine = textLines.Length - 1;
         }
-        
-        
+
+
         if (isActive)
         {
             EnableTextBox();
@@ -49,7 +50,7 @@ public class TextBoxManager : MonoBehaviour {
         {
             DisableTextBox();
         }
-        
+
     }
 
     void Update()
@@ -71,12 +72,13 @@ public class TextBoxManager : MonoBehaviour {
                     //switch image sprite
                     if (textLines[currentLine].Substring(8).Equals("Douglas"))
                     {
-                        
-                    }else if (textLines[currentLine].Substring(8).Equals("Player"))
-                    {
-                        
+
                     }
-                        currentLine++;
+                    else if (textLines[currentLine].Substring(8).Equals("Player"))
+                    {
+
+                    }
+                    currentLine++;
                 }
                 else if (checkGame())
                 {
@@ -102,13 +104,13 @@ public class TextBoxManager : MonoBehaviour {
             }
         }
     }
-    private IEnumerator TextScroll (string lineofText)
+    private IEnumerator TextScroll(string lineofText)
     {
         int letter = 0;
         theText.text = "";
         isTyping = true;
         cancelTyping = false;
-        while (isTyping && !cancelTyping && (letter < lineofText.Length -1))
+        while (isTyping && !cancelTyping && (letter < lineofText.Length - 1))
         {
             theText.text += lineofText[letter];
             letter += 1;
@@ -119,7 +121,7 @@ public class TextBoxManager : MonoBehaviour {
         cancelTyping = false;
     }
     public void EnableTextBox()
-    {   
+    {
         textBox.SetActive(true);
         isActive = true;
         if (stopPlayerMovement)
@@ -141,7 +143,7 @@ public class TextBoxManager : MonoBehaviour {
     }
     public bool checkSwitch()
     {
-        return textLines[currentLine].Substring(0,8).Equals("(switch)");
+        return textLines[currentLine].Substring(0, 8).Equals("(switch)");
     }
 
     public void DisableTextBox()
@@ -153,11 +155,11 @@ public class TextBoxManager : MonoBehaviour {
     }
     public void ReloadScript(TextAsset theText)
     {
-        if(theText != null)
+        if (theText != null)
         {
             textLines = new string[1];
             textLines = (theText.text.Split('\n'));
         }
     }
-    
+
 }
