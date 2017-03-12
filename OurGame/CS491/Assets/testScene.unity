@@ -8730,9 +8730,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e30d1d3309df8b40ba97c484e4efae2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theText: {fileID: 4900000, guid: 4a97cf2bbdcda0746ae4e9e747dac289, type: 3}
+  theText: {fileID: 4900000, guid: 7acdbb4d18de502439a910f87c394e1d, type: 3}
   startLine: 0
-  endLine: 1
+  endLine: 26
   requireButtonPress: 0
   destroyWhenActivated: 1
 --- !u!61 &527547781
@@ -17648,7 +17648,7 @@ MonoBehaviour:
   currentLine: 0
   endAtLine: 0
   player: {fileID: 0}
-  isActive: 1
+  isActive: 0
   stopPlayerMovement: 1
   typeSpeed: 0.01
 --- !u!114 &972685008
@@ -17975,7 +17975,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 989666919}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -99.656, y: 31.984, z: 0}
+  m_LocalPosition: {x: -73.3, y: 20.43, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 133927933}
