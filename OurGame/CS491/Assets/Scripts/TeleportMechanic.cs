@@ -26,7 +26,7 @@ public class TeleportMechanic : MonoBehaviour {
             player.canMove = false;
             fadeScr.EndScene();
             other.transform.position = TeleportPosition;
-            player.canMove = true;
+            player.StartCoroutine("CantMoveForTime", 0.5f);
         }
     }
     void Awake()

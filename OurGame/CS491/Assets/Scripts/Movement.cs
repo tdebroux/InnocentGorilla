@@ -66,7 +66,12 @@ public class Movement : MonoBehaviour {
 
 
     }
-        
+    public IEnumerator CantMoveForTime(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        canMove = true;
+    }
+
 }
 
 
