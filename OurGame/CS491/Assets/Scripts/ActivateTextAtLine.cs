@@ -9,7 +9,6 @@ public class ActivateTextAtLine : MonoBehaviour {
     public int endLine;
     private TextBoxManager theTextBox;
 
-
     public bool requireButtonPress;
     private bool waitForPress;
     public bool destroyWhenActivated;

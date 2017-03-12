@@ -1,0 +1,11 @@
+Hey DingDong, are you finished?
+(switch) Player 4 5
+I have not, no. Why do you ask?
+(switch) Player 6 7
+hm...okay. I'll look at them later, just place them in a separate pile and put them in my office. Have you seen the email I sent you with details about a potential new client?
+(switch) Player 8 9
+Good, tomorrow I want you to create a proposal so we can try and bring them in. I realize it's a Saturday, but this needs to happen before they decide to go with someone else.
+(switch) Player 10 11
+Glad to hear it, I'll talk to you then.
+(exitroom)
+(switch) Player 12 13
