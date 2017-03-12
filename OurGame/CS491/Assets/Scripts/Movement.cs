@@ -63,8 +63,6 @@ public class Movement : MonoBehaviour {
         animator.SetInteger("walkDirectionAnimation", currentDir);
         GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocityX, moveVelocityY) * Time.deltaTime;
 
-
-
     }
     public IEnumerator CantMoveForTime(float seconds)
     {

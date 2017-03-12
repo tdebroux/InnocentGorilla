@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ActivateTextAtLine : MonoBehaviour {
+public class ActivateTextAtLine : MonoBehaviour
+{
     public TextAsset theText;
 
     public int startLine;
@@ -12,16 +13,18 @@ public class ActivateTextAtLine : MonoBehaviour {
     public bool requireButtonPress;
     private bool waitForPress;
     public bool destroyWhenActivated;
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         // theTextBox = FindObjectOfType<TextBoxManager>();
         theTextBox = GameObject.Find("/Canvas/Panel/SpriteHead").GetComponent<TextBoxManager>();
 
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		if(waitForPress && Input.GetKeyDown(KeyCode.J))
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (waitForPress && Input.GetKeyDown(KeyCode.J))
         {
             theTextBox.ReloadScript(theText);
             theTextBox.currentLine = startLine;
@@ -33,10 +36,10 @@ public class ActivateTextAtLine : MonoBehaviour {
                 Destroy(gameObject);
             }
         }
-	}
+    }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.name == "MainCharacter")
+        if (other.name == "MainCharacter")
         {
             if (requireButtonPress)
             {
@@ -57,9 +60,9 @@ public class ActivateTextAtLine : MonoBehaviour {
     }
     void OnTriggerExit2D(Collider2D other)
     {
-        if(other.name == "MainCharacter")
+        if (other.name == "MainCharacter")
         {
             waitForPress = false;
         }
-    } 
+    }
 }
