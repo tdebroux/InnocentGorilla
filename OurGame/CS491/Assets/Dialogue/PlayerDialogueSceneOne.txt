@@ -1,0 +1,28 @@
+Ugh... This is the part of my day I am least looking forward too.
+You'd think at some point they'd hire an assistant to take care of this...
+There are a few requests for support from local groups trying to organize a festival, looks 
+like the idea is to celebrate the centenial year of our town
+(switch) Douglas
+Hey DingDong, are you finished?
+(switch) Player
+Almost.. Just a small pile left and a few more accounts to enter. Have you heard of this festival that is coming up in a few months?
+(switch) Douglas
+I have not, no. Why do you ask?
+(switch) Player
+There are several letters here from local groups asking for aid in organizing and funding for the anniversary of our town's founding.
+(switch) Douglas
+hm...okay. I'll look at them later, just place them in a separate pile and put them in my office. 
+Have you seen the email I sent you with details about a potential new client?
+(switch) Player
+I have, yes.
+(switch) Douglas
+Good, tomorrow I want you to create a proposal so we can try and bring them in. 
+I realize it's a Saturday, but this needs to happen before they decide to go with someone else.
+(switch) Player
+Understood. I'll have it to you by Monday.
+(switch) Douglas
+Glad to hear it, I'll talk to you then.
+(switch) Player
+Great.. Now I've just lost my weekend. I love what I do, but sometimes it's just too much. Oh well, let's just focus at the task at hand.
+(startgame)
+Now to get home and get some sleep before I start on this proposal.

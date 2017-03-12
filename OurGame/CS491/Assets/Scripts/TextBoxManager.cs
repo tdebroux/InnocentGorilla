@@ -17,9 +17,6 @@ public class TextBoxManager : MonoBehaviour {
 
     public Movement player;
 
-    public Image face;
-    public Sprite myFirstImage;
-
     public bool isActive;
 
     public bool stopPlayerMovement;
@@ -27,13 +24,11 @@ public class TextBoxManager : MonoBehaviour {
     private bool isTyping = false;
     private bool cancelTyping = false;
     public float typeSpeed;
+
     // Use this for initialization
     void Start()
     {
         player = FindObjectOfType<Movement>();
-        //myFirstImage = Resources.Load<Sprite>("/Sprites/Shrine");
-        face = GetComponent<Image>();
-        face.sprite = myFirstImage;
         
         if (textFile != null)
         {
@@ -71,7 +66,27 @@ public class TextBoxManager : MonoBehaviour {
             if (!isTyping)
             {
                 currentLine += 1;
-
+                if (checkSwitch())
+                {
+                    //switch image sprite
+                    if (textLines[currentLine].Substring(8).Equals("Douglas"))
+                    {
+                        
+                    }else if (textLines[currentLine].Substring(8).Equals("Player"))
+                    {
+                        
+                    }
+                        currentLine++;
+                }
+                else if (checkGame())
+                {
+                    currentLine++;
+                }
+                else if (checkLeave())
+                {
+                    //boss exits
+                    currentLine++;
+                }
                 if (currentLine > endAtLine)
                 {
                     DisableTextBox();
@@ -104,7 +119,7 @@ public class TextBoxManager : MonoBehaviour {
         cancelTyping = false;
     }
     public void EnableTextBox()
-    {
+    {   
         textBox.SetActive(true);
         isActive = true;
         if (stopPlayerMovement)
@@ -115,6 +130,18 @@ public class TextBoxManager : MonoBehaviour {
         {
             StartCoroutine(TextScroll(textLines[currentLine]));
         }
+    }
+    public bool checkLeave()
+    {
+        return textLines[currentLine].Substring(0, 7).Equals("Glad to");
+    }
+    public bool checkGame()
+    {
+        return textLines[currentLine].Substring(0, 11).Equals("(startgame)");
+    }
+    public bool checkSwitch()
+    {
+        return textLines[currentLine].Substring(0,8).Equals("(switch)");
     }
 
     public void DisableTextBox()
