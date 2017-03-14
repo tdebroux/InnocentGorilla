@@ -8732,7 +8732,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   theText: {fileID: 4900000, guid: 7acdbb4d18de502439a910f87c394e1d, type: 3}
   startLine: 0
-  endLine: 26
+  endLine: 27
   requireButtonPress: 0
   destroyWhenActivated: 1
 --- !u!61 &527547781
@@ -17311,6 +17311,7 @@ GameObject:
   - component: {fileID: 972685009}
   - component: {fileID: 972685008}
   - component: {fileID: 972685007}
+  - component: {fileID: 972685010}
   m_Layer: 5
   m_Name: SpriteHead
   m_TagString: Untagged
@@ -17357,6 +17358,7 @@ MonoBehaviour:
   isActive: 0
   stopPlayerMovement: 1
   typeSpeed: 0.01
+  characterNum: 0
 --- !u!114 &972685008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17390,6 +17392,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 972685005}
+--- !u!95 &972685010
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 972685005}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aae0edb10517f6642ac5dd12b6e47aec, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &979580186
 GameObject:
   m_ObjectHideFlags: 0

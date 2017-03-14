@@ -26,11 +26,16 @@ public class TextBoxManager : MonoBehaviour
     private bool cancelTyping = false;
     public float typeSpeed;
 
+    Animator animator;
+    public int characterNum;
+
+
     // Use this for initialization
     void Start()
     {
         player = FindObjectOfType<Movement>();
-
+        animator = GetComponent<Animator>();
+        animator.SetInteger("CharacterNumber", characterNum);
         if (textFile != null)
         {
             textLines = (textFile.text.Split('\n'));
@@ -70,18 +75,19 @@ public class TextBoxManager : MonoBehaviour
                 if (checkSwitch())
                 {
                     //switch image sprite
-                    if (textLines[currentLine].Substring(8).Equals("Douglas"))
+                    if (textLines[currentLine].Substring(9).Trim().Equals("Douglas"))
                     {
-
+                        characterNum = 2;
                     }
-                    else if (textLines[currentLine].Substring(8).Equals("Player"))
+                    else if (textLines[currentLine].Substring(9).Trim().Equals("Player"))
                     {
-
+                        characterNum = 1;
                     }
                     currentLine++;
                 }
                 else if (checkGame())
                 {
+                    //call minigame
                     currentLine++;
                 }
                 else if (checkLeave())
@@ -97,6 +103,7 @@ public class TextBoxManager : MonoBehaviour
                 {
                     StartCoroutine(TextScroll(textLines[currentLine]));
                 }
+                animator.SetInteger("CharacterNumber", characterNum);
             }
             else if (isTyping && !cancelTyping)
             {
