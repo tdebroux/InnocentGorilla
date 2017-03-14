@@ -107,7 +107,6 @@ public class TextBoxManager : MonoBehaviour
                     }
                     animator.SetInteger("CharacterNumber", characterNum);
                 }
-                currentLine++;
             }
             else if (isTyping && !cancelTyping)
             {
