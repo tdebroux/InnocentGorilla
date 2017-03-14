@@ -53,3 +53,9 @@ TagManager:
   - name: front
     uniqueID: 267432955
     locked: 0
+  - name: terminal background
+    uniqueID: 336121575
+    locked: 0
+  - name: gui text
+    uniqueID: 3997672921
+    locked: 0

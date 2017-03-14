@@ -7,12 +7,20 @@ public class TerminalGameLaunch : MonoBehaviour
     public bool requireButtonPress;
     private bool waitForPress;
     public bool destroyWhenActivated;
+    public Canvas terminal;
     Movement player;
+    TextInput inputter;
+    bool temp;
     // Use this for initialization
     void Start()
     {
+        temp = true;
+        inputter = FindObjectOfType<TextInput>();
         player = FindObjectOfType<Movement>();
+        terminal = FindObjectOfType<Canvas>();
+        terminal.enabled = false;
     }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.name == "MainCharacter")
@@ -37,9 +45,13 @@ public class TerminalGameLaunch : MonoBehaviour
             //launch minigame
             //check if game is done boolean
             player.canMove = false;
-
+            terminal.enabled = true;
+        }
+        if (inputter.gameOver && temp)
+        {
             player.canMove = true;
-            print("YO");
+            terminal.enabled = false;
+            temp = false;
         }
     }
 }
