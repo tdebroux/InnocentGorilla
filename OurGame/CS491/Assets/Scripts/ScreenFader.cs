@@ -11,10 +11,6 @@ public class ScreenFader : MonoBehaviour
     private float duration = 10;
     bool inFirst = false;
 
-    void Start()
-    {
-        EndScene();
-    }
     void Awake()
     {
         FadeImg.rectTransform.localScale = new Vector2(Screen.width, Screen.height);
