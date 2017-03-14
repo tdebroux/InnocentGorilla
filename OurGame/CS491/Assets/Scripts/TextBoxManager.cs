@@ -72,42 +72,38 @@ public class TextBoxManager : MonoBehaviour
             if (!isTyping)
             {
                 currentLine += 1;
-                if (textLines[currentLine].Length > 7)
+                if (checkSwitch())
                 {
-                    if (checkSwitch())
+                    //switch image sprite
+                    if (textLines[currentLine].Substring(9).Trim().Equals("Douglas"))
                     {
-                        //switch image sprite
-                        if (textLines[currentLine].Substring(9).Trim().Equals("Douglas"))
-                        {
-                            characterNum = 2;
-                        }
-                        else if (textLines[currentLine].Substring(9).Trim().Equals("Player"))
-                        {
-                            characterNum = 1;
-                        }
-                        currentLine++;
+                        characterNum = 2;
                     }
-                    else if (checkGame())
+                    else if (textLines[currentLine].Substring(9).Trim().Equals("Player"))
                     {
-                        //call minigame
-                        currentLine++;
+                        characterNum = 1;
                     }
-                    else if (checkLeave())
-                    {
-                        //boss exits
-                        currentLine++;
-                    }
-                    if (currentLine > endAtLine)
-                    {
-                        DisableTextBox();
-                    }
-                    else
-                    {
-                        StartCoroutine(TextScroll(textLines[currentLine]));
-                    }
-                    animator.SetInteger("CharacterNumber", characterNum);
+                    currentLine++;
                 }
-                currentLine++;
+                else if (checkGame())
+                {
+                    //call minigame
+                    currentLine++;
+                }
+                else if (checkLeave())
+                {
+                    //boss exits
+                    currentLine++;
+                }
+                if (currentLine > endAtLine)
+                {
+                    DisableTextBox();
+                }
+                else
+                {
+                    StartCoroutine(TextScroll(textLines[currentLine]));
+                }
+                animator.SetInteger("CharacterNumber", characterNum);
             }
             else if (isTyping && !cancelTyping)
             {

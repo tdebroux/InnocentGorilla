@@ -24,6 +24,6 @@ Understood. I'll have it to you by Monday.
 Glad to hear it, I'll talk to you then.
 (switch) Player
 Great.. Now I've just lost my weekend. I love what I do, but sometimes it's just too much. 
-Oh well, let's just focus at the task at hand. (press J on the computer)
+Oh well, let's just focus at the task at hand.
 (startgame)
 Now to get home and get some sleep before I start on this proposal.
