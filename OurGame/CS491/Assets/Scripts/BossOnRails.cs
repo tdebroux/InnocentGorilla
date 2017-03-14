@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BossOnRails : MonoBehaviour
 {
-    float[] walkTimes = { 3f, 2f };
+    float[] walkTimes = { 5f, 2f };
     int[] currentDir = {0, 3};
     public bool isMoving;
     public float walkSpeed;

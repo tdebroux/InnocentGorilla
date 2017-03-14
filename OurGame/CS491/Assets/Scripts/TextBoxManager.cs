@@ -144,6 +144,12 @@ public class TextBoxManager : MonoBehaviour
     {
         return textLines[currentLine].Substring(0, 7).Equals("Glad to");
     }
+
+    public bool checkEnter()
+    {
+        return currentLine >= 4;
+    }
+
     public bool checkGame()
     {
         return textLines[currentLine].Substring(0, 11).Equals("(startgame)");
