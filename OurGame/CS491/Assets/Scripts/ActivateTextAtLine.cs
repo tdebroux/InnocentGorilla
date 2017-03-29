@@ -24,7 +24,7 @@ public class ActivateTextAtLine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (waitForPress && Input.GetKeyDown(KeyCode.J))
+        if (waitForPress && Input.GetKeyDown(KeyCode.E)) //if you wanna go up and talk to something.
         {
             theTextBox.ReloadScript(theText);
             theTextBox.currentLine = startLine;
@@ -37,7 +37,7 @@ public class ActivateTextAtLine : MonoBehaviour
             }
         }
     }
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other) // if you go near something.
     {
         if (other.name == "MainCharacter")
         {
@@ -58,7 +58,7 @@ public class ActivateTextAtLine : MonoBehaviour
             }
         }
     }
-    void OnTriggerExit2D(Collider2D other)
+    void OnTriggerExit2D(Collider2D other) // 
     {
         if (other.name == "MainCharacter")
         {

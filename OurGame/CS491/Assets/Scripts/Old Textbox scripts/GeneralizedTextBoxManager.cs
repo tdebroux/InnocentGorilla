@@ -28,9 +28,15 @@ public class GeneralizedTextBoxManager : MonoBehaviour
     Animator animator;
     public int characterNum;
 
+    int i = 0;
+   
 
     // Use this for initialization
     void Start()
+    {
+        textLines[0] = " ";
+    }
+    void generateLines()
     {
         player = FindObjectOfType<Movement>();
         animator = GetComponent<Animator>();
@@ -44,7 +50,6 @@ public class GeneralizedTextBoxManager : MonoBehaviour
         {
             endAtLine = textLines.Length - 1;
         }
-
 
         if (isActive)
         {
@@ -64,6 +69,13 @@ public class GeneralizedTextBoxManager : MonoBehaviour
             return;
         }
 
+        i++; 
+        if ( i == 1)
+        {
+            generateLines();
+
+        }
+    
         //theText.text = textLines[currentLine];
 
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.E))
@@ -71,9 +83,13 @@ public class GeneralizedTextBoxManager : MonoBehaviour
             if (!isTyping)
             {
                 currentLine += 1;
-                if (textLines[currentLine].Length > 7)
-                {
-                    if (checkSwitch())
+               
+                    if (moveEvent())
+                    {
+                        //trigger event in "MoveEventCommands" script
+                        currentLine++;
+                    }
+                    else if (checkSwitch())
                     {
                         //switch image sprite
                         if (textLines[currentLine].Substring(9).Trim().Equals("Douglas"))
@@ -87,11 +103,7 @@ public class GeneralizedTextBoxManager : MonoBehaviour
                         currentLine++;
                   
                     }
-                    else if (moveEvent())
-                    {
-                        //trigger event in "MoveEventCommands" script
-                        currentLine++;
-                    }
+                    
                     if (currentLine > endAtLine)
                     {
                         DisableTextBox();
@@ -102,7 +114,7 @@ public class GeneralizedTextBoxManager : MonoBehaviour
                     }
                     animator.SetInteger("CharacterNumber", characterNum);
                 }
-            }
+          
             else if (isTyping && !cancelTyping)
             {
                 cancelTyping = true;
@@ -141,7 +153,11 @@ public class GeneralizedTextBoxManager : MonoBehaviour
 
     public bool moveEvent()
     {
+        print(currentLine);
+        print(textLines.Length);
+        print(isActive);
         return textLines[currentLine].Substring(0, 7).Equals("(event)");
+        
     }
 
     public bool checkSwitch()

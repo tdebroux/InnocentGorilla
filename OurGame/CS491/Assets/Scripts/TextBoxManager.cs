@@ -29,25 +29,31 @@ public class TextBoxManager : MonoBehaviour
     Animator animator;
     public int characterNum;
 
+    public bool isAnEvent = false;
+
 
     // Use this for initialization
     void Start()
     {
-        player = FindObjectOfType<Movement>();
-        animator = GetComponent<Animator>();
+        player = FindObjectOfType<Movement>(); // to freeze player
+        animator = GetComponent<Animator>(); // to switch sprite heads
         animator.SetInteger("CharacterNumber", characterNum);
+        endAtLine = textLines.Length - 1;
+
         if (textFile != null)
         {
             textLines = (textFile.text.Split('\n'));
         }
 
-        if (endAtLine == 0)
+        for (int i = 0; i < textLines.Length; i++) //removes spaces
         {
-            endAtLine = textLines.Length - 1;
+            textLines[i].Trim();
         }
 
 
-        if (isActive)
+
+
+        if (isActive) //FROM: Activate at textLine 
         {
             EnableTextBox();
         }
@@ -72,49 +78,36 @@ public class TextBoxManager : MonoBehaviour
             if (!isTyping)
             {
                 currentLine += 1;
-                if (textLines[currentLine].Length > 7)
+                if (checkSwitch())
                 {
-                    if (checkSwitch())
-                    {
-                        //switch image sprite
-                        if (textLines[currentLine].Substring(9).Trim().Equals("Douglas"))
-                        {
-                            characterNum = 2;
-                        }
-                        else if (textLines[currentLine].Substring(9).Trim().Equals("Player"))
-                        {
-                            characterNum = 1;
-                        }
-                        currentLine++;
-                    }
-                    else if (checkGame())
-                    {
-                        //call minigame
-                        currentLine++;
-                    }
-                    else if (checkLeave())
-                    {
-                        //boss exits
-                        currentLine++;
-                    }
-                    if (currentLine > endAtLine)
-                    {
-                        DisableTextBox();
-                    }
-                    else
-                    {
-                        StartCoroutine(TextScroll(textLines[currentLine]));
-                    }
+                    currentLine += 1;
+                    setCharacterNumber(textLines[currentLine]);
                     animator.SetInteger("CharacterNumber", characterNum);
+                    currentLine += 1;
+                }
+                else if (checkEvent())
+                {
+                    isAnEvent = true;
+                    currentLine += 1;
+
+                }
+                if (currentLine == endAtLine)
+                {
+                    DisableTextBox();
+                }
+                else
+                {
+                    StartCoroutine(TextScroll(textLines[currentLine]));
                 }
             }
+
             else if (isTyping && !cancelTyping)
             {
                 cancelTyping = true;
             }
         }
     }
-    private IEnumerator TextScroll(string lineofText)
+    private IEnumerator TextScroll(string lineofText) // from the web DO NOT MESS WITH
     {
         int letter = 0;
         theText.text = "";
@@ -130,8 +123,9 @@ public class TextBoxManager : MonoBehaviour
         isTyping = false;
         cancelTyping = false;
     }
-    public void EnableTextBox()
+    public void EnableTextBox() // from the web DO NOT MESS WITH
     {
+
         textBox.SetActive(true);
         isActive = true;
         if (stopPlayerMovement)
@@ -142,24 +136,31 @@ public class TextBoxManager : MonoBehaviour
         {
             StartCoroutine(TextScroll(textLines[currentLine]));
         }
-    }
-    public bool checkLeave()
-    {
-        return textLines[currentLine].Substring(0, 7).Equals("Glad to");
+
     }
 
-    public bool checkEnter()
-    {
-        return currentLine >= 4;
-    }
 
-    public bool checkGame()
-    {
-        return textLines[currentLine].Substring(0, 11).Equals("(startgame)");
-    }
     public bool checkSwitch()
     {
-        return textLines[currentLine].Substring(0, 8).Equals("(switch)");
+        return textLines[currentLine].Equals("(switch)");
+    }
+
+    public bool checkEvent()
+    {
+        return textLines[currentLine].Equals("(event)");
+    }
+
+    public void setCharacterNumber(string line)
+    {
+        if (line.Equals("Douglas"))
+        {
+            characterNum = 2;
+        }
+        else if (line.Equals("Player"))
+        {
+            characterNum = 1;
+        }
+        //add more characters
     }
 
     public void DisableTextBox()

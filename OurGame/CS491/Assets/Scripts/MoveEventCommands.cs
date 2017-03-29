@@ -38,9 +38,9 @@ public class MoveEventCommands : MonoBehaviour
     public float y7;
 
 
-    float[] currentXs;
-    float[] currentYs;
-    int[] currentDir;
+    private float[] currentXs;
+    private float[] currentYs;
+    private int[] currentDir;
 
 
 
@@ -59,7 +59,7 @@ public class MoveEventCommands : MonoBehaviour
     private int rndInt;
     bool timesUp;
     int i;
-    GeneralizedTextBoxManager tBoxM;
+    TextBoxManager tBoxM;
 
     // Use this for initialization
     void Start()
@@ -68,7 +68,7 @@ public class MoveEventCommands : MonoBehaviour
         float[] currentYs = { y0, y1, y2, y3, y4, y5, y6, y7 };
         int[] currentDir = { dir0, dir1, dir2, dir3, dir4, dir5, dir6, dir7 };
 
-        tBoxM = FindObjectOfType<GeneralizedTextBoxManager>();
+        tBoxM = FindObjectOfType<TextBoxManager>();
         i = 0;
         animator = GetComponent<Animator>();
         canMove = false;
@@ -77,7 +77,7 @@ public class MoveEventCommands : MonoBehaviour
     void Update()
     {
         
-        if (tBoxM.moveEvent())
+        if (tBoxM.isAnEvent)
         {
             // Decide Walk or Turn
             if (currentDir[i] == 0) // if it is zero, we're walkin'!
@@ -133,7 +133,7 @@ public class MoveEventCommands : MonoBehaviour
                 }
                 else
                 {
-                    print("Should not have a value for both x_i & y_i");
+                    print("ERROR!!! Should not have a value for both x_i & y_i");
                 }
             }
           

@@ -5675,12 +5675,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 363715002}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c2d0738187cdef43b523494480a8430, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e30d1d3309df8b40ba97c484e4efae2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   theText: {fileID: 4900000, guid: 373419d51aa885743897018100feba78, type: 3}
   startLine: 0
-  endLine: 26
+  endLine: 0
   requireButtonPress: 0
   destroyWhenActivated: 1
 --- !u!61 &363715005
@@ -18326,8 +18326,9 @@ GameObject:
   - component: {fileID: 972685006}
   - component: {fileID: 972685009}
   - component: {fileID: 972685008}
-  - component: {fileID: 972685007}
   - component: {fileID: 972685010}
+  - component: {fileID: 972685007}
+  - component: {fileID: 972685011}
   m_Layer: 5
   m_Name: SpriteHead
   m_TagString: Untagged
@@ -18361,7 +18362,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 972685005}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1a5b9e924f5dc94887a068a4ab24c52, type: 3}
+  m_Script: {fileID: 11500000, guid: 89227aa620a298b4b817d3c1f5ddc1b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textBox: {fileID: 772241999}
@@ -18425,6 +18426,29 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &972685011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 972685005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1a5b9e924f5dc94887a068a4ab24c52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textBox: {fileID: 772241999}
+  theText: {fileID: 1156320901}
+  textFile: {fileID: 0}
+  textLines: []
+  currentLine: 0
+  endAtLine: 0
+  player: {fileID: 0}
+  isActive: 0
+  stopPlayerMovement: 1
+  typeSpeed: 0.01
+  characterNum: 0
+  isAnEvent: 0
 --- !u!1 &979580186
 GameObject:
   m_ObjectHideFlags: 0
