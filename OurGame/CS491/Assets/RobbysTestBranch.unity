@@ -18327,7 +18327,6 @@ GameObject:
   - component: {fileID: 972685009}
   - component: {fileID: 972685008}
   - component: {fileID: 972685010}
-  - component: {fileID: 972685007}
   - component: {fileID: 972685011}
   m_Layer: 5
   m_Name: SpriteHead
@@ -18354,28 +18353,6 @@ RectTransform:
   m_AnchoredPosition: {x: -251.1, y: 0}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &972685007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 972685005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89227aa620a298b4b817d3c1f5ddc1b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textBox: {fileID: 772241999}
-  theText: {fileID: 1156320901}
-  textFile: {fileID: 0}
-  textLines: []
-  currentLine: 0
-  endAtLine: 0
-  player: {fileID: 0}
-  isActive: 0
-  stopPlayerMovement: 1
-  typeSpeed: 0.01
-  characterNum: 0
 --- !u!114 &972685008
 MonoBehaviour:
   m_ObjectHideFlags: 0

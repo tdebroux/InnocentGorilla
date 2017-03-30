@@ -39,7 +39,7 @@ public class TextBoxManager : MonoBehaviour
         animator = GetComponent<Animator>(); // to switch sprite heads
         animator.SetInteger("CharacterNumber", characterNum);
         endAtLine = textLines.Length - 1;
-
+        /*
         if (textFile != null)
         {
             textLines = (textFile.text.Split('\n'));
@@ -49,18 +49,8 @@ public class TextBoxManager : MonoBehaviour
         {
             textLines[i].Trim();
         }
-
-
-
-
-        if (isActive) //FROM: Activate at textLine 
-        {
-            EnableTextBox();
-        }
-        else
-        {
-            DisableTextBox();
-        }
+        */
+        DisableTextBox();// makes sure it doesn't start appeared on the screen
 
     }
 
@@ -77,11 +67,17 @@ public class TextBoxManager : MonoBehaviour
         {
             if (!isTyping)
             {
+                if (currentLine == textLines.Length - 1)
+                {
+                    DisableTextBox();
+                    return;
+                }
                 currentLine += 1;
                 if (checkSwitch())
                 {
-                    currentLine += 1;
-                    setCharacterNumber(textLines[currentLine]);
+                    int space = textLines[currentLine].IndexOf(" ");
+                    string person = textLines[currentLine].Substring(space + 1, textLines[currentLine].Length);
+                    setCharacterNumber(person);
                     animator.SetInteger("CharacterNumber", characterNum);
                     currentLine += 1;
                 }
@@ -91,17 +87,16 @@ public class TextBoxManager : MonoBehaviour
                     currentLine += 1;
 
                 }
-                if (currentLine == endAtLine)
+                if (currentLine == textLines.Length - 1)
                 {
                     DisableTextBox();
+                    return;
                 }
-                else
-                {
-                    StartCoroutine(TextScroll(textLines[currentLine]));
-                }
+                StartCoroutine(TextScroll(textLines[currentLine]));
+
             }
 
-            else if (isTyping && !cancelTyping)
+            else if (!cancelTyping)
             {
                 cancelTyping = true;
             }
@@ -136,18 +131,23 @@ public class TextBoxManager : MonoBehaviour
         {
             StartCoroutine(TextScroll(textLines[currentLine]));
         }
+        else
+        {
+            DisableTextBox();
+        }
 
     }
 
-
     public bool checkSwitch()
     {
-        return textLines[currentLine].Equals("(switch)");
+        int space = textLines[currentLine].IndexOf(" ");
+        return textLines[currentLine].Substring(0, space).Equals("(switch)");
     }
 
     public bool checkEvent()
     {
-        return textLines[currentLine].Equals("(event)");
+        int space = textLines[currentLine].IndexOf(" ");
+        return textLines[currentLine].Substring(0, space).Equals("(event)");
     }
 
     public void setCharacterNumber(string line)
@@ -174,7 +174,7 @@ public class TextBoxManager : MonoBehaviour
     {
         if (theText != null)
         {
-            textLines = new string[1];
+            //textLines = new string[1];
             textLines = (theText.text.Split('\n'));
         }
     }

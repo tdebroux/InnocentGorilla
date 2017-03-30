@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MoveEventCommands : MonoBehaviour
 {
@@ -64,9 +62,9 @@ public class MoveEventCommands : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        float[] currentXs = { x0, x1, x2, x3, x4, x5, x6, x7 };
-        float[] currentYs = { y0, y1, y2, y3, y4, y5, y6, y7 };
-        int[] currentDir = { dir0, dir1, dir2, dir3, dir4, dir5, dir6, dir7 };
+        float[] currentXs = new float[8] { x0, x1, x2, x3, x4, x5, x6, x7 };
+        float[] currentYs = new float[8] { y0, y1, y2, y3, y4, y5, y6, y7 };
+        int[] currentDir = new int[8] { dir0, dir1, dir2, dir3, dir4, dir5, dir6, dir7 };
 
         tBoxM = FindObjectOfType<TextBoxManager>();
         i = 0;
@@ -76,7 +74,7 @@ public class MoveEventCommands : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
         if (tBoxM.isAnEvent)
         {
             // Decide Walk or Turn
@@ -84,10 +82,10 @@ public class MoveEventCommands : MonoBehaviour
             {
                 canMove = true;
                 //Decide X or Y
-                if(currentXs[i] != 0)
+                if (currentXs[i] != 0)
                 {
                     // Decide left or right
-                    if(transform.position.x < currentXs[i])
+                    if (transform.position.x < currentXs[i])
                     {
                         // walks RIGHT until it reaches the X_i position
                         currentDir[i] = 2;
@@ -96,7 +94,9 @@ public class MoveEventCommands : MonoBehaviour
                             canMove = false;
                             i++;
                         }
-                    } else {
+                    }
+                    else
+                    {
                         currentDir[i] = 4;
                         // walks LEFT until it reaches the X_i position
                         if (transform.position.x <= currentXs[i])
@@ -105,7 +105,7 @@ public class MoveEventCommands : MonoBehaviour
                             i++;
                         }
                     }
-                    
+
                 }
                 else if (currentYs[i] != 0)
                 {
@@ -136,40 +136,40 @@ public class MoveEventCommands : MonoBehaviour
                     print("ERROR!!! Should not have a value for both x_i & y_i");
                 }
             }
-          
-        // The actual movement
-        isMoving = false;
-        moveVelocityX = 0;
-        moveVelocityY = 0;
-        GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocityX, moveVelocityY);
-        if (canMove)
-        {
-            isMoving = true;
-            if (currentDir[i] == 1)
+
+            // The actual movement
+            isMoving = false;
+            moveVelocityX = 0;
+            moveVelocityY = 0;
+            GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocityX, moveVelocityY);
+            if (canMove)
             {
-                moveVelocityY = walkSpeed * 3;
+                isMoving = true;
+                if (currentDir[i] == 1)
+                {
+                    moveVelocityY = walkSpeed * 3;
+                }
+                if (currentDir[i] == 3)
+                {
+                    moveVelocityY = -walkSpeed * 3;
+
+                }
+
+                if (currentDir[i] == 2)
+                {
+                    moveVelocityX = -walkSpeed * 4;
+
+                }
+
+                if (currentDir[i] == 4)
+                {
+                    moveVelocityX = walkSpeed * 4;
+
+                }
+                GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocityX, moveVelocityY) * Time.deltaTime;
             }
-            if (currentDir[i] == 3)
-            {
-                moveVelocityY = -walkSpeed * 3;
-
-            }
-
-            if (currentDir[i] == 2)
-            {
-                moveVelocityX = -walkSpeed * 4;
-
-            }
-
-            if (currentDir[i] == 4)
-            {
-                moveVelocityX = walkSpeed * 4;
-
-            }
-            GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocityX, moveVelocityY) * Time.deltaTime;
-        }
-        animator.SetBool("IsMoving", isMoving);
-        animator.SetInteger("WalkDirection", currentDir[i]);
+            animator.SetBool("IsMoving", isMoving);
+            animator.SetInteger("WalkDirection", currentDir[i]);
         }
     }
 }

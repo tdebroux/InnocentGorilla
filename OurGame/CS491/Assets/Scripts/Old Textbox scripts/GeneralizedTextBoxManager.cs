@@ -29,7 +29,7 @@ public class GeneralizedTextBoxManager : MonoBehaviour
     public int characterNum;
 
     int i = 0;
-   
+
 
     // Use this for initialization
     void Start()
@@ -69,13 +69,13 @@ public class GeneralizedTextBoxManager : MonoBehaviour
             return;
         }
 
-        i++; 
-        if ( i == 1)
+        i++;
+        if (i == 1)
         {
             generateLines();
 
         }
-    
+
         //theText.text = textLines[currentLine];
 
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.E))
@@ -83,38 +83,38 @@ public class GeneralizedTextBoxManager : MonoBehaviour
             if (!isTyping)
             {
                 currentLine += 1;
-               
-                    if (moveEvent())
-                    {
-                        //trigger event in "MoveEventCommands" script
-                        currentLine++;
-                    }
-                    else if (checkSwitch())
-                    {
-                        //switch image sprite
-                        if (textLines[currentLine].Substring(9).Trim().Equals("Douglas"))
-                        {
-                            characterNum = 2;
-                        }
-                        else if (textLines[currentLine].Substring(9).Trim().Equals("Player"))
-                        {
-                            characterNum = 1;
-                        }
-                        currentLine++;
-                  
-                    }
-                    
-                    if (currentLine > endAtLine)
-                    {
-                        DisableTextBox();
-                    }
-                    else
-                    {
-                        StartCoroutine(TextScroll(textLines[currentLine]));
-                    }
-                    animator.SetInteger("CharacterNumber", characterNum);
+
+                if (moveEvent())
+                {
+                    //trigger event in "MoveEventCommands" script
+                    currentLine++;
                 }
-          
+                else if (checkSwitch())
+                {
+                    //switch image sprite
+                    if (textLines[currentLine].Substring(9).Trim().Equals("Douglas"))
+                    {
+                        characterNum = 2;
+                    }
+                    else if (textLines[currentLine].Substring(9).Trim().Equals("Player"))
+                    {
+                        characterNum = 1;
+                    }
+                    currentLine++;
+
+                }
+
+                if (currentLine > endAtLine)
+                {
+                    DisableTextBox();
+                }
+                else
+                {
+                    StartCoroutine(TextScroll(textLines[currentLine]));
+                }
+                animator.SetInteger("CharacterNumber", characterNum);
+            }
+
             else if (isTyping && !cancelTyping)
             {
                 cancelTyping = true;
@@ -157,7 +157,7 @@ public class GeneralizedTextBoxManager : MonoBehaviour
         print(textLines.Length);
         print(isActive);
         return textLines[currentLine].Substring(0, 7).Equals("(event)");
-        
+
     }
 
     public bool checkSwitch()
