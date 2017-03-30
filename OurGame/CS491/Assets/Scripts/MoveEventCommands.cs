@@ -62,9 +62,9 @@ public class MoveEventCommands : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        float[] currentXs = new float[8] { x0, x1, x2, x3, x4, x5, x6, x7 };
-        float[] currentYs = new float[8] { y0, y1, y2, y3, y4, y5, y6, y7 };
-        int[] currentDir = new int[8] { dir0, dir1, dir2, dir3, dir4, dir5, dir6, dir7 };
+        currentXs = new float[8] { x0, x1, x2, x3, x4, x5, x6, x7 };
+        currentYs = new float[8] { y0, y1, y2, y3, y4, y5, y6, y7 };
+        currentDir = new int[8] { dir0, dir1, dir2, dir3, dir4, dir5, dir6, dir7 };
 
         tBoxM = FindObjectOfType<TextBoxManager>();
         i = 0;
@@ -77,9 +77,14 @@ public class MoveEventCommands : MonoBehaviour
 
         if (tBoxM.isAnEvent)
         {
+            print(i + " EVENT " + currentDir[i]);
             // Decide Walk or Turn
-            if (currentDir[i] == 0) // if it is zero, we're walkin'!
+            if (currentDir[i] == 0)
             {
+                animator.SetInteger("WalkDirection", currentDir[i]);
+            }
+            else
+            { // if it is zero, we're walkin'!
                 canMove = true;
                 //Decide X or Y
                 if (currentXs[i] != 0)
@@ -168,8 +173,8 @@ public class MoveEventCommands : MonoBehaviour
                 }
                 GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocityX, moveVelocityY) * Time.deltaTime;
             }
-            animator.SetBool("IsMoving", isMoving);
-            animator.SetInteger("WalkDirection", currentDir[i]);
         }
+        animator.SetBool("IsMoving", isMoving);
+
     }
 }

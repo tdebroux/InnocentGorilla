@@ -15767,15 +15767,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9db8f4c4a7ef5244b22754d888ef3b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dir0: 0
+  dir0: 4
   x0: 0
   y0: 13
   dir1: 0
   x1: 170
   y1: 0
-  dir2: 3
+  dir2: 0
   x2: 0
-  y2: 0
+  y2: 13
   dir3: 4
   x3: 0
   y3: 0

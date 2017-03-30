@@ -39,17 +39,7 @@ public class TextBoxManager : MonoBehaviour
         animator = GetComponent<Animator>(); // to switch sprite heads
         animator.SetInteger("CharacterNumber", characterNum);
         endAtLine = textLines.Length - 1;
-        /*
-        if (textFile != null)
-        {
-            textLines = (textFile.text.Split('\n'));
-        }
 
-        for (int i = 0; i < textLines.Length; i++) //removes spaces
-        {
-            textLines[i].Trim();
-        }
-        */
         DisableTextBox();// makes sure it doesn't start appeared on the screen
 
     }
@@ -61,8 +51,6 @@ public class TextBoxManager : MonoBehaviour
             return;
         }
 
-        //theText.text = textLines[currentLine];
-
         if (Input.GetKeyDown(KeyCode.Return))
         {
             if (!isTyping)
@@ -73,20 +61,22 @@ public class TextBoxManager : MonoBehaviour
                     return;
                 }
                 currentLine += 1;
-                if (checkSwitch())
+
+                if (checkEvent())
+                {
+                    isAnEvent = true;
+                    currentLine += 1;
+                }
+                else if (checkSwitch())
                 {
                     int space = textLines[currentLine].IndexOf(" ");
-                    string person = textLines[currentLine].Substring(space + 1, textLines[currentLine].Length);
+                    int len = textLines[currentLine].Length;
+                    string person = textLines[currentLine].Substring(space + 1);
                     setCharacterNumber(person);
                     animator.SetInteger("CharacterNumber", characterNum);
                     currentLine += 1;
                 }
-                else if (checkEvent())
-                {
-                    isAnEvent = true;
-                    currentLine += 1;
 
-                }
                 if (currentLine == textLines.Length - 1)
                 {
                     DisableTextBox();
@@ -146,8 +136,7 @@ public class TextBoxManager : MonoBehaviour
 
     public bool checkEvent()
     {
-        int space = textLines[currentLine].IndexOf(" ");
-        return textLines[currentLine].Substring(0, space).Equals("(event)");
+        return textLines[currentLine].Trim().Equals("(event)");
     }
 
     public void setCharacterNumber(string line)
@@ -176,6 +165,10 @@ public class TextBoxManager : MonoBehaviour
         {
             //textLines = new string[1];
             textLines = (theText.text.Split('\n'));
+        }
+        for (int i = 0; i < textLines.Length; i++)
+        {
+            textLines[i].Trim();
         }
     }
 
