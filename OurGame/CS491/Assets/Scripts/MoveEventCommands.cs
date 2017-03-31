@@ -35,17 +35,12 @@ public class MoveEventCommands : MonoBehaviour
     public float x7;
     public float y7;
 
-
     private float[] currentXs;
     private float[] currentYs;
     private int[] currentDir;
 
-
-
-
     bool reachX1;
     bool reachY1;
-
 
     private bool isMoving;
     public float walkSpeed;
@@ -77,25 +72,34 @@ public class MoveEventCommands : MonoBehaviour
 
         if (tBoxM.isAnEvent)
         {
-            print(i + " EVENT " + currentDir[i]);
+            print("EVENT");
+            tBoxM.isAnEvent = false;
+            print("event2");
             // Decide Walk or Turn
-            if (currentDir[i] == 0)
+            if (currentDir[i] != 0)
             {
                 animator.SetInteger("WalkDirection", currentDir[i]);
             }
             else
             { // if it is zero, we're walkin'!
                 canMove = true;
+                print("setting canMove to true: " + canMove);
                 //Decide X or Y
-                if (currentXs[i] != 0)
+                if (currentXs[i] != 0 && currentYs[i] != 0)
+                {
+                    print("ERROR!!!Should not have a value for both x_i &y_i");
+                }
+                else if (currentXs[i] != 0)
                 {
                     // Decide left or right
                     if (transform.position.x < currentXs[i])
                     {
                         // walks RIGHT until it reaches the X_i position
                         currentDir[i] = 2;
+                        print("WalkingRIGHT");
                         if (transform.position.x >= currentXs[i])
                         {
+                            print("STOP");
                             canMove = false;
                             i++;
                         }
@@ -136,12 +140,11 @@ public class MoveEventCommands : MonoBehaviour
                         }
                     }
                 }
-                else
-                {
-                    print("ERROR!!! Should not have a value for both x_i & y_i");
-                }
+
             }
 
+            print("Done in big if");
+            print("canmove: " + canMove);
             // The actual movement
             isMoving = false;
             moveVelocityX = 0;
@@ -149,6 +152,7 @@ public class MoveEventCommands : MonoBehaviour
             GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocityX, moveVelocityY);
             if (canMove)
             {
+                print("incanmove");
                 isMoving = true;
                 if (currentDir[i] == 1)
                 {
@@ -162,8 +166,16 @@ public class MoveEventCommands : MonoBehaviour
 
                 if (currentDir[i] == 2)
                 {
+                    print("WHERELOOPIS");
                     moveVelocityX = -walkSpeed * 4;
-
+                    
+                    while (transform.position.x < currentXs[i])
+                    {
+                        print("loop");
+                        
+                        GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocityX, moveVelocityY) * Time.deltaTime;
+                    }
+                    
                 }
 
                 if (currentDir[i] == 4)
@@ -171,10 +183,33 @@ public class MoveEventCommands : MonoBehaviour
                     moveVelocityX = walkSpeed * 4;
 
                 }
-                GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocityX, moveVelocityY) * Time.deltaTime;
+
             }
         }
         animator.SetBool("IsMoving", isMoving);
+        /*
+        if (isMoving)
+        {
+            if (currentDir[i] == 1)
+            {
+                
+            }
+            if (currentDir[i] == 3)
+            {
 
+            }
+
+            if (currentDir[i] == 2)
+            {
+                
+                isMoving = false;
+            }
+
+            if (currentDir[i] == 4)
+            {
+
+            }
+        }
+        */
     }
 }

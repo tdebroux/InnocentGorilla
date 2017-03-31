@@ -130,8 +130,12 @@ public class TextBoxManager : MonoBehaviour
 
     public bool checkSwitch()
     {
-        int space = textLines[currentLine].IndexOf(" ");
-        return textLines[currentLine].Substring(0, space).Equals("(switch)");
+        if (textLines[currentLine].Contains(" "))
+        {
+            int space = textLines[currentLine].IndexOf(" ");
+            return textLines[currentLine].Substring(0, space).Equals("(switch)");
+        }
+        return false;
     }
 
     public bool checkEvent()
