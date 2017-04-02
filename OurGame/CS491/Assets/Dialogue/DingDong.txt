@@ -1,18 +1,20 @@
 Ding Dong!!! I'm a Rock
 An Event is being triggered right now
 (event)
+(event)
 (switch) Douglas
  WOW!!!! I can't believe it!
 Event 2 has been triggered
 (event)
+(event)
 (switch) Player
 Boys will be boys. Rocks will be... uhhhhhhh h  h hh hu  uhuh   . . . 
-(event)
 (switch) Douglas
 I'm the boss! Watch me spin!!
 (event)
 (event)
-(event)
+dogs!!!
+...
 (event)
 (switch) Player
 There are several letters here from local groups asking for aid in organizing and funding for the anniversary of our town's founding.
@@ -22,6 +24,7 @@ hm...okay... do you have have hands?
 I have, yes.
 (switch) Douglas
 C YA !
+ha!
 (event)
-ha!
-ha!
+baseball!
+vasd

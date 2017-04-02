@@ -28,7 +28,7 @@ public class TextBoxManager : MonoBehaviour
 
     Animator animator;
     public int characterNum;
-
+    MoveEventCommands eventObj;
     public bool isAnEvent = false;
 
 
@@ -38,6 +38,7 @@ public class TextBoxManager : MonoBehaviour
         player = FindObjectOfType<Movement>(); // to freeze player
         animator = GetComponent<Animator>(); // to switch sprite heads
         animator.SetInteger("CharacterNumber", characterNum);
+        eventObj = FindObjectOfType<MoveEventCommands>();
         endAtLine = textLines.Length - 1;
 
         DisableTextBox();// makes sure it doesn't start appeared on the screen
@@ -50,45 +51,56 @@ public class TextBoxManager : MonoBehaviour
         {
             return;
         }
-
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (!eventObj.canMove)
         {
-            if (!isTyping)
+            if (Input.GetKeyDown(KeyCode.Return))
             {
-                if (currentLine == textLines.Length - 1)
+                if (!isTyping)
                 {
-                    DisableTextBox();
-                    return;
-                }
-                currentLine += 1;
-
-                if (checkEvent())
-                {
-                    isAnEvent = true;
+                    if (currentLine == textLines.Length - 1)
+                    {
+                        DisableTextBox();
+                        return;
+                    }
                     currentLine += 1;
+
+                    if (checkEvent(currentLine))
+                    {
+                        isAnEvent = true;
+                        // for consecutive events
+                        if (checkEvent(currentLine + 1))
+                        {
+                            isAnEvent = true;
+                            return;
+                        }
+                        else
+                        {
+                            return;
+                        }
+                    }
+                    else if (checkSwitch())
+                    {
+                        int space = textLines[currentLine].IndexOf(" ");
+                        int len = textLines[currentLine].Length;
+                        string person = textLines[currentLine].Substring(space + 1);
+                        setCharacterNumber(person);
+                        animator.SetInteger("CharacterNumber", characterNum);
+                        currentLine += 1;
+                    }
+
+                    if (currentLine == textLines.Length - 1)
+                    {
+                        DisableTextBox();
+                        return;
+                    }
+                    StartCoroutine(TextScroll(textLines[currentLine]));
+
                 }
-                else if (checkSwitch())
+
+                else if (!cancelTyping)
                 {
-                    int space = textLines[currentLine].IndexOf(" ");
-                    int len = textLines[currentLine].Length;
-                    string person = textLines[currentLine].Substring(space + 1);
-                    setCharacterNumber(person);
-                    animator.SetInteger("CharacterNumber", characterNum);
-                    currentLine += 1;
+                    cancelTyping = true;
                 }
-
-                if (currentLine == textLines.Length - 1)
-                {
-                    DisableTextBox();
-                    return;
-                }
-                StartCoroutine(TextScroll(textLines[currentLine]));
-
-            }
-
-            else if (!cancelTyping)
-            {
-                cancelTyping = true;
             }
         }
     }
@@ -138,9 +150,9 @@ public class TextBoxManager : MonoBehaviour
         return false;
     }
 
-    public bool checkEvent()
+    public bool checkEvent(int line)
     {
-        return textLines[currentLine].Trim().Equals("(event)");
+        return textLines[line].Trim().Equals("(event)");
     }
 
     public void setCharacterNumber(string line)

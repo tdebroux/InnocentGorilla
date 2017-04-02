@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class MoveEventCommands : MonoBehaviour
 {
@@ -48,7 +49,7 @@ public class MoveEventCommands : MonoBehaviour
     Animator animator;
     float moveVelocityX;
     float moveVelocityY;
-    private bool canMove;
+    public bool canMove;
     private int rndInt;
     bool timesUp;
     int i;
@@ -72,18 +73,22 @@ public class MoveEventCommands : MonoBehaviour
 
         if (tBoxM.isAnEvent)
         {
-            print("EVENT");
-            tBoxM.isAnEvent = false;
-            print("event2");
+            tBoxM.isAnEvent = false; //might be our skip event problems (maybe, tommy don't think so)
             // Decide Walk or Turn
             if (currentDir[i] != 0)
             {
                 animator.SetInteger("WalkDirection", currentDir[i]);
+                canMove = false;
+                moveVelocityX = 0;
+                moveVelocityY = 0;
+                isMoving = false;
+                transform.Translate(new Vector2(moveVelocityX, moveVelocityY) * Time.deltaTime);
+
+                i++;
             }
             else
             { // if it is zero, we're walkin'!
                 canMove = true;
-                print("setting canMove to true: " + canMove);
                 //Decide X or Y
                 if (currentXs[i] != 0 && currentYs[i] != 0)
                 {
@@ -92,124 +97,137 @@ public class MoveEventCommands : MonoBehaviour
                 else if (currentXs[i] != 0)
                 {
                     // Decide left or right
-                    if (transform.position.x < currentXs[i])
+                    if (transform.position.x <= currentXs[i])
                     {
                         // walks RIGHT until it reaches the X_i position
                         currentDir[i] = 2;
-                        print("WalkingRIGHT");
-                        if (transform.position.x >= currentXs[i])
-                        {
-                            print("STOP");
-                            canMove = false;
-                            i++;
-                        }
+                        animator.SetInteger("WalkDirection", currentDir[i]);
+                        
                     }
                     else
                     {
                         currentDir[i] = 4;
                         // walks LEFT until it reaches the X_i position
-                        if (transform.position.x <= currentXs[i])
-                        {
-                            canMove = false;
-                            i++;
-                        }
+                        animator.SetInteger("WalkDirection", currentDir[i]);
+                        
                     }
 
                 }
                 else if (currentYs[i] != 0)
                 {
                     // Decide up or down
-                    if (transform.position.y < currentYs[i])
+                    if (transform.position.y <= currentYs[i])
                     {
                         // walks UP until it reaches the Y_i position
                         currentDir[i] = 1;
-                        if (transform.position.y >= currentYs[i])
-                        {
-                            canMove = false;
-                            i++;
-                        }
+                        animator.SetInteger("WalkDirection", currentDir[i]);
+                      
                     }
                     else
                     {
                         currentDir[i] = 3;
                         // walks DOWN until it reaches the Y_i position
-                        if (transform.position.y <= currentYs[i])
-                        {
-                            canMove = false;
-                            i++;
-                        }
+                        animator.SetInteger("WalkDirection", currentDir[i]);
+                       
                     }
-                }
-
-            }
-
-            print("Done in big if");
-            print("canmove: " + canMove);
-            // The actual movement
-            isMoving = false;
-            moveVelocityX = 0;
-            moveVelocityY = 0;
-            GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocityX, moveVelocityY);
-            if (canMove)
-            {
-                print("incanmove");
-                isMoving = true;
-                if (currentDir[i] == 1)
-                {
-                    moveVelocityY = walkSpeed * 3;
-                }
-                if (currentDir[i] == 3)
-                {
-                    moveVelocityY = -walkSpeed * 3;
-
-                }
-
-                if (currentDir[i] == 2)
-                {
-                    print("WHERELOOPIS");
-                    moveVelocityX = -walkSpeed * 4;
-                    
-                    while (transform.position.x < currentXs[i])
-                    {
-                        print("loop");
-                        
-                        GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocityX, moveVelocityY) * Time.deltaTime;
-                    }
-                    
-                }
-
-                if (currentDir[i] == 4)
-                {
-                    moveVelocityX = walkSpeed * 4;
-
                 }
 
             }
         }
-        animator.SetBool("IsMoving", isMoving);
-        /*
-        if (isMoving)
+        // The actual movement
+        if (canMove)
         {
+            isMoving = true;
             if (currentDir[i] == 1)
             {
-                
+                moveVelocityY = walkSpeed * 3;
+                if (transform.position.y > currentYs[i])
+                {
+                    canMove = false;
+
+                    isMoving = false;
+                    canMove = false;
+                    moveVelocityX = 0;
+                    moveVelocityY = 0;
+                    i++;
+                    if (tBoxM.checkEvent(tBoxM.currentLine + 1))
+                    {
+                      
+                        tBoxM.currentLine += 1;
+                        tBoxM.isAnEvent = true;
+                    }
+                }
+                transform.Translate(new Vector2(moveVelocityX, moveVelocityY) * Time.deltaTime);
             }
-            if (currentDir[i] == 3)
+            else if (currentDir[i] == 3)
             {
+                moveVelocityY = -walkSpeed * 3;
+                if (transform.position.y < currentYs[i])
+                {
+                    canMove = false;
 
+                    isMoving = false;
+                    moveVelocityX = 0;
+                    moveVelocityY = 0;
+                    i++;
+                    if (tBoxM.checkEvent(tBoxM.currentLine + 1))
+                    {
+                        
+                        tBoxM.currentLine += 1;
+                        tBoxM.isAnEvent = true;
+                    }
+                }
+                transform.Translate(new Vector2(moveVelocityX, moveVelocityY) * Time.deltaTime);
             }
 
-            if (currentDir[i] == 2)
+            else if (currentDir[i] == 2)
             {
-                
-                isMoving = false;
+                moveVelocityX = walkSpeed * 4;
+                if (transform.position.x > currentXs[i])
+                {
+                    canMove = false;
+
+                    isMoving = false;
+                    moveVelocityX = 0;
+                    moveVelocityY = 0;
+                    i++;
+                    if (tBoxM.checkEvent(tBoxM.currentLine + 1))
+                    {
+                        
+                        tBoxM.currentLine += 1;
+                        tBoxM.isAnEvent = true;
+                    }
+                }
+                transform.Translate(new Vector2(moveVelocityX, moveVelocityY) * Time.deltaTime);
             }
 
-            if (currentDir[i] == 4)
+            else if (currentDir[i] == 4)
             {
+                moveVelocityX = -walkSpeed * 4;
+                if (transform.position.x < currentXs[i])
+                {
+                    canMove = false;
 
+                    isMoving = false;
+                    moveVelocityX = 0;
+                    moveVelocityY = 0;
+                    i++;
+                    if (tBoxM.checkEvent(tBoxM.currentLine + 1))
+                    {
+                      
+                        tBoxM.currentLine += 1;
+                        tBoxM.isAnEvent = true;
+                    }
+                }
+                transform.Translate(new Vector2(moveVelocityX, moveVelocityY) * Time.deltaTime);
             }
         }
-        */
+        animator.SetBool("isWalking", isMoving);
+    }
+
+    public IEnumerator CantMoveForTime(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        canMove = true;
     }
 }
