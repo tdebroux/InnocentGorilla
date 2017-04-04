@@ -28,6 +28,7 @@ public class NonPlayerMovement : MonoBehaviour
     bool isHittingTimesUp;
     bool changeDirTimesUp;
     TextBoxManager eventcommander;
+    bool stopMove;
     //Transform weber;
     // Use this for initialization
     void Start()
@@ -42,6 +43,14 @@ public class NonPlayerMovement : MonoBehaviour
         timesUpIdle = true;
         eventcommander = FindObjectOfType<TextBoxManager>();
         currentDir = 1;
+    }
+    public void stopMovement()
+    {
+        stopMove = true;
+    }
+    public void startMovement()
+    {
+        stopMove = false;
     }
     // Update is called once per frame
     void Update()
@@ -66,11 +75,7 @@ public class NonPlayerMovement : MonoBehaviour
         }
         */
 
-        if (eventcommander.isAnEvent)
-        {
-
-        }
-        else
+        if (!stopMove)
         {
             // outta the play pen OR hitting a wall
             if (outOfBounds)
@@ -144,79 +149,90 @@ public class NonPlayerMovement : MonoBehaviour
 
     public IEnumerator WalkForTime(float seconds)
     {
-
-        yield return new WaitForSeconds(seconds);
-        timesUpWalk = true;
-        canMove = false;
+        if (!stopMove)
+        {
+            yield return new WaitForSeconds(seconds);
+            timesUpWalk = true;
+            canMove = false;
+        }
     }
 
     public IEnumerator IdleForTime(float seconds)
     {
-
-        yield return new WaitForSeconds(seconds);
-        timesUpIdle = true;
-        canMove = true;
+        if (!stopMove)
+        {
+            yield return new WaitForSeconds(seconds);
+            timesUpIdle = true;
+            canMove = true;
+        }
     }
 
     public IEnumerator changeDirInTime(float seconds)
     {
-        //print("changeDir");
-        yield return new WaitForSeconds(seconds);
-        currentDir = Random.Range(1, 5);
-        changeDirTimesUp = true;
+        if (!stopMove)
+        {
+            //print("changeDir");
+            yield return new WaitForSeconds(seconds);
+            currentDir = Random.Range(1, 5);
+            changeDirTimesUp = true;
+        }
     }
 
     public IEnumerator saveAVector(float seconds)
     {
-
-        yield return new WaitForSeconds(seconds);
-        print("saveOldPos");
-        //  oldPosition = weber.position;
-        SaveAVectorTimesUp = true;
-
+        if (!stopMove)
+        {
+            yield return new WaitForSeconds(seconds);
+            print("saveOldPos");
+            //  oldPosition = weber.position;
+            SaveAVectorTimesUp = true;
+        }
     }
 
     public IEnumerator checkIsHitting(float seconds)
     {
-
-        yield return new WaitForSeconds(seconds);
-        print("checkIsHitting");
-        isHitting = HittingTheWall();
-        isHittingTimesUp = true;
-
+        if (!stopMove)
+        {
+            yield return new WaitForSeconds(seconds);
+            print("checkIsHitting");
+            isHitting = HittingTheWall();
+            isHittingTimesUp = true;
+        }
     }
 
     public IEnumerator WalkOtherDirectonForSeconds(float seconds)
     {
-        if (currentDir == 1)
+        if (!stopMove)
         {
-            moveVelocityY = -walkSpeed * 3;
-            currentDir = 3;
+            if (currentDir == 1)
+            {
+                moveVelocityY = -walkSpeed * 3;
+                currentDir = 3;
+            }
+            else if (currentDir == 3)
+            {
+                moveVelocityY = walkSpeed * 3;
+                currentDir = 1;
+
+            }
+
+            else if (currentDir == 4)
+            {
+                moveVelocityX = walkSpeed * 4;
+                currentDir = 2;
+            }
+
+            else if (currentDir == 2)
+            {
+                moveVelocityX = -walkSpeed * 4;
+                currentDir = 4;
+            }
+            animator.SetInteger("WalkDirection", currentDir);
+            GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocityX, moveVelocityY) * Time.deltaTime;
+
+            outOfBounds = false;
+            yield return new WaitForSeconds(seconds);
         }
-        else if (currentDir == 3)
-        {
-            moveVelocityY = walkSpeed * 3;
-            currentDir = 1;
-
-        }
-
-        else if (currentDir == 4)
-        {
-            moveVelocityX = walkSpeed * 4;
-            currentDir = 2;
-        }
-
-        else if (currentDir == 2)
-        {
-            moveVelocityX = -walkSpeed * 4;
-            currentDir = 4;
-        }
-        animator.SetInteger("WalkDirection", currentDir);
-        GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocityX, moveVelocityY) * Time.deltaTime;
-
-        outOfBounds = false;
-        yield return new WaitForSeconds(seconds);
-
     }
 
     public bool HittingTheWall()

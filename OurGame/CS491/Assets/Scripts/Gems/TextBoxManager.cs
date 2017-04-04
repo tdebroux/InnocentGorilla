@@ -30,7 +30,7 @@ public class TextBoxManager : MonoBehaviour
     public int characterNum;
     MoveEventCommands eventObj;
     public bool isAnEvent = false;
-
+    NonPlayerMovement aiMovement;
 
     // Use this for initialization
     void Start()
@@ -87,9 +87,45 @@ public class TextBoxManager : MonoBehaviour
                         animator.SetInteger("CharacterNumber", characterNum);
                         currentLine += 1;
                     }
+                    else if (checkStartEvent())
+                    {
+                        int space = textLines[currentLine].IndexOf(" ");
+                        string person = textLines[currentLine].Substring(space + 1);
+                        //if this person stop their random movement
+                        if (person.Equals("Douglas"))
+                        {
+                            aiMovement = GameObject.FindWithTag("Douglas").GetComponent<NonPlayerMovement>();
+                            aiMovement.stopMovement();
+                        }
+                        else if (person.Equals("Sarah"))
+                        {
+                            aiMovement = GameObject.FindWithTag("Sarah").GetComponent<NonPlayerMovement>();
+                            aiMovement.stopMovement();
+                        }
+                        else if (person.Equals("Ernie"))
+                        {
+                            aiMovement = GameObject.FindWithTag("Ernie").GetComponent<NonPlayerMovement>();
+                            aiMovement.stopMovement();
+                        }
+                        else if (person.Equals("Eric"))
+                        {
+                            aiMovement = GameObject.FindWithTag("Eric").GetComponent<NonPlayerMovement>();
+                            aiMovement.stopMovement();
+                        }
+                        else if (person.Equals("Weber"))
+                        {
+                            aiMovement = GameObject.FindWithTag("Weber").GetComponent<NonPlayerMovement>();
+                            aiMovement.stopMovement();
+                        }
+                    }
 
                     if (currentLine == textLines.Length - 1)
                     {
+                        if(aiMovement != null)
+                        {
+                            aiMovement.startMovement();
+                            aiMovement = null;
+                        }
                         DisableTextBox();
                         return;
                     }
@@ -120,6 +156,7 @@ public class TextBoxManager : MonoBehaviour
         isTyping = false;
         cancelTyping = false;
     }
+
     public void EnableTextBox() // from the web DO NOT MESS WITH
     {
 
@@ -146,6 +183,16 @@ public class TextBoxManager : MonoBehaviour
         {
             int space = textLines[currentLine].IndexOf(" ");
             return textLines[currentLine].Substring(0, space).Equals("(switch)");
+        }
+        return false;
+    }
+
+    public bool checkStartEvent()
+    {
+        if (textLines[currentLine].Contains(")"))
+        {
+            int index = textLines[currentLine].IndexOf(")");
+            return textLines[currentLine].Trim().Substring(0, index).Equals("(startevents)");
         }
         return false;
     }
