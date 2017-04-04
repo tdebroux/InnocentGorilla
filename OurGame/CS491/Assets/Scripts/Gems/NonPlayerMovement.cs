@@ -28,22 +28,25 @@ public class NonPlayerMovement : MonoBehaviour
     bool isHittingTimesUp;
     bool changeDirTimesUp;
     TextBoxManager eventcommander;
-    Transform weber;
+    //Transform weber;
     // Use this for initialization
     void Start()
     {
         changeDirTimesUp = true;
         isHittingTimesUp = true;
         SaveAVectorTimesUp = true;
-        weber = GameObject.FindGameObjectWithTag("Weber").transform;
+     // weber = GameObject.FindGameObjectWithTag("Weber").transform;
+
         animator = GetComponent<Animator>();
         timesUpWalk = false;
         timesUpIdle = true;
         eventcommander = FindObjectOfType<TextBoxManager>();
+        currentDir = 1;
     }
     // Update is called once per frame
     void Update()
     {
+        
         /*
         //save a vector
         if (SaveAVectorTimesUp)
@@ -62,12 +65,12 @@ public class NonPlayerMovement : MonoBehaviour
             }
         }
         */
-
-        if (!eventcommander.isAnEvent)
+        
+       if (!eventcommander.isAnEvent)
         {
 
-            // outta the play pen OR hitting a wall
-            if (outOfBounds)
+     // outta the play pen OR hitting a wall
+        if (outOfBounds)
             {
                 print(this.name);
                 StartCoroutine("WalkOtherDirectonForSeconds", .7f);
@@ -94,9 +97,7 @@ public class NonPlayerMovement : MonoBehaviour
             }
 
             //reset isHitting
-            //isHitting = false;
-
-
+            //isHitting = false
 
             isMoving = false;
             moveVelocityX = 0;
@@ -136,7 +137,7 @@ public class NonPlayerMovement : MonoBehaviour
             // update position
             //currPosition = weber.position;
         }
-    }
+     }
 
     public IEnumerator WalkForTime(float seconds)
     {
@@ -167,7 +168,7 @@ public class NonPlayerMovement : MonoBehaviour
 
         yield return new WaitForSeconds(seconds);
         print("saveOldPos");
-        oldPosition = weber.position;
+      //  oldPosition = weber.position;
         SaveAVectorTimesUp = true;
 
     }
@@ -219,7 +220,7 @@ public class NonPlayerMovement : MonoBehaviour
     {
         if (currPosition == oldPosition)
         {
-            print(" H I T T I N G");
+            print(" H I T T I N G ");
         }
         return currPosition == oldPosition;
     }

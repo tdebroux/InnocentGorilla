@@ -4,24 +4,22 @@ using UnityEngine;
 
 public class NonPlayerBoundries : MonoBehaviour
 {
-    NonPlayerMovement bot;
+    
     // Use this for initialization
     void Start()
     {
-        bot = GameObject.FindObjectOfType<NonPlayerMovement>();
+        
     }
 
     // Update is called once per frame
-    void OnTriggerExit2D(Collider2D botCollider)
+    void OnTriggerExit2D(Collider2D npcCollider)
     {
-        if (botCollider.GetType().Equals(bot.GetType()))
+        NonPlayerMovement npc = npcCollider.GetComponent<NonPlayerMovement>();
+        if (npc != null)
         {
-
-        }
-        if (botCollider.name != "MainCharacter")
-        {
-            print("out");
-            bot.outOfBounds = true;
+            npc.GetComponent<NonPlayerMovement>();
+            print("out " + npc.name);
+            npc.outOfBounds = true;
         }
     }
 }
