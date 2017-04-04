@@ -1,0 +1,10 @@
+Hi!
+(switch) Douglas
+Hey Ding Dong!
+(switch) Player
+Hey.
+My dad is so good at basketball.
+(switch) Douglas
+I think you're great!
+(switch) Player
+Thanks! Bye!
