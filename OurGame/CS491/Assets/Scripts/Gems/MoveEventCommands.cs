@@ -131,7 +131,6 @@ public class MoveEventCommands : MonoBehaviour
                        
                     }
                 }
-
             }
         }
         // The actual movement

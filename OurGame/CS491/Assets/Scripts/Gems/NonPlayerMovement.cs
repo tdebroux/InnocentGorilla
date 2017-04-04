@@ -35,7 +35,7 @@ public class NonPlayerMovement : MonoBehaviour
         changeDirTimesUp = true;
         isHittingTimesUp = true;
         SaveAVectorTimesUp = true;
-     // weber = GameObject.FindGameObjectWithTag("Weber").transform;
+        // weber = GameObject.FindGameObjectWithTag("Weber").transform;
 
         animator = GetComponent<Animator>();
         timesUpWalk = false;
@@ -46,7 +46,7 @@ public class NonPlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
         /*
         //save a vector
         if (SaveAVectorTimesUp)
@@ -65,19 +65,22 @@ public class NonPlayerMovement : MonoBehaviour
             }
         }
         */
-        
-       if (!eventcommander.isAnEvent)
+
+        if (eventcommander.isAnEvent)
         {
 
-     // outta the play pen OR hitting a wall
-        if (outOfBounds)
+        }
+        else
+        {
+            // outta the play pen OR hitting a wall
+            if (outOfBounds)
             {
                 print(this.name);
                 StartCoroutine("WalkOtherDirectonForSeconds", .7f);
             }
             else
-            // actual movement
-            if (timesUpWalk) //hands off to Idle
+                // actual movement
+                if (timesUpWalk) //hands off to Idle
             {
                 timesUpWalk = false;
                 StartCoroutine("IdleForTime", timeIdle);
@@ -137,7 +140,7 @@ public class NonPlayerMovement : MonoBehaviour
             // update position
             //currPosition = weber.position;
         }
-     }
+    }
 
     public IEnumerator WalkForTime(float seconds)
     {
@@ -168,7 +171,7 @@ public class NonPlayerMovement : MonoBehaviour
 
         yield return new WaitForSeconds(seconds);
         print("saveOldPos");
-      //  oldPosition = weber.position;
+        //  oldPosition = weber.position;
         SaveAVectorTimesUp = true;
 
     }
