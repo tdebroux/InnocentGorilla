@@ -157,13 +157,29 @@ public class TextBoxManager : MonoBehaviour
 
     public void setCharacterNumber(string line)
     {
-        if (line.Equals("Douglas"))
+        if (line.Equals("Player"))
+        {
+            characterNum = 1;
+        }
+        else if (line.Equals("Douglas"))
         {
             characterNum = 2;
         }
-        else if (line.Equals("Player"))
+        else if (line.Equals("Weber"))
         {
-            characterNum = 1;
+            characterNum = 3;
+        }
+        else if (line.Equals("Ernie"))
+        {
+            characterNum = 4;
+        }
+        else if (line.Equals("Eric"))
+        {
+            characterNum = 5;
+        }
+        else if (line.Equals("Sarah"))
+        {
+            characterNum = 6;
         }
         //add more characters
     }
