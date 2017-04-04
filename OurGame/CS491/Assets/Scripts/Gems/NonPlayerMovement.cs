@@ -27,7 +27,7 @@ public class NonPlayerMovement : MonoBehaviour
     bool SaveAVectorTimesUp;
     bool isHittingTimesUp;
     bool changeDirTimesUp;
-
+    TextBoxManager eventcommander;
     Transform weber;
     // Use this for initialization
     void Start()
@@ -39,6 +39,7 @@ public class NonPlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         timesUpWalk = false;
         timesUpIdle = true;
+        eventcommander = FindObjectOfType<TextBoxManager>();
     }
     // Update is called once per frame
     void Update()
@@ -62,79 +63,84 @@ public class NonPlayerMovement : MonoBehaviour
         }
         */
 
-        // outta the play pen OR hitting a wall
-        if (outOfBounds)
+        if (!eventcommander.isAnEvent)
         {
-            StartCoroutine("WalkOtherDirectonForSeconds", .7f);
-        }
-        else
-        // actual movement
-        if (timesUpWalk) //hands off to Idle
-        {
-            timesUpWalk = false;
-            StartCoroutine("IdleForTime", timeIdle);
-        }
 
-        if (timesUpIdle) //hands off to Walk
-        {
-            StartCoroutine("WalkForTime", timeBetweenWalks);
-            timesUpIdle = false;
-        }
-
-        if (changeDirTimesUp) //hands off self
-        {
-           
-            StartCoroutine("changeDirInTime", timeTilChangeDir);
-            changeDirTimesUp = false;
-        }
-
-        //reset isHitting
-        //isHitting = false;
-
-
-
-        isMoving = false;
-        moveVelocityX = 0;
-        moveVelocityY = 0;
-        GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocityX, moveVelocityY);
-        if (canMove)
-        {
-            isMoving = true;
-            if (currentDir == 1)
+            // outta the play pen OR hitting a wall
+            if (outOfBounds)
             {
-                moveVelocityY = walkSpeed * 3;
+                print(this.name);
+                StartCoroutine("WalkOtherDirectonForSeconds", .7f);
             }
-            if (currentDir == 3)
+            else
+            // actual movement
+            if (timesUpWalk) //hands off to Idle
             {
-                moveVelocityY = -walkSpeed * 3;
-
+                timesUpWalk = false;
+                StartCoroutine("IdleForTime", timeIdle);
             }
 
-            if (currentDir == 4)
+            if (timesUpIdle) //hands off to Walk
             {
-                moveVelocityX = -walkSpeed * 4;
-
+                StartCoroutine("WalkForTime", timeBetweenWalks);
+                timesUpIdle = false;
             }
 
-            if (currentDir == 2)
+            if (changeDirTimesUp) //hands off self
             {
-                moveVelocityX = walkSpeed * 4;
 
+                StartCoroutine("changeDirInTime", timeTilChangeDir);
+                changeDirTimesUp = false;
             }
 
+            //reset isHitting
+            //isHitting = false;
+
+
+
+            isMoving = false;
+            moveVelocityX = 0;
+            moveVelocityY = 0;
+            GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocityX, moveVelocityY);
+            if (canMove)
+            {
+                isMoving = true;
+                if (currentDir == 1)
+                {
+                    moveVelocityY = walkSpeed * 3;
+                }
+                if (currentDir == 3)
+                {
+                    moveVelocityY = -walkSpeed * 3;
+
+                }
+
+                if (currentDir == 4)
+                {
+                    moveVelocityX = -walkSpeed * 4;
+
+                }
+
+                if (currentDir == 2)
+                {
+                    moveVelocityX = walkSpeed * 4;
+
+                }
+
+                animator.SetInteger("WalkDirection", currentDir);
+                GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocityX, moveVelocityY) * Time.deltaTime;
+            }
             animator.SetInteger("WalkDirection", currentDir);
-            GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocityX, moveVelocityY) * Time.deltaTime;
+            animator.SetBool("isWalking", isMoving);
+
+            // update position
+            //currPosition = weber.position;
         }
-        animator.SetInteger("WalkDirection", currentDir);
-        animator.SetBool("isWalking", isMoving);
-       
-        // update position
-        //currPosition = weber.position;
     }
 
     public IEnumerator WalkForTime(float seconds)
     {
-        
+
         yield return new WaitForSeconds(seconds);
         timesUpWalk = true;
         canMove = false;
@@ -142,7 +148,7 @@ public class NonPlayerMovement : MonoBehaviour
 
     public IEnumerator IdleForTime(float seconds)
     {
-       
+
         yield return new WaitForSeconds(seconds);
         timesUpIdle = true;
         canMove = true;
@@ -150,7 +156,7 @@ public class NonPlayerMovement : MonoBehaviour
 
     public IEnumerator changeDirInTime(float seconds)
     {
-        print("changeDir");
+        //print("changeDir");
         yield return new WaitForSeconds(seconds);
         currentDir = Random.Range(1, 5);
         changeDirTimesUp = true;
@@ -211,7 +217,7 @@ public class NonPlayerMovement : MonoBehaviour
 
     public bool HittingTheWall()
     {
-        if(currPosition == oldPosition)
+        if (currPosition == oldPosition)
         {
             print(" H I T T I N G");
         }
