@@ -26,10 +26,14 @@ public class ActivateTextAtLine : MonoBehaviour
     {
         if (waitForPress && Input.GetKeyDown(KeyCode.E)) //if you wanna go up and talk to something.
         {
-            theTextBox.ReloadScript(theText);
-            theTextBox.currentLine = startLine;
-            theTextBox.endAtLine = endLine;
-            theTextBox.EnableTextBox();
+            if(theText != null)
+            {
+                theTextBox.ReloadScript(theText);
+                theTextBox.currentLine = startLine;
+                theTextBox.endAtLine = endLine;
+                theTextBox.EnableTextBox();
+            }
+            
 
             if (destroyWhenActivated)
             {

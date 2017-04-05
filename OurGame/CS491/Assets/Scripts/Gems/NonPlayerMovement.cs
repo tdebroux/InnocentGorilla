@@ -55,7 +55,6 @@ public class NonPlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         /*
         //save a vector
         if (SaveAVectorTimesUp)
@@ -80,7 +79,6 @@ public class NonPlayerMovement : MonoBehaviour
             // outta the play pen OR hitting a wall
             if (outOfBounds)
             {
-                print(this.name);
                 StartCoroutine("WalkOtherDirectonForSeconds", .7f);
             }
             else

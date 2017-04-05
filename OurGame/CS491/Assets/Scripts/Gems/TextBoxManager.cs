@@ -13,7 +13,7 @@ public class TextBoxManager : MonoBehaviour
     public TextAsset textFile;
     public string[] textLines;
 
-    public int currentLine;
+    public int currentLine = -1;
     public int endAtLine;
 
     public Movement player;
@@ -85,17 +85,21 @@ public class TextBoxManager : MonoBehaviour
                         string person = textLines[currentLine].Substring(space + 1);
                         setCharacterNumber(person);
                         animator.SetInteger("CharacterNumber", characterNum);
-                        currentLine += 1;
+                        return;
                     }
                     else if (checkStartEvent())
                     {
                         int space = textLines[currentLine].IndexOf(" ");
                         string person = textLines[currentLine].Substring(space + 1);
                         //if this person stop their random movement
+                        person = person.Trim();
+                        print("dong |" + person + "|");
+                        print(person.Equals("Douglas"));
                         if (person.Equals("Douglas"))
                         {
                             aiMovement = GameObject.FindWithTag("Douglas").GetComponent<NonPlayerMovement>();
                             aiMovement.stopMovement();
+                            print(aiMovement.name + "dingngngg");
                         }
                         else if (person.Equals("Sarah"))
                         {
@@ -117,6 +121,7 @@ public class TextBoxManager : MonoBehaviour
                             aiMovement = GameObject.FindWithTag("Weber").GetComponent<NonPlayerMovement>();
                             aiMovement.stopMovement();
                         }
+                        return;
                     }
 
                     if (currentLine == textLines.Length - 1)
@@ -189,12 +194,7 @@ public class TextBoxManager : MonoBehaviour
 
     public bool checkStartEvent()
     {
-        if (textLines[currentLine].Contains(")"))
-        {
-            int index = textLines[currentLine].IndexOf(")");
-            return textLines[currentLine].Trim().Substring(0, index).Equals("(startevents)");
-        }
-        return false;
+      return textLines[currentLine].Contains("(startevents)");
     }
 
     public bool checkEvent(int line)

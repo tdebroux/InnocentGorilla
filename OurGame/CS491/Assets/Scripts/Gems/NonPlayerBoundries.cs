@@ -18,7 +18,6 @@ public class NonPlayerBoundries : MonoBehaviour
         if (npc != null)
         {
             npc.GetComponent<NonPlayerMovement>();
-            print("out " + npc.name);
             npc.outOfBounds = true;
         }
     }
