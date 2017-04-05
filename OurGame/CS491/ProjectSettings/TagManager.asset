@@ -9,6 +9,7 @@ TagManager:
   - Sarah
   - Eric
   - Douglas
+  - SpriteHead
   layers:
   - Default
   - TransparentFX

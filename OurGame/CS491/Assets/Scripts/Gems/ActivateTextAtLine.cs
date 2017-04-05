@@ -8,7 +8,7 @@ public class ActivateTextAtLine : MonoBehaviour
 
     public int startLine;
     public int endLine;
-    private TextBoxManager theTextBox;
+    TextBoxManager theTextBox;
 
     public bool requireButtonPress;
     private bool waitForPress;
@@ -17,8 +17,11 @@ public class ActivateTextAtLine : MonoBehaviour
     void Start()
     {
         // theTextBox = FindObjectOfType<TextBoxManager>();
-        theTextBox = GameObject.Find("/Canvas/Panel/SpriteHead").GetComponent<TextBoxManager>();
-
+        print("before");
+        print(theTextBox == null);
+        theTextBox = GameObject.FindWithTag("SpriteHead").GetComponent<TextBoxManager>();
+        print("After");
+        print(theTextBox == null);
     }
 
     // Update is called once per frame
@@ -26,14 +29,14 @@ public class ActivateTextAtLine : MonoBehaviour
     {
         if (waitForPress && Input.GetKeyDown(KeyCode.E)) //if you wanna go up and talk to something.
         {
-            if(theText != null)
+            if (theText != null)
             {
                 theTextBox.ReloadScript(theText);
                 theTextBox.currentLine = startLine;
                 theTextBox.endAtLine = endLine;
                 theTextBox.EnableTextBox();
             }
-            
+
 
             if (destroyWhenActivated)
             {
