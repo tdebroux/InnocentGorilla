@@ -83,7 +83,9 @@ public class TextBoxManager : MonoBehaviour
                         int space = textLines[currentLine].IndexOf(" ");
                         int len = textLines[currentLine].Length;
                         string person = textLines[currentLine].Substring(space + 1);
+                        person = person.Trim();
                         setCharacterNumber(person);
+                        
                         animator.SetInteger("CharacterNumber", characterNum);
                         return;
                     }
@@ -93,8 +95,6 @@ public class TextBoxManager : MonoBehaviour
                         string person = textLines[currentLine].Substring(space + 1);
                         //if this person stop their random movement
                         person = person.Trim();
-                        print("dong |" + person + "|");
-                        print(person.Equals("Douglas"));
                         if (person.Equals("Douglas"))
                         {
                             aiMovement = GameObject.FindWithTag("Douglas").GetComponent<NonPlayerMovement>();

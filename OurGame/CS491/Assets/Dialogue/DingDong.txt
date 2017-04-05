@@ -3,6 +3,8 @@ aaaaaaaaaaaaaa
 Ding Dong!!! I'm a Rock
 An Event is being triggered right now
 (event)
+(switch) Sarah
+um...
 (event)
 (switch) Douglas
  WOW!!!! I can't believe it!
@@ -14,6 +16,15 @@ Boys will be boys. Rocks will be... uhhhhhhh h  h hh hu  uhuh   . . .
 (switch) Douglas
 I'm the boss! Watch me spin!!
 (event)
+(switch) Sarah
+Hey tootsie
+(switch) Ernie
+Sarah... it's been so long.
+My dad is so good at basketball.
+(switch) Eric
+Kiss me you crazy fool!
+(switch) Weber
+EEEWWW!!!
 (event)
 dogs!!!
 ...
