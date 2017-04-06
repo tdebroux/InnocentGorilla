@@ -31,7 +31,7 @@ public class TextBoxManager : MonoBehaviour
     MoveEventCommands eventObj;
     public bool isAnEvent = false;
     NonPlayerMovement aiMovement;
-
+    public static TextBoxManager S;
     // Use this for initialization
     void Start()
     {
@@ -43,6 +43,10 @@ public class TextBoxManager : MonoBehaviour
 
         DisableTextBox();// makes sure it doesn't start appeared on the screen
 
+    }
+    void Awake()
+    {
+        S = this;
     }
 
     void Update()
@@ -85,7 +89,7 @@ public class TextBoxManager : MonoBehaviour
                         string person = textLines[currentLine].Substring(space + 1);
                         person = person.Trim();
                         setCharacterNumber(person);
-                        
+
                         animator.SetInteger("CharacterNumber", characterNum);
                         return;
                     }
@@ -126,7 +130,7 @@ public class TextBoxManager : MonoBehaviour
 
                     if (currentLine == textLines.Length - 1)
                     {
-                        if(aiMovement != null)
+                        if (aiMovement != null)
                         {
                             aiMovement.startMovement();
                             aiMovement = null;
@@ -194,7 +198,7 @@ public class TextBoxManager : MonoBehaviour
 
     public bool checkStartEvent()
     {
-      return textLines[currentLine].Contains("(startevents)");
+        return textLines[currentLine].Contains("(startevents)");
     }
 
     public bool checkEvent(int line)

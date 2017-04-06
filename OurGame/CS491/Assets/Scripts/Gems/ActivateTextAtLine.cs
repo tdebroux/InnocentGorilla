@@ -16,10 +16,9 @@ public class ActivateTextAtLine : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        // theTextBox = FindObjectOfType<TextBoxManager>();
         print("before");
         print(theTextBox == null);
-        theTextBox = GameObject.FindWithTag("SpriteHead").GetComponent<TextBoxManager>();
+        theTextBox = TextBoxManager.S;
         print("After");
         print(theTextBox == null);
     }
