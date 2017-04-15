@@ -4,27 +4,27 @@ Ding Dong!!! I'm a Rock
 An Event is being triggered right now
 (event)
 (switch) Sarah
-um...
+um... sara is talking
 (event)
 (switch) Douglas
- WOW!!!! I can't believe it!
+ WOW!!!! DOUGLAS
 Event 2 has been triggered
 (event)
 (event)
 (switch) Player
-Boys will be boys. Rocks will be... uhhhhhhh h  h hh hu  uhuh   . . . 
+Player talks 
 (switch) Douglas
 I'm the boss! Watch me spin!!
 (event)
 (switch) Sarah
-Hey tootsie
+Hi! SARAh
 (switch) Ernie
-Sarah... it's been so long.
+I'm ERNIE... it's been so long.
 My dad is so good at basketball.
 (switch) Eric
-Kiss me you crazy fool!
+ERIC SAYS Kiss me you crazy fool!
 (switch) Weber
-EEEWWW!!!
+WEBER EEEWWW!!!
 (event)
 dogs!!!
 ...

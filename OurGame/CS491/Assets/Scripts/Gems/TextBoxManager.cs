@@ -32,6 +32,7 @@ public class TextBoxManager : MonoBehaviour
     public bool isAnEvent = false;
     NonPlayerMovement aiMovement;
     public static TextBoxManager S;
+    private bool displayText;
     // Use this for initialization
     void Start()
     {
@@ -40,6 +41,10 @@ public class TextBoxManager : MonoBehaviour
         animator.SetInteger("CharacterNumber", characterNum);
         eventObj = FindObjectOfType<MoveEventCommands>();
         endAtLine = textLines.Length - 1;
+        displayText = false;
+
+
+
 
         DisableTextBox();// makes sure it doesn't start appeared on the screen
 
@@ -55,100 +60,74 @@ public class TextBoxManager : MonoBehaviour
         {
             return;
         }
+        // cant progress until event is finished
         if (!eventObj.canMove)
         {
-            if (Input.GetKeyDown(KeyCode.Return))
+            //do all events (even consecutive)
+            if (checkEvent(currentLine))
             {
-                if (!isTyping)
+                isAnEvent = true;
+                currentLine += 1;
+                return;
+            }
+
+            if (checkSwitch())
+            {
+                int space = textLines[currentLine].IndexOf(" ");
+                int len = textLines[currentLine].Length;
+                string person = textLines[currentLine].Substring(space + 1);
+                person = person.Trim();
+                setCharacterNumber(person);
+                animator.SetInteger("CharacterNumber", characterNum);
+                currentLine += 1;
+
+                printToTextBox();
+
+
+                return;
+            }
+            else if (checkStartEvent())
+            {
+                int space = textLines[currentLine].IndexOf(" ");
+                string person = textLines[currentLine].Substring(space + 1);
+                //if this person stop their random movement
+                person = person.Trim();
+                if (person.Equals("Douglas"))
                 {
-                    if (currentLine == textLines.Length - 1)
-                    {
-                        DisableTextBox();
-                        return;
-                    }
-                    currentLine += 1;
-
-                    if (checkEvent(currentLine))
-                    {
-                        isAnEvent = true;
-                        // for consecutive events
-                        if (checkEvent(currentLine + 1))
-                        {
-                            isAnEvent = true;
-                            return;
-                        }
-                        else
-                        {
-                            return;
-                        }
-                    }
-                    else if (checkSwitch())
-                    {
-                        int space = textLines[currentLine].IndexOf(" ");
-                        int len = textLines[currentLine].Length;
-                        string person = textLines[currentLine].Substring(space + 1);
-                        person = person.Trim();
-                        setCharacterNumber(person);
-
-                        animator.SetInteger("CharacterNumber", characterNum);
-                        return;
-                    }
-                    else if (checkStartEvent())
-                    {
-                        int space = textLines[currentLine].IndexOf(" ");
-                        string person = textLines[currentLine].Substring(space + 1);
-                        //if this person stop their random movement
-                        person = person.Trim();
-                        if (person.Equals("Douglas"))
-                        {
-                            aiMovement = GameObject.FindWithTag("Douglas").GetComponent<NonPlayerMovement>();
-                            aiMovement.stopMovement();
-                            print(aiMovement.name + "dingngngg");
-                        }
-                        else if (person.Equals("Sarah"))
-                        {
-                            aiMovement = GameObject.FindWithTag("Sarah").GetComponent<NonPlayerMovement>();
-                            aiMovement.stopMovement();
-                        }
-                        else if (person.Equals("Ernie"))
-                        {
-                            aiMovement = GameObject.FindWithTag("Ernie").GetComponent<NonPlayerMovement>();
-                            aiMovement.stopMovement();
-                        }
-                        else if (person.Equals("Eric"))
-                        {
-                            aiMovement = GameObject.FindWithTag("Eric").GetComponent<NonPlayerMovement>();
-                            aiMovement.stopMovement();
-                        }
-                        else if (person.Equals("Weber"))
-                        {
-                            aiMovement = GameObject.FindWithTag("Weber").GetComponent<NonPlayerMovement>();
-                            aiMovement.stopMovement();
-                        }
-                        return;
-                    }
-
-                    if (currentLine == textLines.Length - 1)
-                    {
-                        if (aiMovement != null)
-                        {
-                            aiMovement.startMovement();
-                            aiMovement = null;
-                        }
-                        DisableTextBox();
-                        return;
-                    }
-                    StartCoroutine(TextScroll(textLines[currentLine]));
-
+                    aiMovement = GameObject.FindWithTag("Douglas").GetComponent<NonPlayerMovement>();
+                    aiMovement.stopMovement();
                 }
-
-                else if (!cancelTyping)
+                else if (person.Equals("Sarah"))
                 {
-                    cancelTyping = true;
+                    aiMovement = GameObject.FindWithTag("Sarah").GetComponent<NonPlayerMovement>();
+                    aiMovement.stopMovement();
                 }
+                else if (person.Equals("Ernie"))
+                {
+                    aiMovement = GameObject.FindWithTag("Ernie").GetComponent<NonPlayerMovement>();
+                    aiMovement.stopMovement();
+                }
+                else if (person.Equals("Eric"))
+                {
+                    aiMovement = GameObject.FindWithTag("Eric").GetComponent<NonPlayerMovement>();
+                    aiMovement.stopMovement();
+                }
+                else if (person.Equals("Weber"))
+                {
+                    aiMovement = GameObject.FindWithTag("Weber").GetComponent<NonPlayerMovement>();
+                    aiMovement.stopMovement();
+                }
+                currentLine += 1;
+                return;
+            }
+
+            else if (Input.GetKeyDown(KeyCode.Return))
+            {
+                printToTextBox();
             }
         }
     }
+
     private IEnumerator TextScroll(string lineofText) // from the web DO NOT MESS WITH
     {
         int letter = 0;
@@ -178,6 +157,7 @@ public class TextBoxManager : MonoBehaviour
         if (currentLine < textLines.Length)
         {
             StartCoroutine(TextScroll(textLines[currentLine]));
+            currentLine++;
         }
         else
         {
@@ -255,4 +235,38 @@ public class TextBoxManager : MonoBehaviour
         }
     }
 
+    public void printToTextBox()
+    {
+        if (!isTyping)
+        {
+            if (currentLine == textLines.Length - 1)
+            {
+                DisableTextBox();
+                return;
+            }
+
+
+            if (currentLine == textLines.Length - 1)
+            {
+                if (aiMovement != null)
+                {
+                    aiMovement.startMovement();
+                    aiMovement = null;
+                }
+                DisableTextBox();
+                return;
+            }
+
+            if (currentLine != 0)
+            {
+                StartCoroutine(TextScroll(textLines[currentLine]));
+                currentLine += 1;
+            }
+        }
+
+        else if (!cancelTyping)
+        {
+            cancelTyping = true;
+        }
+    }
 }
