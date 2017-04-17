@@ -16,11 +16,7 @@ public class ActivateTextAtLine : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        print("before");
-        print(theTextBox == null);
         theTextBox = TextBoxManager.S;
-        print("After");
-        print(theTextBox == null);
     }
 
     // Update is called once per frame

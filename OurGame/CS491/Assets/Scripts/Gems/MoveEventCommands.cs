@@ -151,8 +151,6 @@ public class MoveEventCommands : MonoBehaviour
                     i++;
                     if (tBoxM.checkEvent(tBoxM.currentLine + 1))
                     {
-                      
-                       
                         tBoxM.isAnEvent = true;
                     }
                 }
@@ -171,8 +169,6 @@ public class MoveEventCommands : MonoBehaviour
                     i++;
                     if (tBoxM.checkEvent(tBoxM.currentLine + 1))
                     {
-                        
-                       
                         tBoxM.isAnEvent = true;
                     }
                 }
@@ -192,8 +188,6 @@ public class MoveEventCommands : MonoBehaviour
                     i++;
                     if (tBoxM.checkEvent(tBoxM.currentLine + 1))
                     {
-                        
-                       
                         tBoxM.isAnEvent = true;
                     }
                 }
@@ -213,8 +207,6 @@ public class MoveEventCommands : MonoBehaviour
                     i++;
                     if (tBoxM.checkEvent(tBoxM.currentLine + 1))
                     {
-                      
-                       
                         tBoxM.isAnEvent = true;
                     }
                 }

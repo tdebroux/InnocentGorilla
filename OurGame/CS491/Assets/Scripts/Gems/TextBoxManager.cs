@@ -42,12 +42,9 @@ public class TextBoxManager : MonoBehaviour
         eventObj = FindObjectOfType<MoveEventCommands>();
         endAtLine = textLines.Length - 1;
         displayText = false;
-
-
-
-
         DisableTextBox();// makes sure it doesn't start appeared on the screen
-
+        currentLine = -5;
+        print("curlinstart: " + currentLine);
     }
     void Awake()
     {
@@ -56,6 +53,9 @@ public class TextBoxManager : MonoBehaviour
 
     void Update()
     {
+        print("line 0: " + textLines[0]);
+        print("CURRENTLINE: " + currentLine);
+        print("thisline: " + textLines[currentLine]);
         if (!isActive)
         {
             return;
@@ -77,13 +77,10 @@ public class TextBoxManager : MonoBehaviour
                 int len = textLines[currentLine].Length;
                 string person = textLines[currentLine].Substring(space + 1);
                 person = person.Trim();
+                print("Switching! : " + person);
                 setCharacterNumber(person);
                 animator.SetInteger("CharacterNumber", characterNum);
                 currentLine += 1;
-
-                printToTextBox();
-
-
                 return;
             }
             else if (checkStartEvent())
@@ -123,7 +120,33 @@ public class TextBoxManager : MonoBehaviour
 
             else if (Input.GetKeyDown(KeyCode.Return))
             {
-                printToTextBox();
+                if (!isTyping)
+                {
+                    if (currentLine == textLines.Length - 1)
+                    {
+                        DisableTextBox();
+                        return;
+                    }
+                    if (currentLine == textLines.Length - 1)
+                    {
+                        if (aiMovement != null)
+                        {
+                            aiMovement.startMovement();
+                            aiMovement = null;
+                        }
+                        DisableTextBox();
+                        return;
+                    }
+                    if (currentLine != 0)
+                    {
+                        StartCoroutine(TextScroll(textLines[currentLine]));
+                        currentLine += 1;
+                    }
+                }
+                else if (!cancelTyping)
+                {
+                    cancelTyping = true;
+                }
             }
         }
     }
@@ -157,7 +180,7 @@ public class TextBoxManager : MonoBehaviour
         if (currentLine < textLines.Length)
         {
             StartCoroutine(TextScroll(textLines[currentLine]));
-            currentLine++;
+            //currentLine++;
         }
         else
         {
@@ -232,41 +255,6 @@ public class TextBoxManager : MonoBehaviour
         for (int i = 0; i < textLines.Length; i++)
         {
             textLines[i].Trim();
-        }
-    }
-
-    public void printToTextBox()
-    {
-        if (!isTyping)
-        {
-            if (currentLine == textLines.Length - 1)
-            {
-                DisableTextBox();
-                return;
-            }
-
-
-            if (currentLine == textLines.Length - 1)
-            {
-                if (aiMovement != null)
-                {
-                    aiMovement.startMovement();
-                    aiMovement = null;
-                }
-                DisableTextBox();
-                return;
-            }
-
-            if (currentLine != 0)
-            {
-                StartCoroutine(TextScroll(textLines[currentLine]));
-                currentLine += 1;
-            }
-        }
-
-        else if (!cancelTyping)
-        {
-            cancelTyping = true;
         }
     }
 }
