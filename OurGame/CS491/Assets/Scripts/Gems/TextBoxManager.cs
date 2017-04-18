@@ -53,13 +53,14 @@ public class TextBoxManager : MonoBehaviour
 
     void Update()
     {
-        print("line 0: " + textLines[0]);
-        print("CURRENTLINE: " + currentLine);
-        print("thisline: " + textLines[currentLine]);
+        print("CurLine: " + currentLine + " Line: " + textLines[currentLine]);
+
         if (!isActive)
         {
+            print("IS NOT ACTIVE");
             return;
         }
+
         // cant progress until event is finished
         if (!eventObj.canMove)
         {
@@ -71,19 +72,8 @@ public class TextBoxManager : MonoBehaviour
                 return;
             }
 
-            if (checkSwitch())
-            {
-                int space = textLines[currentLine].IndexOf(" ");
-                int len = textLines[currentLine].Length;
-                string person = textLines[currentLine].Substring(space + 1);
-                person = person.Trim();
-                print("Switching! : " + person);
-                setCharacterNumber(person);
-                animator.SetInteger("CharacterNumber", characterNum);
-                currentLine += 1;
-                return;
-            }
-            else if (checkStartEvent())
+
+            if (checkStartEvent())
             {
                 int space = textLines[currentLine].IndexOf(" ");
                 string person = textLines[currentLine].Substring(space + 1);
@@ -122,11 +112,7 @@ public class TextBoxManager : MonoBehaviour
             {
                 if (!isTyping)
                 {
-                    if (currentLine == textLines.Length - 1)
-                    {
-                        DisableTextBox();
-                        return;
-                    }
+
                     if (currentLine == textLines.Length - 1)
                     {
                         if (aiMovement != null)
@@ -136,6 +122,17 @@ public class TextBoxManager : MonoBehaviour
                         }
                         DisableTextBox();
                         return;
+                    }
+                    if (checkSwitch())
+                    {
+                        int space = textLines[currentLine].IndexOf(" ");
+                        int len = textLines[currentLine].Length;
+                        string person = textLines[currentLine].Substring(space + 1);
+                        person = person.Trim();
+                        print("Switching! : " + person);
+                        setCharacterNumber(person);
+                        animator.SetInteger("CharacterNumber", characterNum);
+                        currentLine += 1;
                     }
                     if (currentLine != 0)
                     {
@@ -168,9 +165,8 @@ public class TextBoxManager : MonoBehaviour
         cancelTyping = false;
     }
 
-    public void EnableTextBox() // from the web DO NOT MESS WITH
+    public void EnableTextBox()
     {
-
         textBox.SetActive(true);
         isActive = true;
         if (stopPlayerMovement)
@@ -179,8 +175,9 @@ public class TextBoxManager : MonoBehaviour
         }
         if (currentLine < textLines.Length)
         {
-            StartCoroutine(TextScroll(textLines[currentLine]));
             //currentLine++;
+            StartCoroutine(TextScroll(textLines[currentLine]));
+            currentLine++;
         }
         else
         {
@@ -249,7 +246,6 @@ public class TextBoxManager : MonoBehaviour
     {
         if (theText != null)
         {
-            //textLines = new string[1];
             textLines = (theText.text.Split('\n'));
         }
         for (int i = 0; i < textLines.Length; i++)
