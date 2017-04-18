@@ -27,6 +27,16 @@ public class Movement : MonoBehaviour {
         GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocityX, moveVelocityY);
         isMoving = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D);
         animator.SetBool("isMoving", isMoving);
+
+
+        /*
+         * float hoomph = Input.GetButton("Horizontal");
+         * float voomph = Input.GetButton("Vertical");
+         * Vector2 oomph = new Vector2(hoomph, voomph);
+         * oomph.Normalize();
+         * oomph *= walkSpeed * 3
+         */
+
         if (!canMove)
         {
             animator.enabled = false;

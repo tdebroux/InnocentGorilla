@@ -1,0 +1,10 @@
+(switch) Douglas
+"Hi there, thought I told you not to come in?"
+(switch) Player
+"Yeah, I know, just taking a walk, thought I'd say hi."
+(switch) Douglas
+"Oh, in that case, hi. Just taking a quick break before I get back to work."
+(switch) Player
+"Well, I'll leave you too it then. Bye."
+(switch) Douglas
+"See you around."

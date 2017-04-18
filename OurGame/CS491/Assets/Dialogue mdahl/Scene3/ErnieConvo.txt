@@ -1,0 +1,25 @@
+(switch) Ernie
+Character! Hey!
+(switch) Player
+Hey there, Ernie. How've you been?
+(switch) Ernie
+Good! It's been a while!
+(switch) Player
+That sounds great, I'm happy for you. Wish I could say things have been going as well for me.
+(switch) Ernie
+Oh, what going on?
+(switch) Player
+I made a mistake and cost my company some money, now they are trying to see if I did it on purpose or not.
+Not sure if I'll have a job tomorrow.
+(switch) Ernie
+Wow, man. That's rough. I understand where you’re coming from though.
+Life of an artist isn’t all that everyone cracked it up to be, though I do still love what I do.
+Y'know what? We haven't hung out in a while, why don't you stop by my place later tonight?
+I'm having a few friends over and I'd love for you to join us. It'll help you relax a bit.
+(switch) Player
+Considering all this time on my hands, sure why not. What time?
+(switch) Ernie
+About 8 or so.
+(switch) Player
+I'll see you then, talk to you later.
+*I should probably head home and get ready for Ernies after my walk.*
