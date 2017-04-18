@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class TextBoxManager : MonoBehaviour
 {
-
     public GameObject textBox;
 
     public Text theText;
@@ -175,6 +174,50 @@ public class TextBoxManager : MonoBehaviour
         }
         if (currentLine < textLines.Length)
         {
+            if (checkSwitch())
+            {
+                int space = textLines[currentLine].IndexOf(" ");
+                int len = textLines[currentLine].Length;
+                string person = textLines[currentLine].Substring(space + 1);
+                person = person.Trim();
+                print("Switching! : " + person);
+                setCharacterNumber(person);
+                animator.SetInteger("CharacterNumber", characterNum);
+                currentLine += 1;
+            }
+            if (checkStartEvent())
+            {
+                int space = textLines[currentLine].IndexOf(" ");
+                string person = textLines[currentLine].Substring(space + 1);
+                //if this person stop their random movement
+                person = person.Trim();
+                if (person.Equals("Douglas"))
+                {
+                    aiMovement = GameObject.FindWithTag("Douglas").GetComponent<NonPlayerMovement>();
+                    aiMovement.stopMovement();
+                }
+                else if (person.Equals("Sarah"))
+                {
+                    aiMovement = GameObject.FindWithTag("Sarah").GetComponent<NonPlayerMovement>();
+                    aiMovement.stopMovement();
+                }
+                else if (person.Equals("Ernie"))
+                {
+                    aiMovement = GameObject.FindWithTag("Ernie").GetComponent<NonPlayerMovement>();
+                    aiMovement.stopMovement();
+                }
+                else if (person.Equals("Eric"))
+                {
+                    aiMovement = GameObject.FindWithTag("Eric").GetComponent<NonPlayerMovement>();
+                    aiMovement.stopMovement();
+                }
+                else if (person.Equals("Weber"))
+                {
+                    aiMovement = GameObject.FindWithTag("Weber").GetComponent<NonPlayerMovement>();
+                    aiMovement.stopMovement();
+                }
+                currentLine += 1;
+            }
             //currentLine++;
             StartCoroutine(TextScroll(textLines[currentLine]));
             currentLine++;
