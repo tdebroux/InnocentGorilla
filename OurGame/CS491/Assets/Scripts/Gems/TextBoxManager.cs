@@ -26,7 +26,7 @@ public class TextBoxManager : MonoBehaviour
     public float typeSpeed;
 
     Animator animator;
-    public int characterNum;
+    private int characterNum = 1;
     MoveEventCommands eventObj;
     public bool isAnEvent = false;
     NonPlayerMovement aiMovement;
@@ -43,7 +43,6 @@ public class TextBoxManager : MonoBehaviour
         displayText = false;
         DisableTextBox();// makes sure it doesn't start appeared on the screen
         currentLine = -5;
-        print("curlinstart: " + currentLine);
     }
     void Awake()
     {
@@ -52,11 +51,8 @@ public class TextBoxManager : MonoBehaviour
 
     void Update()
     {
-        print("CurLine: " + currentLine + " Line: " + textLines[currentLine]);
-
         if (!isActive)
         {
-            print("IS NOT ACTIVE");
             return;
         }
 
@@ -128,7 +124,6 @@ public class TextBoxManager : MonoBehaviour
                         int len = textLines[currentLine].Length;
                         string person = textLines[currentLine].Substring(space + 1);
                         person = person.Trim();
-                        print("Switching! : " + person);
                         setCharacterNumber(person);
                         animator.SetInteger("CharacterNumber", characterNum);
                         currentLine += 1;
@@ -253,7 +248,7 @@ public class TextBoxManager : MonoBehaviour
     {
         if (line.Equals("Player"))
         {
-            characterNum = 1;
+            characterNum = 8;
         }
         else if (line.Equals("Douglas"))
         {
@@ -274,6 +269,14 @@ public class TextBoxManager : MonoBehaviour
         else if (line.Equals("Sarah"))
         {
             characterNum = 6;
+        }
+        else if (line.Equals("Tod"))
+        {
+            characterNum = 7;
+        }
+        else if (line.Equals("Null"))
+        {
+            characterNum = 1;
         }
         //add more characters
     }
