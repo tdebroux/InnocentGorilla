@@ -226,7 +226,7 @@ public class NonPlayerMovement : MonoBehaviour
                 currentDir = 4;
             }
             animator.SetInteger("WalkDirection", currentDir);
-            GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocityX, moveVelocityY) * Time.deltaTime;
+            GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocityX, moveVelocityY)*Time.deltaTime;
 
             outOfBounds = false;
             yield return new WaitForSeconds(seconds);

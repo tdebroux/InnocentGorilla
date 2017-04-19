@@ -1,0 +1,12 @@
+(switch) Tod
+Hey there, welcome back Freddy! You here for a drink of milk?
+Or do you got your eyes on that mighty fine rope over there?
+(switch) Player
+Um, I'm just walking around town.
+(switch) Tod
+Well, feel free to hang out. Oh, and sorry the pool table's broken at the moment.
+Somebody lost all the balls!
+(switch) Player
+...
+(switch) Tod
+heh heh...
