@@ -1,13 +1,12 @@
-(startevents) Ernie
-(event)
 (switch) Ernie
-"Awesome! You showed up. Here, I’ll introduce you to everyone
-"Everyone, this is Character! He's an old friend of mine from school that I haven't seen in a while."
-"Character, this is Eric and Sarah"
+(startevents) Ernie
+Awesome! You showed up. Here, I’ll introduce you to everyone
+"Everyone, this is Freddy! He's an old friend of mine from school that I haven't seen in a while.
+Character, this is Eric and Sarah
 (switch) Eric
-Eric: "Hi."
+Hi.
 (switch) Sarah
-"Hello."
+Hello.
 (switch) Player
 "Hi guys, it's a pleasure to meet you. I've seen you a bit around town"
 (switch) Eric
