@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class TextBoxManager : MonoBehaviour
@@ -67,7 +68,13 @@ public class TextBoxManager : MonoBehaviour
                 return;
             }
 
-
+            if (checkSceneChange())
+            {
+                int space = textLines[currentLine].IndexOf(" ");
+                int len = textLines[currentLine].Length;
+                string scene = textLines[currentLine].Substring(space + 1);
+                SceneManager.LoadScene(scene.Trim());
+            }
             if (checkStartEvent())
             {
                 int space = textLines[currentLine].IndexOf(" ");
@@ -222,6 +229,10 @@ public class TextBoxManager : MonoBehaviour
             DisableTextBox();
         }
 
+    }
+    public bool checkSceneChange()
+    {
+        return textLines[currentLine].Contains("(change)".Trim());
     }
 
     public bool checkSwitch()
