@@ -1,0 +1,15 @@
+(switch) Weber
+(startevents) Weber
+Oh Fred! You came! 
+(switch) Player
+Sure did. I always keep my promises. 
+(switch) Weber
+Well, I can assure you that we won't dissapoint. Please, take your seat. 
+(switch) Player
+Wow, these are front row tickets. Thank you! 
+(switch) Weber
+Of course. Anything for one of my favorite students. 
+(switch) Player
+Well thank you. I appreciate it. 
+(switch) Weber
+Now please, find your seat. We'll be starting soon. 

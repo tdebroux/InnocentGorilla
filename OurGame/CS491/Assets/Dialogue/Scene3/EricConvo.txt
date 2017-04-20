@@ -1,0 +1,10 @@
+(switch) Eric
+"Hey there!" 
+(switch) Player
+"Hi."
+(switch) Eric
+"It's a fine evening for a stroll, is it not?"
+(switch) Player
+"Yeah, it sure is."
+(switch) Eric
+"Well, hope you have a good day!"

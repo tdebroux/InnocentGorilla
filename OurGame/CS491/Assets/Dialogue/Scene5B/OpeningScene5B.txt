@@ -1,0 +1,14 @@
+(switch) Player
+(startevents) Weber
+Wow, that was really something. 
+(switch) Weber
+Told you! It'd be much better if we had an extra violinist. 
+(switch) Player
+So it would seem. 
+(switch) Weber
+Anyway, let me introduce you to the band.
+(switch) Player
+I should probably turn in soon, but I'll be happy to talk to them. 
+(switch) Weber
+Well, they're right over here. Come on. 
+(event)

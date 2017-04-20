@@ -1,6 +1,0 @@
-(switch) Sarah
-"Isn't this fountain amazing?"
-(switch) Player
-"Yeah, it's pretty nice."
-(switch) Sarah
-"This and the flower garden always takes me by surprise each spring. I love it!"

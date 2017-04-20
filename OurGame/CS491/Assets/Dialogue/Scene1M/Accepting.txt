@@ -1,0 +1,27 @@
+(switch) Weber
+Oh! Fred, hello! How are you?
+(switch) Player
+I'm doing great actually, I've finally made my decision. 
+(switch) Weber
+Hmm? And what would that be? 
+(switch) Player
+I've decided I'll take the open spot. I want to perform. 
+(switch) Weber
+Delightful! I'm sure the band will be just as excited as I am. 
+I'm sure you'll find that once you begin to perform on stage again, nothing else comes close. 
+(switch) Player
+That's kind of what I'm hoping for. I can't really believe I stopped playing for these past few years. 
+It was such a passion of mine. I guess life rarely takes you where you thought it would. 
+(switch) Weber
+Isn't that the truth? 
+Anyway, here's a few things that you'll need. Things like a practice schedule, important dates. 
+Also please fill this out. It just lets me know your sizes so I can get any uniform ahead of time. 
+(switch) Player
+Thanks. Sounds good, I'll have that done before our next practice. And from the looks of it, that's tonight?
+(switch) Weber
+Yup! Though, one more thing before you leave. The first chair is still open.
+I remember how hard you worked last time to get it. 
+(switch) Player
+I'll be sure to keep that in mind, thanks again. 
+(switch) Weber
+Don't mention it. See you later tonight. 

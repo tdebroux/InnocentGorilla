@@ -1,0 +1,20 @@
+(swtich) Weber
+Guys, I'd like to introduce you to Fred, who was one of my most gifted students. 
+I've been trying to convince him to fill our vacancy. 
+(switch) Player
+Oh, uh. Hello everyone. 
+(switch) Orchestra
+Hey there! 
+(switch) Player
+As I had said, not exactly sure if I'll be able to, even though this does sound like quite the opportunity. 
+I'll keep the offer in mind though. Besides I haven't actually played in quite a while. 
+(switch) Weber
+Oh hush. I'm sure you'll play as well as ever with a little bit of practice. 
+Speaking of, I'd like to invite you to sit in on our practice tomorrow morning. 
+I'd like for you to at least try and play with us before you make your decision. 
+(switch) Player
+That sounds fair, sure. I'd love to. Though before I go, I do just want to say you guys played wonderfully. 
+(switch) Orchestra
+Why thank you. It's truly a team effort. 
+(switch) Player
+Anyway, I really should be heading home. You guys have a wonderful rest of your night. 
