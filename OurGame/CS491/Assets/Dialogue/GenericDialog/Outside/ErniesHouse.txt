@@ -1,0 +1,4 @@
+(switch) Null
+A small house, though cozy. 
+(switch) Player
+This is Ernies Place. He seems to have made himself at home. 

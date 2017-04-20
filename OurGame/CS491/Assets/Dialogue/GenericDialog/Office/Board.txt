@@ -1,0 +1,4 @@
+(switch) Null
+A board containing various notices and notes.
+(switch) Player
+Hmm. I really should read through these at some point. 

@@ -1,4 +1,4 @@
 (switch) Null
 You're dresser with a large photo of you and Ernie. 
-(swutch) Player
+(switch) Player
 This is a photo that was taken shortly after graduation. Wow, I didn't realize how long ago that was. 
