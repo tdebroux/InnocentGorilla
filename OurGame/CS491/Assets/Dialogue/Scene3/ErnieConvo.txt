@@ -3,6 +3,7 @@ Fred! Hey!
 (switch) Player
 Hey there, Ernie. How've you been?
 (switch) Ernie
+(startevents) Ernie
 Good! It's been a while!
 (switch) Player
 That sounds great, I'm happy for you. Wish I could say things have been going as well for me.
@@ -23,3 +24,5 @@ About 8 or so.
 (switch) Player
 I'll see you then, talk to you later.
 I should probably head home and get ready for Ernies after my walk.
+
+(change) Scene4

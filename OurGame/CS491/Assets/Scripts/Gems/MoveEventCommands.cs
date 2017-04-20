@@ -70,7 +70,6 @@ public class MoveEventCommands : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (tBoxM.isAnEvent)
         {
             tBoxM.isAnEvent = false; //might be our skip event problems (maybe, tommy don't think so)
