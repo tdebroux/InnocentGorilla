@@ -1,4 +1,7 @@
 (switch) Weber
+(startevents) Weber
 Good, you've arrived. Now we can start, take the empty seat. 
 (switch) Player
 Sure thing. 
+
+(change) Scene6b
