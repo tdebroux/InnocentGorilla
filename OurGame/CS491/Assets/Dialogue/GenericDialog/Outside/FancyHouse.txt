@@ -1,0 +1,4 @@
+(switch) Null
+This is the largest house in town. You don't recall who lives here though. 
+(switch) Player
+I wonder who lives here? I never see anyone home. 

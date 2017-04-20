@@ -1,0 +1,8 @@
+(switch) Null
+An old barrel, the metal bands are beginning to rust. 
+(switch) Player
+I wonder what's in these barrels? They've been out here for a while. 
+(switch) Null
+You take a peek inside. You find an elixer!
+(switch) Player
+Uh, what? 

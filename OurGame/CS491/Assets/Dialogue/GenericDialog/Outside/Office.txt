@@ -1,0 +1,5 @@
+(switch) Null
+A large office building. It seems rather out of place in this small town. 
+(switch) Player
+This is where I work. It's kind of odd that Douglas decided to build this large building here.
+I guese it's because he grew up here and wanted to help the community grow. 

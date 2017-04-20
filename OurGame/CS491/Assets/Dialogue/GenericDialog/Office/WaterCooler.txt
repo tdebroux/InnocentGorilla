@@ -1,0 +1,2 @@
+(switch) Player
+A water cooler. I wonder the last time that it's been refilled. 

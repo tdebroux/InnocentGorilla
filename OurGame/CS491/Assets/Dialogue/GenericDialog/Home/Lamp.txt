@@ -1,0 +1,4 @@
+(switch) Player
+I love lamp.
+(switch) Tod
+Are you just looking at things in your room and saying you love them?

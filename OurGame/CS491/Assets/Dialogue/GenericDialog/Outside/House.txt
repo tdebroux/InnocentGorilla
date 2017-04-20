@@ -1,0 +1,4 @@
+(switch) Null
+This is a nice house. Small, but it gets the job done. 
+(switch) Player
+Home sweet home. It's been a few years since I moved here and I couldn't ask for more. 

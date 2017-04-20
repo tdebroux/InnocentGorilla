@@ -1,0 +1,4 @@
+(switch) Null
+A large fancy auditorium with pillars out front. 
+(switch) Player
+This building always impresses me. It seems so out of place. It's used as the local theater. 

@@ -1,0 +1,4 @@
+(switch) Null
+A large fountain with a stallion in the center. It's really quite impressive. 
+(switch) Player
+This has been here since I moved here with Ernie years back. I wonder what the story behind it is? 

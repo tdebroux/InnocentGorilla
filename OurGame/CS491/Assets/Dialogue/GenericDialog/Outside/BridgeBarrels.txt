@@ -1,0 +1,5 @@
+(switch) Null
+A bunch of barrels block the path over the bridge, if you try and move one, they do not budge. 
+(switch) Player
+I remember hearing of the accident that left these barrels here. Not sure what are in them, but they're heavy!
+I'm sure they'll be removed eventually. 
