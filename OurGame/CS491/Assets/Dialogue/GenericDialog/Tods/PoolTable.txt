@@ -1,0 +1,4 @@
+(switch) Null
+A large pool table with a single pool cue. 
+(switch) Player
+I haven't played pool in a while. I wonder where all the balls are? 

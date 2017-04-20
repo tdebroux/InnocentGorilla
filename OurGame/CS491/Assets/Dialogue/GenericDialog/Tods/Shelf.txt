@@ -1,0 +1,4 @@
+(switch) Null
+A shelf containing various goods. 
+(switch) Player
+Pretty small selection, but it functions well enough. 
