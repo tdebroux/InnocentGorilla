@@ -1,0 +1,28 @@
+(switch) Null
+Your phone vibrates. A phone call from Douglas. 
+(switch) Player
+Douglas? I wonder what he wants. 
+Hello?
+(switch) Douglas
+Yes, Fred. Hello. Did you double check your accounts before you submitted them last night? 
+(switch) Player
+Yes, always. Why? 
+(switch) Douglas
+Well, it would seem that the bills that you paid, were sent to incorrect accounts. 
+And that money has not been accounted for. The money's gone. 
+(switch) Player
+What?! This has to be an honest mistake. 
+(switch) Douglas 
+Clearly, though we still have to investigate this. 
+While we aren't saying you are guilty, we have to investigate you for embezzlement.
+(switch) Player
+That's ridiculous! You know I would never steal our companies money!
+(switch) Douglas
+Until we know for sure, consider yourself suspended until further notice. *click*
+(switch) Null
+The line goes dead.
+(switch) Player
+No! No no no!
+This is just insane. 
+
+(change) Scene3
