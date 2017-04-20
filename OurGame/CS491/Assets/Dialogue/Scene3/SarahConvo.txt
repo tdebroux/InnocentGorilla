@@ -1,6 +1,9 @@
 (switch) Sarah
-"Isn't this fountain amazing?"
+(startevents) Sarah
+Isn't this fountain amazing?
 (switch) Player
-"Yeah, it's pretty nice."
+Yeah, it's pretty nice.
 (switch) Sarah
-"This and the flower garden always takes me by surprise each spring. I love it!"
+This and the flower garden always takes me by surprise each spring. I love it!
+I think Ernie was wandering around on the northern part of town.
+Maybe saying hi to him would be nice!

@@ -1,10 +1,13 @@
 (switch) Eric
-"Hey there!" 
+(startevents) Eric
+Hey there!
 (switch) Player
-"Hi."
+Hi.
 (switch) Eric
-"It's a fine evening for a stroll, is it not?"
+It's a fine evening for a stroll, is it not?
 (switch) Player
-"Yeah, it sure is."
+Yeah, it sure is.
 (switch) Eric
-"Well, hope you have a good day!"
+I think I saw Sarah over by the town fountain on the park bench. 
+She looked lonely. 
+Go say hi!
