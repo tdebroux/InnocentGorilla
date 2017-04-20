@@ -1,0 +1,10 @@
+(switch) Weber
+(startevents) Weber
+Hey Freddy! Don't you just love the sound of the clarinet?
+(switch) Player
+Yeah it's pretty good, but I really prefer the low sound of the bassoon.
+(switch) Weber
+Hmm...
+I can see why you think that.
+...
+I guess they all have their time and place in the ensemble.

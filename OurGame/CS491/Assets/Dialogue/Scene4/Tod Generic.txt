@@ -1,0 +1,10 @@
+(switch) Tod
+So the word around town is that there's gonna be a meteor shower tonight.
+I'll tell you what, I hope I don't get hit!
+(switch) Player
+...
+Yeah, you probably won't, but who knows
+(switch) Tod
+Yikes, to think that your life could end at any second is pretty scary...
+...
+Live every day with purpose Freddy.

@@ -40,10 +40,16 @@ Hello.
 “That’s all I can really ask for. Anyway, let’s mingle a little.”
 A few hours pass as you've gone about the room and talked to everyone. 
 (switch) Player
-"Anyway, I think it's about time I turn in. Bye guys, had a wonderful time."
+"Anyway, I think it's about time I head home. Bye guys, had a wonderful time."
 (switch) Ernie
 "Bye!"
 (switch) Sarah
 "Take it easy. Hope to see you again soon!"
 (switch) Eric
 "See you around."
+(switch) Null
+We are now going to skip scene 5 and move onto scene 6 due to asset conflicts
+...
+thank you.
+
+(change) Scene6a

@@ -1,0 +1,7 @@
+(switch) Douglas
+What are you doing here?
+(switch) Player
+...
+(switch) Douglas
+The investigation is still ongoing.
+Please leave.
