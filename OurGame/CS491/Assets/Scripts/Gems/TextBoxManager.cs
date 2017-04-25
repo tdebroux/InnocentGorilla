@@ -182,7 +182,6 @@ public class TextBoxManager : MonoBehaviour
                 int len = textLines[currentLine].Length;
                 string person = textLines[currentLine].Substring(space + 1);
                 person = person.Trim();
-                print("Switching! : " + person);
                 setCharacterNumber(person);
                 animator.SetInteger("CharacterNumber", characterNum);
                 currentLine += 1;

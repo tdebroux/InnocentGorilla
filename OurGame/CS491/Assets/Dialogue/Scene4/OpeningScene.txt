@@ -1,52 +1,57 @@
 (switch) Ernie
 (startevents) Ernie
+Hey!
+(event)
 Awesome! You showed up. Here, I’ll introduce you to everyone
-"Everyone, this is Freddy! He's an old friend of mine from school that I haven't seen in a while.
-Character, this is Eric and Sarah
+(event)
+Everyone, this is Freddy! He's an old friend of mine from school that I haven't seen in a while.
+(event)
+Freddy, this is Eric and Sarah
+(event)
 (switch) Eric
 Hi.
 (switch) Sarah
 Hello.
 (switch) Player
-"Hi guys, it's a pleasure to meet you. I've seen you a bit around town"
+Hi guys, it's a pleasure to meet you. I've seen you a bit around town
 (switch) Eric
-"Likewise."
+Likewise.
 (switch) Sarah
-"Yeah, you were walking around town earlier today."
+Yeah, you were walking around town earlier today.
 (switch) Player
-"So how's it been going Ernie? You mentioned that you are still working as an artist?"
+So how's it been going Ernie? You mentioned that you are still working as an artist?
 (switch) Ernie
-"Yeah! It’s had its ups and downs, though I wouldn’t trade it for the world."
-"I'm actually trying to organize an open gallery for a festival that's in the works."
+Yeah! It’s had its ups and downs, though I wouldn’t trade it for the world.
+I'm actually trying to organize an open gallery for a festival that's in the works.
 (switch) Player
-"Yeah, I've heard a little about something like that, I told my boss about it and he was going to see if he wanted to organize it."
+Yeah, I've heard a little about something like that, I told my boss about it and he was going to see if he wanted to organize it.
 (switch) Ernie
-"Yeah, it's shaping up to be something special should everything go along as planned."
-"There will be an open gallery featuring local artists and a performance from the local orchestra."
+Yeah, it's shaping up to be something special should everything go along as planned.
+There will be an open gallery featuring local artists and a performance from the local orchestra.
 (switch) Player
-"Sounds like a great opportunity for you guys."
+Sounds like a great opportunity for you guys.
 (switch) Ernie
-"It truly is. You want to help us organize the gallery?"
-"It'd be great to hang out with you again and this is kind of what your company does, isn’t it?"
+It truly is. You want to help us organize the gallery?
+It'd be great to hang out with you again and this is kind of what your company does, isn’t it?
 (switch) Player
-"Yeah, sort of. We take on clients looking to organize various events or anything requiring a lot of logistics."
-"They pay us a small fee plus the costs of whatever they are organizing and we make it happen."
-"I tended organize larger events, but we have wedding planners and other people for more specialized events.”
+Yeah, sort of. We take on clients looking to organize various events or anything requiring a lot of logistics.
+They pay us a small fee plus the costs of whatever they are organizing and we make it happen.
+I tended organize larger events, but we have wedding planners and other people for more specialized events.
 (switch) Ernie
-"Sounds like you’d be a great help to have helping us.”
+Sounds like you’d be a great help to have helping us.
 (switch) Player
-"I’ll have to get back to you on that, I have no idea what’s going on with work but I’ll definitely keep it in mind.”
+I’ll have to get back to you on that, I have no idea what’s going on with work but I’ll definitely keep it in mind.
 (switch) Ernie
-“That’s all I can really ask for. Anyway, let’s mingle a little.”
+That’s all I can really ask for. Anyway, let’s mingle a little.
 A few hours pass as you've gone about the room and talked to everyone. 
 (switch) Player
-"Anyway, I think it's about time I head home. Bye guys, had a wonderful time."
+Anyway, I think it's about time I head home. Bye guys, had a wonderful time.
 (switch) Ernie
-"Bye!"
+Bye!
 (switch) Sarah
-"Take it easy. Hope to see you again soon!"
+Take it easy. Hope to see you again soon!
 (switch) Eric
-"See you around."
+See you around.
 (switch) Null
 We are now going to skip scene 5 and move onto scene 6 due to asset conflicts
 ...

@@ -58,11 +58,13 @@ public class MoveEventCommands : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+
         currentXs = new float[8] { x0, x1, x2, x3, x4, x5, x6, x7 };
         currentYs = new float[8] { y0, y1, y2, y3, y4, y5, y6, y7 };
         currentDir = new int[8] { dir0, dir1, dir2, dir3, dir4, dir5, dir6, dir7 };
 
         tBoxM = FindObjectOfType<TextBoxManager>();
+        print("Starting i = 0");
         i = 0;
         animator = GetComponent<Animator>();
         canMove = false;
@@ -72,21 +74,24 @@ public class MoveEventCommands : MonoBehaviour
     {
         if (tBoxM.isAnEvent)
         {
+            print("i: " + i);
             tBoxM.isAnEvent = false; //might be our skip event problems (maybe, tommy don't think so)
             // Decide Walk or Turn
+
             if (currentDir[i] != 0)
             {
+                print("direction");
                 animator.SetInteger("WalkDirection", currentDir[i]);
                 canMove = false;
                 moveVelocityX = 0;
                 moveVelocityY = 0;
                 isMoving = false;
-                transform.Translate(new Vector2(moveVelocityX, moveVelocityY) * Time.deltaTime);
-
+                //transform.Translate(new Vector2(moveVelocityX, moveVelocityY) * Time.deltaTime);
                 i++;
             }
             else
             { // if it is zero, we're walkin'!
+                print("moving");
                 canMove = true;
                 //Decide X or Y
                 if (currentXs[i] != 0 && currentYs[i] != 0)
@@ -101,14 +106,14 @@ public class MoveEventCommands : MonoBehaviour
                         // walks RIGHT until it reaches the X_i position
                         currentDir[i] = 2;
                         animator.SetInteger("WalkDirection", currentDir[i]);
-                        
+
                     }
                     else
                     {
                         currentDir[i] = 4;
                         // walks LEFT until it reaches the X_i position
                         animator.SetInteger("WalkDirection", currentDir[i]);
-                        
+
                     }
 
                 }
@@ -120,14 +125,14 @@ public class MoveEventCommands : MonoBehaviour
                         // walks UP until it reaches the Y_i position
                         currentDir[i] = 1;
                         animator.SetInteger("WalkDirection", currentDir[i]);
-                      
+
                     }
                     else
                     {
                         currentDir[i] = 3;
                         // walks DOWN until it reaches the Y_i position
                         animator.SetInteger("WalkDirection", currentDir[i]);
-                       
+
                     }
                 }
             }
