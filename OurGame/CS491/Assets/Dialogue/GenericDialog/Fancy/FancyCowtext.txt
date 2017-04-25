@@ -1,5 +1,8 @@
 (switch) Null
-This cow looks like it hasn't been milked in a while. I sure hope its okay.
 It's a myth that cows sleep standing up...
 ...but this one is trying to prove everyone wrong.
-You should leave it alone.
+(switch) Player
+You look like you haven't been milked in a while girl. Are you okay?
+(switch) Null
+...mmm...    ...zzzZZzz...
+You should leave her alone.

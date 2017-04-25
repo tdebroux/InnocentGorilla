@@ -1,4 +1,0 @@
-(switch) Null
-A large spool of rope. 
-(switch) Player
-Who would need this? 
