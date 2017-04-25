@@ -1,7 +1,0 @@
-(switch) Player
-I realize that while both Douglas and Ernie could use my help, being able to perform 
-infront of an audience is something I've wanted for years. 
-Even if I have let it fall to the wayside recently. Sorry guys. 
-I should probably start practicing for a while. 
-
-(change) SceneM1

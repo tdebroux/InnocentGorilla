@@ -1,0 +1,8 @@
+(switch) Null
+Gee whiz, how many barrels are there?
+A quick barrel count yields 45.
+You think five rows of nine would've worked better.
+...or three rows of fifteen.
+...or one long line of forty-five.
+...
+You decide that they look better unorganized after all. 
