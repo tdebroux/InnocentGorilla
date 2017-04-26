@@ -1,2 +1,2 @@
-(switch) Player
-It's nice day out. 
+(switch) Null
+It's nice day outside. 
