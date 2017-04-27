@@ -2,7 +2,7 @@
 (startevents) Ernie
 Hey!
 (event)
-Awesome! You showed up. Here, I’ll introduce you to everyone
+You showed up! Here, I’ll introduce you to everyone
 (event)
 Everyone, this is Freddy! He's an old friend of mine from school that I haven't seen in a while.
 (event)

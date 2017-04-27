@@ -43,7 +43,7 @@ public class MoveEventCommands : MonoBehaviour
     bool reachX1;
     bool reachY1;
 
-    private bool isMoving;
+    public bool isMoving;
     public float walkSpeed;
     Vector2 input;
     Animator animator;
@@ -77,7 +77,7 @@ public class MoveEventCommands : MonoBehaviour
             print("i: " + i);
             tBoxM.isAnEvent = false; //might be our skip event problems (maybe, tommy don't think so)
             // Decide Walk or Turn
-
+            
             if (currentDir[i] != 0)
             {
                 print("direction");
@@ -138,6 +138,7 @@ public class MoveEventCommands : MonoBehaviour
             }
         }
         // The actual movement
+        print("MECcanMove: " + canMove);
         if (canMove)
         {
             isMoving = true;

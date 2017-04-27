@@ -52,13 +52,13 @@ public class TextBoxManager : MonoBehaviour
 
     void Update()
     {
-        print("canmove: " + eventObj.canMove);
         if (!isActive)
         {
             return;
         }
 
         // cant progress until event is finished
+        print(eventObj.canMove);
         if (!eventObj.canMove)
         {
             //do all events (even consecutive)
