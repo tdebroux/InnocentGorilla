@@ -53,7 +53,7 @@ public class MoveEventCommands : MonoBehaviour
     private int rndInt;
     bool timesUp;
     int i;
-    TextBoxManager tBoxM;
+    public TextBoxManager tBoxM;
 
     // Use this for initialization
     void Start()
@@ -63,8 +63,7 @@ public class MoveEventCommands : MonoBehaviour
         currentYs = new float[8] { y0, y1, y2, y3, y4, y5, y6, y7 };
         currentDir = new int[8] { dir0, dir1, dir2, dir3, dir4, dir5, dir6, dir7 };
 
-        tBoxM = FindObjectOfType<TextBoxManager>();
-        print("Starting i = 0");
+        //tBoxM = FindObjectOfType<TextBoxManager>();
         i = 0;
         animator = GetComponent<Animator>();
         canMove = false;
@@ -72,6 +71,7 @@ public class MoveEventCommands : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (tBoxM.isAnEvent)
         {
             print("i: " + i);
@@ -146,14 +146,13 @@ public class MoveEventCommands : MonoBehaviour
                 moveVelocityY = walkSpeed * 3;
                 if (transform.position.y > currentYs[i])
                 {
-                    canMove = false;
-
                     isMoving = false;
                     canMove = false;
                     moveVelocityX = 0;
                     moveVelocityY = 0;
                     i++;
-                    if (tBoxM.checkEvent(tBoxM.currentLine + 1))
+                    print("going down destination reached");
+                    if (tBoxM.checkEvent(tBoxM.currentLine))
                     {
                         tBoxM.isAnEvent = true;
                     }
@@ -166,12 +165,11 @@ public class MoveEventCommands : MonoBehaviour
                 if (transform.position.y < currentYs[i])
                 {
                     canMove = false;
-
                     isMoving = false;
                     moveVelocityX = 0;
                     moveVelocityY = 0;
                     i++;
-                    if (tBoxM.checkEvent(tBoxM.currentLine + 1))
+                    if (tBoxM.checkEvent(tBoxM.currentLine))
                     {
                         tBoxM.isAnEvent = true;
                     }
@@ -185,12 +183,11 @@ public class MoveEventCommands : MonoBehaviour
                 if (transform.position.x > currentXs[i])
                 {
                     canMove = false;
-
                     isMoving = false;
                     moveVelocityX = 0;
                     moveVelocityY = 0;
                     i++;
-                    if (tBoxM.checkEvent(tBoxM.currentLine + 1))
+                    if (tBoxM.checkEvent(tBoxM.currentLine))
                     {
                         tBoxM.isAnEvent = true;
                     }
@@ -204,12 +201,11 @@ public class MoveEventCommands : MonoBehaviour
                 if (transform.position.x < currentXs[i])
                 {
                     canMove = false;
-
                     isMoving = false;
                     moveVelocityX = 0;
                     moveVelocityY = 0;
                     i++;
-                    if (tBoxM.checkEvent(tBoxM.currentLine + 1))
+                    if (tBoxM.checkEvent(tBoxM.currentLine))
                     {
                         tBoxM.isAnEvent = true;
                     }

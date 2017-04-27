@@ -52,6 +52,7 @@ public class TextBoxManager : MonoBehaviour
 
     void Update()
     {
+        print("canmove: " + eventObj.canMove);
         if (!isActive)
         {
             return;
@@ -63,6 +64,7 @@ public class TextBoxManager : MonoBehaviour
             //do all events (even consecutive)
             if (checkEvent(currentLine))
             {
+                print("event on: " + currentLine);
                 isAnEvent = true;
                 currentLine += 1;
                 return;
