@@ -290,6 +290,18 @@ public class TextBoxManager : MonoBehaviour
         {
             characterNum = 1;
         }
+        else if (line.Equals("Tina"))
+        {
+            characterNum = 9;
+        }
+        else if (line.Equals("Will"))
+        {
+            characterNum = 10;
+        }
+        else if (line.Equals("Gus"))
+        {
+            characterNum = 11;
+        }
         //add more characters
     }
 
