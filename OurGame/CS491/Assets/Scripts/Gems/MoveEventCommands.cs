@@ -71,7 +71,6 @@ public class MoveEventCommands : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (tBoxM.isAnEvent)
         {
             print("i: " + i);
@@ -138,7 +137,6 @@ public class MoveEventCommands : MonoBehaviour
             }
         }
         // The actual movement
-        print("MECcanMove: " + canMove);
         if (canMove)
         {
             isMoving = true;

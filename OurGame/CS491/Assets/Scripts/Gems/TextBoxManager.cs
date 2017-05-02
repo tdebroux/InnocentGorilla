@@ -58,8 +58,8 @@ public class TextBoxManager : MonoBehaviour
         }
 
         // cant progress until event is finished
-        print(eventObj.canMove);
         if (!eventObj.canMove)
+
         {
             //do all events (even consecutive)
             if (checkEvent(currentLine))
