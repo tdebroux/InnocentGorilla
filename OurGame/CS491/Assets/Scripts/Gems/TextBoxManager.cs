@@ -58,8 +58,8 @@ public class TextBoxManager : MonoBehaviour
         }
 
         // cant progress until event is finished
-        print(eventObj.canMove);
         if (!eventObj.canMove)
+
         {
             //do all events (even consecutive)
             if (checkEvent(currentLine))
@@ -289,6 +289,18 @@ public class TextBoxManager : MonoBehaviour
         else if (line.Equals("Null"))
         {
             characterNum = 1;
+        }
+        else if (line.Equals("Tina"))
+        {
+            characterNum = 9;
+        }
+        else if (line.Equals("Will"))
+        {
+            characterNum = 10;
+        }
+        else if (line.Equals("Gus"))
+        {
+            characterNum = 11;
         }
         //add more characters
     }
