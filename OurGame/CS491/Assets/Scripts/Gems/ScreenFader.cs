@@ -19,7 +19,6 @@ public class ScreenFader : MonoBehaviour
         print("fadeState: " + animator.GetInteger("FadeState"));
         animator.SetInteger("FadeState", 1);
         print("animator: " + animator.name);
-        animator.SetBool("testboy", true);
         print("fadestate: " + animator.GetInteger("FadeState"));
     }
     public void FadeToTrans()
