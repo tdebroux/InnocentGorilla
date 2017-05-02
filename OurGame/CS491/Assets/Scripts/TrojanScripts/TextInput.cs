@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TextInput : MonoBehaviour {
 	InputField input;
@@ -22,8 +23,7 @@ public class TextInput : MonoBehaviour {
     {
 		
 	}
-	private void SubmitInput(string arg0)
-    {
+	private void SubmitInput(string arg0) {
 		if (lineCount < 8) {
 			output.text += "\n" + arg0;
 			input.text = "";
@@ -32,18 +32,28 @@ public class TextInput : MonoBehaviour {
 				if (output.text.Trim().Equals (correct.text.Trim())) {
 					output.text = "\nJohn Smith \n35 \n420 Marketplace Terr.\nMilwaukee, WI 53226\n414-638-6382\nyeahboi@blazeit.net\n$520,500.00\n10.5%\n" + "Do these records match?";
                 } else {
-					output.text = output.text + "\n\n" + "Do these records match?";
+					output.text = output.text + "\n\n" + "Press enter to submit";
 				}
-                StartCoroutine("CantContinueForTime", 7f);
-
+                StartCoroutine(WaitForKeyDown(KeyCode.Return));
+                //StartCoroutine("CantContinueForTime", 7f);
 			}
 		} 
 		input.ActivateInputField ();
 	}
+    IEnumerator WaitForKeyDown(KeyCode keyCode){
+        while (!Input.GetKeyUp(keyCode))
+            yield return null;
+        while (!Input.GetKeyDown(keyCode))
+            yield return null;
+        //output.text = "yo";
+        SceneManager.LoadScene("Menu");
+    }
+    /*
     public IEnumerator CantContinueForTime(float seconds)
     {
         yield return new WaitForSeconds(seconds);
         gameOver = true;
         input.enabled = false;
     }
+    */
 }
