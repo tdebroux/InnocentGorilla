@@ -30,7 +30,7 @@ public class TextInput : MonoBehaviour {
 			lineCount++;
 			if(lineCount == 8){
 				if (output.text.Trim().Equals (correct.text.Trim())) {
-					output.text = "\nJohn Smith \n35 \n420 Marketplace Terr.\nMilwaukee, WI 53226\n414-638-6382\nyeahboi@blazeit.net\n$520,500.00\n10.5%\n" + "Do these records match?";
+					output.text = "\nJohn Smith \n35 \n420 Marketplace Terr.\nMilwaukee, WI 53226\n414-638-6382\nyeahboi@blazeit.net\n$520,500.00\n10.5%\n" + "Press enter to submit";
                 } else {
 					output.text = output.text + "\n\n" + "Press enter to submit";
 				}
