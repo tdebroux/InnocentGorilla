@@ -25,10 +25,10 @@ public class TeleportMechanic : MonoBehaviour
     {
         if (other.name == "MainCharacter")
         {
-            //player.canMove = false;
-            fadeScr.FadeToBlack();
+            player.canMove = false;
+            fadeScr.EndScene();
             other.transform.position = TeleportPosition;
-            //player.StartCoroutine("CantMoveForTime", .7f);
+            player.StartCoroutine("CantMoveForTime", .7f);
         }
     }
     void Awake()
