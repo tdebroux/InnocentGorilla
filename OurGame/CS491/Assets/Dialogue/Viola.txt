@@ -1,0 +1,15 @@
+(switch) Gus
+The name's Gus.
+(switch) Player
+Hi Gus!
+(switch) Gus
+My wife played the viola her whole life before she passed away last fall.
+(switch) Player
+I'm sorry to hear that. 
+(switch) Gus
+Well, I just don't think I'll ever get the fact she's not here, but music is my way of coping.
+A few months after she passed, I dusted of this here viola and began to learn it in her honor.
+(switch) Player
+You're an inspiring guy Gus. 
+(switch) Gus
+Aw shucks.

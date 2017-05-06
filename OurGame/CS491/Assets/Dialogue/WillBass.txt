@@ -1,0 +1,12 @@
+(switch) Will
+My name's Will, but everyone calls me "Dizzy W.".
+(switch) Player
+Cool nickname. How'd you get it?
+(switch) Will
+Well, back in '93 I was a traveling jazz musician.
+(switch) Player
+Awesome.
+(switch) Will
+Yeah, I did a few late night shows, jazz clubs, and even got asked to play at a white house event. 
+I was on the verge of stardom, but I decided the fast paced life was too much for me.
+Anyways, somewhere in there people started calling me "Dizzy W.".

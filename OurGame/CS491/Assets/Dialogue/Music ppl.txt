@@ -1,0 +1,11 @@
+(switch) Tina
+Hi, I'm Tina.
+(switch) Player
+Hey.
+(switch) Tina
+I started playing cello when I was six. 
+My mom worked an extra part time job just to help pay for lessons.
+(switch) Player
+Wow, now that's selfless.
+(switch) Tina
+If it weren't for her, I wouldn't be where I am today.
