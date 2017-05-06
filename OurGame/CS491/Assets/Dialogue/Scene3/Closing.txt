@@ -1,6 +1,0 @@
-(switch) Null
-A few hours pass after your walk.
-(switch) Player
-I should probably head over to Ernies. It's about that time. 
-
-(change) Scene4
