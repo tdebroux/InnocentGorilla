@@ -1,0 +1,7 @@
+(switch) Tod
+I can't believe Bessy and I won first place in the cow competition yet again!
+(switch) Player
+Oh really? How many cows competed this year?
+(switch) Tod
+...
+One.

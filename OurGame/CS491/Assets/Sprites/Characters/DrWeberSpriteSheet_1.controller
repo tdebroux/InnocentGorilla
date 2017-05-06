@@ -501,25 +501,11 @@ AnimatorStateMachine:
   - {fileID: 1101762684496344178}
   - {fileID: 1101744135766982998}
   - {fileID: 1101844524464336892}
-  m_EntryTransitions:
-  - {fileID: 1109263121795498280}
+  m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 504, y: 120, z: 0}
   m_EntryPosition: {x: 96, y: 312, z: 0}
   m_ExitPosition: {x: 936, y: 312, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: 1102177608496825466}
---- !u!1109 &1109263121795498280
-AnimatorTransition:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_Conditions: []
-  m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: 1102177608496825466}
-  m_Solo: 0
-  m_Mute: 0
-  m_IsExit: 0
-  serializedVersion: 1
+  m_DefaultState: {fileID: 1102739005381215716}
