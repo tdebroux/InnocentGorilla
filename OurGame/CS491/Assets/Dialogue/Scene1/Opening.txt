@@ -5,8 +5,8 @@ It's always such a mess. Why can't someone else do this?
 (switch) Null
 You continue to sift through the papers. 
 You notice that there are serveral emails asking for help organize a local festival.
-EVENT HERE
-EVENT HERE
+(event)
+(event)
 (switch) Douglas
 You about done, Fred?
 (switch) Player
@@ -23,7 +23,8 @@ Sure thing. I'll just finish up here. I should have it to you by Monday.
 Glad to hear it. Have a nice weekend. 
 (switch) Player
 You too.
-EVENT HERE
+(event)
+(event)
 Great. Now I've just lost my weekend. 
 This job takes a lot of hard work, but at least the things I do make a difference. 
 Anyway, I should probably head over to my PC and enter in these financials.

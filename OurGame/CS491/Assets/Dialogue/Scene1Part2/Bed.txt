@@ -1,0 +1,4 @@
+(switch) Player
+I love this bed. 
+
+(change) Scene2

@@ -46,7 +46,7 @@ public class TextInput : MonoBehaviour {
         while (!Input.GetKeyDown(keyCode))
             yield return null;
         //output.text = "yo";
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("Scene1PartTwo");
     }
     /*
     public IEnumerator CantContinueForTime(float seconds)

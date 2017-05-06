@@ -71,13 +71,11 @@ public class MoveEventCommands : MonoBehaviour
        // print("name " + tBoxM.name);
         if (tBoxM.isAnEvent)
         {
-            print("i: " + i);
             tBoxM.isAnEvent = false; //might be our skip event problems (maybe, tommy don't think so)
                                      // Decide Walk or Turn
 
             if (currentDir[i] != 0)
             {
-                print("direction");
                 animator.SetInteger("WalkDirection", currentDir[i]);
                 canMove = false;
                 moveVelocityX = 0;
@@ -88,7 +86,6 @@ public class MoveEventCommands : MonoBehaviour
             }
             else
             { // if it is zero, we're walkin'!
-                print("moving");
                 canMove = true;
                 //Decide X or Y
                 if (currentXs[i] != 0 && currentYs[i] != 0)
