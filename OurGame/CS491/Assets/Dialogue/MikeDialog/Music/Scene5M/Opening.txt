@@ -1,0 +1,30 @@
+(switch) Player
+It's been almost a month since I've joined the band, and it seems like I'm really starting to find my groove again. 
+I still have a little bit to go until I secure the first chair, but I'm confident given some more time that it'll be mine. 
+(switch) Null
+Your phone vibrates in your pocket, a small light flashes indicating you've missed a call. 
+(switch) Player
+Oh? I must've missed someones call. Oh, two. One from Douglas, and another from Ernie. 
+Haven't heard from Ernie in a while. 
+(switch) Ernie
+Hey FredI know you're super busy with preparing for your show, though I was curious if it'd be possible if you could still lend us a hand if you have the spare time? 
+I know you're good at organizing these types of events and frankly, there have been a few kinks that we've been struggling to iron out. 
+We could really use your expertise if you could lend it. If you can help, just give me a call or stop on over, thanks.
+(switch) Player
+Sounds serious. I wonder what kind of issues he's having? Next message. 
+(switch) Douglas
+Fred, we realize that you've part your ways, though with the circumstances regarding your departure...
+Has left us in a bit of a bind as we don't have someone else with your skill set within the company to organize this festival with your specialty. 
+There have been a few hiccups that we could really use your help resolving, and we'd offer you a special contract to help us deal with this.
+Which includes a sizable pay increase as an apology for this whole situation you've been placed in. 
+We hope to hear back from you, thanks.
+(switch) Player
+I'm not sure what to do about this... 
+Both Ernie and Douglas need my help, but I just know that helping either of them will take a considerable amount of time. 
+Any 'kink' in the organizing at this point is more than a small problem. 
+But if I were to help either of them, I don't think I'll be in a position to get the first chair. 
+What should I do?
+(switch) Null
+Should you wish to continue with your music, you should probably return to practice. 
+Or, should you wish to help either Douglas or Ernie, you should probably go talk to them. 
+

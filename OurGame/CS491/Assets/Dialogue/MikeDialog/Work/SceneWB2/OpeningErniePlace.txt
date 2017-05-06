@@ -1,0 +1,8 @@
+(switch) Ernie
+Wow, it's take a few days but, you've done it! We really owe you a lot, Fred.
+(switch) Player
+It's no problem, I can always find some time to help a friend. I should probably swing by work and head home.
+(switch) Ernie
+Alright, well. Take it easy. 
+(switch) Player
+Bye. 

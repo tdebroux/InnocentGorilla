@@ -1,0 +1,14 @@
+(startevents) Weber
+(switch) Weber
+Fred! You got my message! How lovely of you to stop by!
+(switch) Player
+It's no problem, really. How can I help? You seemed like you were in a bit of a bind.
+(switch) Weber
+That's for sure. We need more help raising some funds and sponsors for our show to cover our expenses for the stage.
+As well to fund hiring a few stage hands.
+(switch) Player
+That's doable, I'll be happy to do what I can. 
+I had a few sponsors that didn't want to support the festival directly, but maybe they will support a band.
+I'll make a few calls.
+
+(change) SceneWC1

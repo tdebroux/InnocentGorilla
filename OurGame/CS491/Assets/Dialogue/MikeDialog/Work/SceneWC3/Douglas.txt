@@ -1,0 +1,12 @@
+(switch) Douglas
+Hey, Fred. Is your speech done? 
+(switch) Player
+Yeah, took a while but it's done. 
+(switch) Douglas
+There are a few things I'd like you to mention while you're up there. 
+Let the people know that the Art Gallery will be a little delayed due to some unforseen circumstances.
+It should be okay though, they just need a bit more time.
+(switch) Player
+Sure thing.
+(switch) Douglas
+Anyway, you're up. Head up to the microphone when you're ready.

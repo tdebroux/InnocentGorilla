@@ -1,0 +1,19 @@
+(startevents) Weber
+(switch) Null
+After practice ends, Weber stands infront to address everyone. 
+(switch) Weber
+Great! We are really shaping up for our upcoming performance and I'm sure it'll go off without a hitch.
+And as the date is fast approaching, which means we need to select our first chair. 
+Even though they are a recent addition, they have put in many, many hours, and dedicated themselves to this group.
+Please, give a round of applause for Character, our new first chair!
+(switch) Null
+Everyone on stage applauds. 
+(switch) Orchestra
+Congradulations! You've earned it! 
+(switch) Player
+Thanks guys, I really appreciate this honor. I know that I'm the newest bandmate, but I promise not to let you guys down.
+(switch) Weber
+I'm sure you won't. 
+Anyhow, that's it for today folks. Our next meeting with be at the festival, so be sure to practice, and I'll see you there!
+(switch) Player
+I'll see you guys around, looking forward to our show! 

@@ -1,0 +1,12 @@
+(startevents) Douglas
+(switch) Douglas
+Fred! I'm glad to see you. So, I take it you'll be coming back to work for us then?
+(switch) Player
+Yes sir, while the work can be hard, I love what I do here.
+(switch) Douglas
+I'm glad to hear it, because honestly, we don't exactly have anyone that can replace you. 
+But otherwise, you'll need to find vendors to attend the festival, sponsors, volunteers, events, and anything else you can think of.
+(switch) Player
+Sure thing, sir. I'll get started immediately.
+
+(change) Scene2W1

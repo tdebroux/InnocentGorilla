@@ -1,0 +1,2 @@
+Start in Ernies house, with a text trigger to being talking to Ernie on load. 
+Eric and Sarah are talking near the couch. A few canvases are around. 

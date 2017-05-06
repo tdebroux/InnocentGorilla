@@ -1,0 +1,25 @@
+(startevents) Ernie
+(switch) Player
+How has the hunt for volunteers been going? 
+(switch) Ernie
+Great, actually. Here's a list of names and their availability. 
+(switch) Player
+Awesome. I'll get a schedule organized then. I've finished the floor plan, but I've still gotta assign jobs. 
+(switch) Ernie
+Sounds good. There is one thing I wanted to ask though. Would you want to try and submit a piece to be shown in the gallery? 
+(switch) Player
+I'm not exactly the greatest artist around. 
+(switch) Ernie
+All of us here could help teach you. We've got an empty space, c'mon. You've gotta. 
+(switch) Player
+Well, how's this? we'll work on teaching me to paint, and I'll start painting something over the next few weeks for the festival. 
+Though, I've still got to focus on getting everything finished first. 
+(switch) Ernie
+Awesome! I'm sure you'll pick it up in no time. Want to start? 
+(switch) Player
+I guess? 
+(switch) Ernie
+Cool, I've got a canvas over here already set up. 
+(event) 
+
+(change) SceneF3

@@ -1,0 +1,2 @@
+Band Members and Weber in Theater, player can start outside of theater. 
+Colider Box on empty chair on stage triggers next scene. 

@@ -1,0 +1,9 @@
+(switch) Null
+A few days pass, you've been hard at work ironing out the finer details of the plan. 
+(switch) Player
+Douglas, I've reorganized the general layout of the festival for maximum effectiveness, ironed out schedule conflicts and added a few more vendors with the new space I made with reorganizing the layout. 
+(switch) Douglas
+Sounds great, Fred. I appreciate the help. Once again, sorry for everything that happened, and just know that there's always a spot here for you should you want it. 
+(switch) Player
+I'll keep that in mind, thanks. Anyway, I've gotta head over to practice. See you around, sir. 
+

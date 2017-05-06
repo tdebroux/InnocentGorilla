@@ -1,0 +1,19 @@
+(switch) Player
+I'd like to give thanks to sponsors, vendors, and everyone who has shown up to make this festival something special.
+It has really come together to be something great, to celebrate our 100th year anniversary as a town.
+I'd like to give thanks to Dr. Weber, for organizing her band to perform for all of us.
+As well as Ernest Fletcher, who has organized an art gallery for all of us to view of some of the best local artists. 
+Though please know, that there will be a slight delay on the opening of both events due to some unforeseen circumstances.
+I hope you all have a wonderful time!
+(switch) Null
+The audience applauses. 
+
+(switch) Player
+It's strange how your life can make such drastic changes in such little time. 
+A bit over a month ago I was working for Douglas, working weekends and overtime. 
+I liked the work, and saw the change that I could make, so after my suspension I went back.
+Now, I've managed to become the new Vice President of the company. 
+I may have messed up those accounts, and mistakes were made. I failed. 
+But just because I failed, it didn't mean it was the end of the world. 
+More opportunities arrose and through hard work and dedication I was able to take control and move forward. 
+

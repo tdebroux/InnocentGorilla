@@ -1,0 +1,1 @@
+Player practicing violin in the park, start on box collider to immediately trigger text file/scene change. 

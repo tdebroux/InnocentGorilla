@@ -1,0 +1,1 @@
+Have player start just inside house door, with a text trigger box on the bed, Dr. Weber in the theater, and Ernie at home. 

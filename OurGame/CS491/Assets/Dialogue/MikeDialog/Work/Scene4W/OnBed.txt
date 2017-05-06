@@ -1,0 +1,6 @@
+(switch) Player
+I feel bad that I'm not able to help those guys out.
+But I feel that I need to continue working on the general festival or everything will suffer and that wouldn't look the best.
+After I get some rest, I'll head back to work. 
+
+(change) SceneWA1

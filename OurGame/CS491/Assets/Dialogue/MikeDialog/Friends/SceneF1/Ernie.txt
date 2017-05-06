@@ -1,0 +1,29 @@
+(startevents) Ernie
+(switch) Ernie
+Oh, Fred! Did you get my message? Does that mean you're going to help us out?
+(switch) Player
+Of course. What exactly do you need help with?
+(switch) Ernie
+Awesome! Thanks man. Basically, we're not stupid or anything, but we're all artists. 
+We could organize this well enough, but this is what you do. 
+We wanted to bring you on to help make sure everything goes smoothly.
+(switch) Player
+Ha! Of course, it's no problem. I can certainly do that, but I'll need your help in all this.
+(switch) Ernie
+Don't even worry about it, you know I'll help. I even have a few friends too. 
+(switch) Player
+Awesome, first things first, do you think you'll need help outside of the people presenting to set things up?
+(switch) Ernie
+Ernie: Yeah, probably.
+(switch) Player
+Well if that's the case, then you'll probably need to get some volunteers.
+(switch) Ernie
+I can do that, I kinda have a way with people, that and I know a few folks who might be willing to help out.
+(switch) Player
+Sure thing, then I'll take care of getting schedules organized, organizing jobs, and get a floor plan laid out.
+(switch) Ernie
+Sounds great!
+(switch) Player
+I'll get started then. 
+
+(change) SceneF2

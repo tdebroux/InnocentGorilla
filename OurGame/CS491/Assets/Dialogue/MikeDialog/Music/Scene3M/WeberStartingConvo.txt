@@ -1,0 +1,16 @@
+(startevents) Weber
+(switch) Weber
+(event) (Weber Walking in)
+Fred, you're still here? 
+(switch) Player
+Oh, hi Dr. Weber. what time is it? 
+(switch) Weber
+It's 8:00 AM!
+(switch) Player
+Really? Wow. Sorry, time really got away from me, I was practicing and found this old sheet music.
+Then I found some more and then, well, you get the idea.
+(switch) Weber
+Well, that shows dedication! And from the sounds of it, you've picked up right where you left off. 
+But please, go home and get some rest.
+(switch) Player
+Yeah, I probably should. Thanks.

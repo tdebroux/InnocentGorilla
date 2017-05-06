@@ -1,0 +1,10 @@
+(switch) Douglas
+I hope your time off didn't affect our project, did it? 
+(switch) Player
+Of course not. Everything's going as planned. 
+(switch) Douglas
+Good. I'll see you at the festival. 
+(switch) Player
+Sure thing, I'll just finish writing up my speech for the opening and head home.
+
+(change) SceneWC3

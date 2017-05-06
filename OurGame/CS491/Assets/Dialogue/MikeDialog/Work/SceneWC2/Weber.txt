@@ -1,0 +1,9 @@
+(switch) Player
+I've managed to raise some more funds for your expenses, you should have everything covered.
+(switch) Weber
+Amazing! This means so much to all of us, thank you! 
+(switch) Player
+It's no problem. I'm sure you'll put on an amazing show and I'm glad that I was able to be apart of it somehow. 
+Anyway, I need to get back to work. Have a great day. 
+(switch) Weber
+You too! 
