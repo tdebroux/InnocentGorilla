@@ -32,7 +32,6 @@ public class TextBoxManager : MonoBehaviour
     public bool isAnEvent = false;
     NonPlayerMovement aiMovement;
     public static TextBoxManager S;
-    private bool displayText;
     // Use this for initialization
     void Start()
     {
@@ -40,8 +39,8 @@ public class TextBoxManager : MonoBehaviour
         animator = GetComponent<Animator>(); // to switch sprite heads
         animator.SetInteger("CharacterNumber", characterNum);
         eventObj = FindObjectOfType<MoveEventCommands>();
+
         endAtLine = textLines.Length - 1;
-        displayText = false;
         DisableTextBox();// makes sure it doesn't start appeared on the screen
         currentLine = -5;
     }
