@@ -13,3 +13,7 @@ EditorBuildSettings:
     path: Assets/Scene1PartTwo.unity
   - enabled: 1
     path: Assets/Minigame.unity
+  - enabled: 1
+    path: Assets/Scene5A.unity
+  - enabled: 1
+    path: Assets/Scene5B.unity
