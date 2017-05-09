@@ -5,11 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class BridgeToFestivalTele : MonoBehaviour
 {
+    public string sceneName;
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.name == "MainCharacter")
         {
-            SceneManager.LoadScene("SceneWA2b");
+            SceneManager.LoadScene(sceneName.Trim());
         }
     }
 }
