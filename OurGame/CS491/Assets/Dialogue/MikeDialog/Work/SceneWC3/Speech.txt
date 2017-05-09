@@ -7,6 +7,7 @@ Though please know, that there will be a slight delay on the opening of the Art 
 (startevents) Weber
 (event)
 (event)
+(event)
 (switch) Weber
 Mind if I take the mic for a moment? 
 (switch) Player
@@ -19,7 +20,6 @@ Please, give him a round of applause.
 The audience applauses. 
 (switch) Player
 I hope you all have a wonderful time!
-
 (switch) Player
 It's strange how your life can make such drastic changes in such little time. 
 A bit over a month ago I was working for Douglas, working weekends and overtime. 
