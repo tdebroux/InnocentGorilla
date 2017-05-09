@@ -17,3 +17,29 @@ EditorBuildSettings:
     path: Assets/Scene5A.unity
   - enabled: 1
     path: Assets/Scene5B.unity
+  - enabled: 1
+    path: Assets/Scene6a.unity
+  - enabled: 1
+    path: Assets/Scene6b.unity
+  - enabled: 1
+    path: Assets/SceneWA1.unity
+  - enabled: 1
+    path: Assets/SceneWA2a.unity
+  - enabled: 1
+    path: Assets/SceneWA2b.unity
+  - enabled: 1
+    path: Assets/SceneWB1.unity
+  - enabled: 1
+    path: Assets/SceneWB2.unity
+  - enabled: 1
+    path: Assets/SceneWB3a.unity
+  - enabled: 1
+    path: Assets/SceneWB3b.unity
+  - enabled: 1
+    path: Assets/SceneWC1.unity
+  - enabled: 1
+    path: Assets/SceneWC2.unity
+  - enabled: 1
+    path: Assets/SceneWC3a.unity
+  - enabled: 1
+    path: Assets/SceneWC3b.unity
