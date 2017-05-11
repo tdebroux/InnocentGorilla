@@ -1,6 +1,6 @@
 (startevents) Weber
 (switch) Weber
-And I'm delighted to announce that Character has decided to join our band.
+And I'm delighted to announce that Fred has decided to join our band.
 (switch) Orchestra
 Hey! Welcome!
 (switch) Player
@@ -8,4 +8,4 @@ Hello everyone. I'm glad to be a part of the group. I'll be sure to work hard an
 (switch) Orchestra
 Well, it won't come easy!
 (switch) Weber
-Anyway, shall we begin? Please, take your chair, Character.
+Anyway, shall we begin? Please, take your spot, Fred.

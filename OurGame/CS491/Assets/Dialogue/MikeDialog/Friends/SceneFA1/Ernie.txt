@@ -1,0 +1,20 @@
+(switch) Ernie
+Fred! Hey, we're about to finish everything up. 
+(switch) Player
+Oh really? Wow, awesome. 
+(switch) Ernie
+There is one more thing that you need to do though. 
+(switch) Player
+And what's that? 
+(switch) Ernie
+Your painting. 
+(switch) Null
+Ernie points over towards the canvas in his room. 
+(switch) Player
+Alright, alright. Fine. I'll do it. 
+(switch) Ernie
+Great! I'll be over here finishing up the rest of the busy work, you paint. If you need any help, just ask. 
+(switch) Player
+Awesome. Will do.
+
+(change) SceneFA2

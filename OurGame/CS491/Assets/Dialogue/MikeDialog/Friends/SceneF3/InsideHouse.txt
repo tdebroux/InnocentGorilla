@@ -1,0 +1,22 @@
+(switch) Player
+Oh, I've got a few messages, one from Dr. Weber and another from Douglas. 
+(switch) Null
+The first message plays. 
+(switch) Douglas
+Fred, we realize that you've part your ways, though with the circumstances regarding your departure...
+Has left us in a bit of a bind as we don't have someone else with your skill set within the company to organize this festival with your specialty. 
+There have been a few hiccups that we could really use your help resolving, and we'd offer you a special contract to help us deal with this.
+Which includes a sizable pay increase as an apology for this whole situation you've been placed in. 
+We hope to hear back from you, thanks.
+(switch) Player
+Sounds like he's in a bit of a bind. 
+(switch) Null
+The next message continues to play. 
+(switch) Weber
+Hi! Sorry to disturb you, though we could really use your help. 
+We're running low on funding for the set up of our stage over at the festival grounds and will need more volunteers.
+Considering this is what you do, I was wondering if you could help us raise some more funds and finding more volunteers.
+Any help you could give would be appreciated, thanks.
+(switch) Player
+This puts me in a bit of a bind. They both need the help, but if I go help them, I'll likely not finish my project for the gallery. What should I do? 
+I guess I'll go talk to whoever I choose to help, or go just head back to bed and go back to Ernie's in the morning. 

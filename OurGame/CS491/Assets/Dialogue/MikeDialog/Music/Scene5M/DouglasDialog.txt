@@ -20,4 +20,4 @@ Wow, a lot of vendors.
 This festival grounds plan needs to be almost entirely reworked and a schedule ironed out for the main activities.
 This'll take a few days,
 
-(change) Scene1MC
+(change) SceneMC1

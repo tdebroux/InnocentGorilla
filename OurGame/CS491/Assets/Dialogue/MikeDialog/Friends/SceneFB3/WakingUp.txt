@@ -1,0 +1,6 @@
+(switch) Null
+A few days pass and you just barely had enough time to finish organizing everything for the gallery. 
+Though, unfortunately couldn't complete your painting to submit to the gallery. 
+(switch) Player
+Today is the day! I think they cleared those barrels from the bridge, now I should be able to get to the festival grounds. 
+I've finished my painting and everything is ready for the gallery opening. 

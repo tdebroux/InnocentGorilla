@@ -1,0 +1,4 @@
+(switch) Player
+I appreciate what Dr. Weber and Douglas have done for me, but I need to take some time for myself. I'll head over to Ernie's in the morning. 
+
+(change) SceneFA1

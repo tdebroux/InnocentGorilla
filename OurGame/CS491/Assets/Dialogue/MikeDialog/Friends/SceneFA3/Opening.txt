@@ -1,0 +1,26 @@
+(startevents) Ernie
+(switch) Null
+A few hours passed, the gallery opened and closed. People inspected the art, took pictures, and asked questions.
+It went really well and everyone was generally pleased. 
+(event)
+(event)
+(switch) Ernie
+Fred! Wow, that went amazingly. It was an experience of a lifetime!
+(switch) Player
+It sure was. I heard a lot of good things about my painting as well. 
+(switch) Ernie
+Because it is good, Fred. Though hey, we're all heading out for a little after party. 
+You want to go? 
+(switch) Player
+Of course! Let's go!
+(event)
+(switch) Null
+It's strange how your life can make such drastic changes in such little time. 
+A bit over a month ago I was working for Douglas, working weekends and overtime. 
+I liked the work, and saw the change that I could make, so after my suspension I went back.
+Now, I've submitted a paiting to a local art gallery and it was actually well recieved. 
+I may have messed up those accounts while working for Douglas, and mistakes were made. I failed. 
+But just because I failed, it didn't mean it was the end of the world. 
+More opportunities arrose and through hard work and dedication I was able to take control and move forward. 
+
+-THE END-

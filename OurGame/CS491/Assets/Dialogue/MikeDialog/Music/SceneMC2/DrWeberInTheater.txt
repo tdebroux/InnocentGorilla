@@ -8,9 +8,9 @@ They have put in many, many hours, and dedicated themselves to this group.
 They've shown their skills and their dedication over the last several weeks, please, give a round of applause for Angela!
 (switch) Null
 Everyone on stage applauds. 
-(switch) Orchestra
+(switch) George
 Congradulations! You've earned it! 
-(switch) Orchestra
+(switch) Tina
 Thank you! I promise not to spoil the opprtunity! 
 (switch) Weber
 I'm sure you won't. 
