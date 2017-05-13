@@ -24,9 +24,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/SceneWA1.unity
   - enabled: 1
+    path: Assets/Scene1W.unity
+  - enabled: 1
     path: Assets/SceneWA2a.unity
   - enabled: 1
+    path: Assets/Scene2W1.unity
+  - enabled: 1
     path: Assets/SceneWA2b.unity
+  - enabled: 1
+    path: Assets/Scene2W2.unity
   - enabled: 1
     path: Assets/SceneWB1.unity
   - enabled: 1

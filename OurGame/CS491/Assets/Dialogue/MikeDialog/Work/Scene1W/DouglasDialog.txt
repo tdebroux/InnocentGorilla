@@ -1,4 +1,3 @@
-(startevents) Douglas
 (switch) Douglas
 Fred! I'm glad to see you. So, I take it you'll be coming back to work for us then?
 (switch) Player
