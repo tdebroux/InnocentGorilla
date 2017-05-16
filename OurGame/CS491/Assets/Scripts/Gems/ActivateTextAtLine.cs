@@ -17,6 +17,10 @@ public class ActivateTextAtLine : MonoBehaviour
     void Start()
     {
         theTextBox = TextBoxManager.S;
+        if (gameObject.GetComponentInParent<MoveEventCommands>() != null)
+        {
+            gameObject.GetComponent<Rigidbody2D>();
+        }
     }
 
     // Update is called once per frame
@@ -31,7 +35,6 @@ public class ActivateTextAtLine : MonoBehaviour
                 theTextBox.endAtLine = endLine;
                 theTextBox.EnableTextBox();
             }
-
 
             if (destroyWhenActivated)
             {

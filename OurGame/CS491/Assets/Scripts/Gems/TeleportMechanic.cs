@@ -26,7 +26,8 @@ public class TeleportMechanic : MonoBehaviour
         if (other.name == "MainCharacter")
         {
             player.canMove = false;
-            fadeScr.EndScene();
+            //fadeScr.EndScene();
+            fadeScr.StartFade();
             other.transform.position = TeleportPosition;
             player.StartCoroutine("CantMoveForTime", .7f);
         }
