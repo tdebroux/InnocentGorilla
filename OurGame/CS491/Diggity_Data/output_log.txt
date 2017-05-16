@@ -1,0 +1,82 @@
+Initialize engine version: 5.5.1f1 (88d00a7498cd)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) HD Graphics 510 (ID=0x1906)
+    Vendor:   Intel
+    VRAM:     1115 MB
+    Driver:   21.20.16.4550
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\tjdeb\Documents\InnocentGorilla\OurGame\CS491\Diggity_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\tjdeb\Documents\InnocentGorilla\OurGame\CS491\Diggity_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\tjdeb\Documents\InnocentGorilla\OurGame\CS491\Diggity_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\tjdeb\Documents\InnocentGorilla\OurGame\CS491\Diggity_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\tjdeb\Documents\InnocentGorilla\OurGame\CS491\Diggity_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\tjdeb\Documents\InnocentGorilla\OurGame\CS491\Diggity_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\tjdeb\Documents\InnocentGorilla\OurGame\CS491\Diggity_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\tjdeb\Documents\InnocentGorilla\OurGame\CS491\Diggity_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\tjdeb\Documents\InnocentGorilla\OurGame\CS491\Diggity_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\tjdeb\Documents\InnocentGorilla\OurGame\CS491\Diggity_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+Platform assembly: C:\Users\tjdeb\Documents\InnocentGorilla\OurGame\CS491\Diggity_Data\Managed\UnityEngine.VR.dll (this message is harmless)
+Loading C:\Users\tjdeb\Documents\InnocentGorilla\OurGame\CS491\Diggity_Data\Managed\UnityEngine.VR.dll into Unity Child Domain
+- Completed reload, in  0.140 seconds
+Platform assembly: C:\Users\tjdeb\Documents\InnocentGorilla\OurGame\CS491\Diggity_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\tjdeb\Documents\InnocentGorilla\OurGame\CS491\Diggity_Data\Managed\System.dll (this message is harmless)
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+<RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 4.193937 ms
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 1bec -> priority: 1 
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 52.115852 ms
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 13320.
+Total: 13.778902 ms (FindLiveObjects: 0.927999 ms CreateObjectMapping: 0.450908 ms MarkObjects: 3.586907 ms  DeleteObjects: 0.657939 ms)
+
+event on: 7
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+going down destination reached
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+event on: 8
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+event on: 25
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+event on: 26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 100.327705 ms
+
+Unloading 512 unused Assets to reduce memory usage. Loaded Objects now: 300.
+Total: 2.221574 ms (FindLiveObjects: 0.075151 ms CreateObjectMapping: 0.070302 ms MarkObjects: 0.328727 ms  DeleteObjects: 1.746423 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.811877 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 13330.
+Total: 3.354665 ms (FindLiveObjects: 0.745696 ms CreateObjectMapping: 0.228848 ms MarkObjects: 2.343271 ms  DeleteObjects: 0.035878 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 48.446522 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 13320.
+Total: 5.932118 ms (FindLiveObjects: 1.305696 ms CreateObjectMapping: 0.450424 ms MarkObjects: 4.120240 ms  DeleteObjects: 0.053818 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 52.462517 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 13331.
+Total: 4.130422 ms (FindLiveObjects: 0.899393 ms CreateObjectMapping: 0.277333 ms MarkObjects: 2.912968 ms  DeleteObjects: 0.039757 ms)
+

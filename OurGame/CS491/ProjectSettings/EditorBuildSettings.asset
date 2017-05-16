@@ -10,9 +10,27 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene1.unity
   - enabled: 1
+    path: Assets/Minigame.unity
+  - enabled: 1
     path: Assets/Scene1PartTwo.unity
   - enabled: 1
-    path: Assets/Minigame.unity
+    path: Assets/Scene1W.unity
+  - enabled: 1
+    path: Assets/Scene2.unity
+  - enabled: 1
+    path: Assets/Scene2W1.unity
+  - enabled: 1
+    path: Assets/Scene2W2.unity
+  - enabled: 1
+    path: Assets/Scene2W3.unity
+  - enabled: 1
+    path: Assets/Scene3.unity
+  - enabled: 1
+    path: Assets/Scene3W.unity
+  - enabled: 1
+    path: Assets/Scene4.unity
+  - enabled: 1
+    path: Assets/Scene4W.unity
   - enabled: 1
     path: Assets/Scene5A.unity
   - enabled: 1
@@ -22,17 +40,87 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene6b.unity
   - enabled: 1
-    path: Assets/SceneWA1.unity
+    path: Assets/SceneF1.unity
   - enabled: 1
-    path: Assets/Scene1W.unity
+    path: Assets/SceneF2.unity
+  - enabled: 1
+    path: Assets/SceneF3.unity
+  - enabled: 1
+    path: Assets/SceneFA1.unity
+  - enabled: 1
+    path: Assets/SceneFA2.unity
+  - enabled: 1
+    path: Assets/SceneFA2Festival.unity
+  - enabled: 1
+    path: Assets/SceneFA3.unity
+  - enabled: 1
+    path: Assets/SceneFB1.unity
+  - enabled: 1
+    path: Assets/SceneFB2.unity
+  - enabled: 1
+    path: Assets/SceneFB3Festival.unity
+  - enabled: 1
+    path: Assets/SceneFB4.unity
+  - enabled: 1
+    path: Assets/SceneFC1.unity
+  - enabled: 1
+    path: Assets/SceneFC2.unity
+  - enabled: 1
+    path: Assets/SceneFC2Festival.unity
+  - enabled: 1
+    path: Assets/SceneFC3.unity
+  - enabled: 1
+    path: Assets/SceneM1.unity
+  - enabled: 1
+    path: Assets/SceneM2.unity
+  - enabled: 1
+    path: Assets/SceneM3.unity
+  - enabled: 1
+    path: Assets/SceneM4A.unity
+  - enabled: 1
+    path: Assets/SceneM4B.unity
+  - enabled: 1
+    path: Assets/SceneM4C.unity
+  - enabled: 1
+    path: Assets/SceneM5.unity
+  - enabled: 1
+    path: Assets/SceneMA1a.unity
+  - enabled: 1
+    path: Assets/SceneMA1b.unity
+  - enabled: 1
+    path: Assets/SceneMA2.unity
+  - enabled: 1
+    path: Assets/SceneMA2Fairground.unity
+  - enabled: 1
+    path: Assets/SceneMA3.unity
+  - enabled: 1
+    path: Assets/SceneMB1.unity
+  - enabled: 1
+    path: Assets/SceneMB2a.unity
+  - enabled: 1
+    path: Assets/SceneMB2b.unity
+  - enabled: 1
+    path: Assets/SceneMB3.unity
+  - enabled: 1
+    path: Assets/SceneMB3Festival.unity
+  - enabled: 1
+    path: Assets/SceneMB4Festival.unity
+  - enabled: 1
+    path: Assets/SceneMC1.unity
+  - enabled: 1
+    path: Assets/SceneMC2.unity
+  - enabled: 1
+    path: Assets/SceneMC3.unity
+  - enabled: 1
+    path: Assets/SceneMC3Festival.unity
+  - enabled: 1
+    path: Assets/SceneMC4.unity
+  - enabled: 1
+    path: Assets/SceneWA1.unity
   - enabled: 1
     path: Assets/SceneWA2a.unity
   - enabled: 1
-    path: Assets/Scene2W1.unity
-  - enabled: 1
     path: Assets/SceneWA2b.unity
-  - enabled: 1
-    path: Assets/Scene2W2.unity
   - enabled: 1
     path: Assets/SceneWB1.unity
   - enabled: 1

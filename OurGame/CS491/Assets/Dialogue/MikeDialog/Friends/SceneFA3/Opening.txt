@@ -1,5 +1,3 @@
-(startevents) Ernie
-(switch) Null
 A few hours passed, the gallery opened and closed. People inspected the art, took pictures, and asked questions.
 It went well and everyone liked it.
 (switch) Ernie

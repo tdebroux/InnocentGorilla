@@ -1,9 +1,5 @@
-(startevents) Ernie
-(switch) Null
 A few hours passed, the gallery opened and closed. People inspected the art, took pictures, and asked questions.
 It went really well and everyone was generally pleased. 
-(event)
-(event)
 (switch) Ernie
 Fred! Wow, that went amazingly. It was an experience of a lifetime!
 (switch) Player
@@ -18,7 +14,6 @@ Hey, we're all heading out for a little after party.
 You want to go? 
 (switch) Player
 Of course! Let's go!
-(event)
 (switch) Null
 It's strange how your life can make such drastic changes in such little time. 
 A bit over a month ago I was working for Douglas, working weekends and overtime. 
