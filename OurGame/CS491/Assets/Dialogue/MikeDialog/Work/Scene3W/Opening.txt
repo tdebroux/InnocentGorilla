@@ -1,7 +1,7 @@
 (startevents) Douglas
 (event)
 (switch) Douglas
-Do you have any update on how the festival is coming, Character?
+Do you have any update on how the festival is coming, Fred?
 (switch) Player
 I've got a lot of vendors, sponsors, and enough volunteers to man everything.
 Now is time to organize the layout and scheduling of everything.

@@ -1,6 +1,6 @@
 (startevents) Weber
 (switch) Weber
-(event) (Weber Walking in)
+(event)
 Fred, you're still here? 
 (switch) Player
 Oh, hi Dr. Weber. what time is it? 

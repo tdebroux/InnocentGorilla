@@ -1,0 +1,8 @@
+(switch) Null
+Now inside his house, Fred pulls out his phone. 
+(switch) Player
+I still have the information for a few people I've contacted in the past for sponsorships, I'll call a few of them and get this straightened out. 
+Hello, is this Cool Clothes for Attractive People, LLC? 
+Can I be forwarded to your marketing department for a sponsorship opportunity? Thanks. 
+
+(change) SceneFB2

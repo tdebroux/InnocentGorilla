@@ -1,0 +1,19 @@
+(switch) Weber
+Fred! I'm so glad you came!
+(switch) Player
+How could I abandon my favorite teacher in her time of need? 
+(switch) Weber
+Oh, stop. But really, thank you. 
+(switch) Player
+So, you just need some help raising some extra funding?
+(switch) Weber
+Yes. We need to find funding for the stage and hiring on the stage hands.
+(switch) Player
+Sure thing. I know a few places I could reach out too to gain you some sponsorships.
+It'll take a while to iron out the details. But I'm sure I can get it done.
+(switch) Weber
+Great! If you need any help, feel free to ask!
+(switch) Player
+No problem.
+
+(change) SceneFB1

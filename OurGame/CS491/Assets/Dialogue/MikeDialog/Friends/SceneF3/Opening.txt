@@ -1,0 +1,6 @@
+(switch) Ernie
+Wow, you're really coming along! You've improved a lot over the past week. 
+(switch) Player
+Thanks, I appreciate it. Anyway, it's about time I head home. Take it easy. 
+(switch) Ernie
+Don't mention it! See you around. 

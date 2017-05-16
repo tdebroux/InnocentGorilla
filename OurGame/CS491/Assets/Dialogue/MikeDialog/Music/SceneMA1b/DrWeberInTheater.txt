@@ -5,10 +5,10 @@ After practice ends, Weber stands infront to address everyone.
 Great! We are really shaping up for our upcoming performance and I'm sure it'll go off without a hitch.
 And as the date is fast approaching, which means we need to select our first chair. 
 Even though they are a recent addition, they have put in many, many hours, and dedicated themselves to this group.
-Please, give a round of applause for Character, our new first chair!
+Please, give a round of applause for Fred, our new first chair!
 (switch) Null
 Everyone on stage applauds. 
-(switch) Orchestra
+(switch) Tina
 Congradulations! You've earned it! 
 (switch) Player
 Thanks guys, I really appreciate this honor. I know that I'm the newest bandmate, but I promise not to let you guys down.

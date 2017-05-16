@@ -1,0 +1,16 @@
+(change) Douglas
+Fred, you've made it. Thank god. 
+(change) Player
+Yeah, it sounded like you really needed the help. 
+And well, you were good to me, so I wanted to see what I could do.
+(change) Douglas
+Well, thank you. We could really use the help.
+We've been juggling multiple vendors and are having trouble keeping everything organized.
+This is what you'll be tasked with managing.
+(switch) Player
+Sounds doable, if not a bit time consuming. 
+(switch) Douglas
+Yes it will be. But I'm sure you'll be able to do it!
+Your old desk is still open, all the information you'll need is there.
+(switch) Player
+Wonderful, I'll get started immediately.

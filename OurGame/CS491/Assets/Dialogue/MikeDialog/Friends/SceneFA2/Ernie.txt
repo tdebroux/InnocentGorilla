@@ -1,0 +1,15 @@
+(switch) Ernie
+Hey! We're almost done here, thanks to your awesome skills. 
+Wish I could say the same for everything else though. 
+The band is going to be running a little bit late due to some unforseen circumstances.
+That and the opening of the festival is delayed a bit so vendors can still get set up. 
+(switch) Player
+Wow, that's unfortunate. I'm sure everything will turn out okay though. 
+(switch) Ernie
+Yeah, everything should be fine. But we've gotten everything hung up including your painting. 
+(switch) Player
+Well thanks! 
+(switch) Ernie
+Now we just wait for it to open. 
+
+(change) SceneFA3

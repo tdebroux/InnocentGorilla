@@ -1,2 +1,4 @@
 (switch) Player
 I have a bit of time to explore the festival grounds, but when I'm ready I should talk to Dr. Weber near the stage. 
+
+(change) SceneMA2Fairground

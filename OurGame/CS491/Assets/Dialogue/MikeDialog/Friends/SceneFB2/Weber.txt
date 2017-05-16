@@ -1,0 +1,12 @@
+(switch) Weber
+Fred, hi! How's everything going? Haven't heard from you for a few days. 
+(switch) Player
+Well, I've got a few sponsorships which should give you what you need. All the information is in here. 
+(switch) Weber
+Thank you so much! This fixes everything! 
+(switch) Player 
+It's really no problem. I hope your performance goes well. I really should be getting back to bed. 
+(switch) Weber
+Have a good rest of your day. 
+
+(change) SceneFB3

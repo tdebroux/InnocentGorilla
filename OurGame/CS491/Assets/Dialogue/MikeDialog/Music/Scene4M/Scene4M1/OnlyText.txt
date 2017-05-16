@@ -1,5 +1,6 @@
 (startevents)
 (switch) Player
-I've gotta keep practicing. 
+The park is refreshing, it's nice to practice out here sometimes. 
+Anyway, time to get back to it. 
 
-(change) Scene4M2
+(change) SceneM4B
