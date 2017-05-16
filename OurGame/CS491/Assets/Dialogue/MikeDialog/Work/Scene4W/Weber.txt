@@ -1,4 +1,3 @@
-(startevents) Weber
 (switch) Weber
 Fred! You got my message! How lovely of you to stop by!
 (switch) Player

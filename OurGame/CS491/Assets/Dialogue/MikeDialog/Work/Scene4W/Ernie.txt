@@ -1,4 +1,3 @@
-(startevents) Ernie
 (switch) Ernie
 Hey! Fred! You got my message? 
 (switch) Player
