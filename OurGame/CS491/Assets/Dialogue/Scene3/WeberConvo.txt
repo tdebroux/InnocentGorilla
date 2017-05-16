@@ -5,7 +5,6 @@ Hi Dr. Weber.
 (switch) Weber
 Why so glum?
 (switch) Player
-(startevents) Weber
 Might've just lost my job. It appears I made a mistake and now I'm unsure if I'll have a job tomorrow.
 (switch) Weber
 That's horrible. I'm sorry to hear that. It seems you have grown a lot since you were in my class. Are you still practicing your violin?
