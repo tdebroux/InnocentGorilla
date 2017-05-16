@@ -46,27 +46,27 @@ public class Movement : MonoBehaviour {
         if (Input.GetKey(KeyCode.W))
         {
             currentDir = 0;
-            moveVelocityY = walkSpeed * 3;
+            moveVelocityY = walkSpeed * 9;
 
         }
         if (Input.GetKey(KeyCode.S))
         {
             currentDir = 2;
-            moveVelocityY = -walkSpeed * 3;
+            moveVelocityY = -walkSpeed * 9;
 
         }
 
         if (Input.GetKey(KeyCode.A))
         {
             currentDir = 3;
-            moveVelocityX = -walkSpeed * 4;
+            moveVelocityX = -walkSpeed * 12;
 
         }
 
         if (Input.GetKey(KeyCode.D))
         {
             currentDir = 1;
-            moveVelocityX = walkSpeed * 4;
+            moveVelocityX = walkSpeed * 12;
 
         }
        
