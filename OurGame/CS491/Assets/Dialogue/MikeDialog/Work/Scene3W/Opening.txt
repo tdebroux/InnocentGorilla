@@ -5,14 +5,14 @@ Do you have any update on how the festival is coming, Fred?
 (switch) Player
 I've got a lot of vendors, sponsors, and enough volunteers to man everything.
 Now is time to organize the layout and scheduling of everything.
-(switch) Douglas
+(switch) Douglas 
 That's excellent work, Fred. Over these last few weeks you've really gone above and beyond, working weekends, putting in the hours. 
 It reminds me a lot of me when I first started, the type of attitude that allowed me to grow this company to where it is today.
 (switch) Player
-Thank you sir, it means a lot.
+Thank you, sir, it means a lot.
 (switch) Douglas
 Well, you deserve it. 
-Keep working like this and showing your worth, there's likely to be a position opening up above you that I feel you'd be well suited for.
+Keep working like this and showing your worth, there's likely to be a position opening above you that I feel you'd be well suited for.
 (switch) Player
 That sounds great. Thanks for letting me know.
 (switch) Douglas

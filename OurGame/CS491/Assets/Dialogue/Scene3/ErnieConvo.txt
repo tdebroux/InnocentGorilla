@@ -23,6 +23,6 @@ Considering all this time on my hands, sure why not. What time?
 About 8 or so.
 (switch) Player
 I'll see you then, talk to you later.
-I should probably head home and get ready for Ernies after my walk.
+I should probably head home and get ready for Ernie’s after my walk.
 
 (change) Scene4

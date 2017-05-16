@@ -1,3 +1,6 @@
+(switch) Null
+A few days have passed, and you have Ernie have been hard at work. 
+Everything has been finalized, and now it's time for your show.
 (switch) Player
 Today is the day! I think they cleared those barrels from the bridge, now I should be able to get to the festival grounds. 
 I've finished my painting and everything is ready for the gallery opening. 

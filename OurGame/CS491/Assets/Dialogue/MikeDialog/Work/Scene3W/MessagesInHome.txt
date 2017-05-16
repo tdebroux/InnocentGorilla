@@ -1,11 +1,11 @@
 (switch) Player
 Oh, it seems that I missed a call. I wonder who from? 
-I guess I missed two. I have mesages from Ernie and Dr. Weber. What do they want? 
+I guess I missed two. I have messages from Ernie and Dr. Weber. What do they want?  
 (switch) Null
 The first message plays. 
 (switch) Ernie
 Hey Fred, I know you're super busy with preparing for your show, though I was curious if it'd be possible if you could still lend us a hand if you have the spare time? 
-I know you're really good at organizing these types of events and frankly, there have been a few kinks that we've been struggling to iron out. 
+I know you're good at organizing these types of events and frankly, there have been a few kinks that we've been struggling to iron out. 
 We could really use your expertise if you could lend it. If you can help, just give me a call or stop on over, thanks.
 (switch) Player
 Sounds like he could use some help. Not sure if I have the time though... 
@@ -13,7 +13,7 @@ Sounds like he could use some help. Not sure if I have the time though...
 The next message plays. 
 (switch) Weber
 Hi! Sorry to disturb you, though we could really use your help. 
-We're running low on funding for the set up of our stage over at the festival grounds and will need more volunteers.
+We're running low on funding for the setup of our stage over at the festival grounds and will need more volunteers.
 Considering this is what you do, I was wondering if you could help us raise some more funds and finding more volunteers.
 Any help you could give would be appreciated, thanks.
 (switch) Player

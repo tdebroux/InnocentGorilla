@@ -1,6 +1,6 @@
 (switch) Ernie
 Hey! We're almost done here, thanks to your awesome skills. 
-Though, the band will delayed a bit as they needed more time to set up. 
+Though, the band will be delayed a bit as they needed more time to set up. 
 (switch) Player
 Wow, that's unfortunate. I'm sure everything will turn out okay though. 
 (switch) Ernie
@@ -11,4 +11,4 @@ Yeah, sorry about that.
 It's not a problem, we just put another one of mine in there. 
 Anyway, now we just have to wait for it to open. 
 
-(change) SceneFC3
+(change) SceneFC3 

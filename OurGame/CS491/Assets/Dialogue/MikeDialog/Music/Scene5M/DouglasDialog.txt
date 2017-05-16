@@ -9,8 +9,8 @@ Well, I'm glad you've decided to come work for us again, even if it's temporary.
 We could really use the help. We've been juggling multiple vendors and are having trouble keeping everything organized. 
 This is what you'll be tasked with managing.
 (switch) Player
-Sounds... managable I guess, if a bit time consuming. 
-(switch) Douglas
+Sounds... manageable I guess, if a bit time consuming. 
+(switch) Douglas 
 Yes, it will be. 
 But I'm sure you'll be able to do it! 
 Your old desk is still open, all the information you'll need is there.

@@ -1,6 +1,6 @@
 (switch) Douglas
 Fred, you've really proven yourself, even after your suspension, you came back working as hard as ever.
-Once this festival has been completed, the Vice President slot will have opened up. I'd like you to take it. 
+Once this festival has been completed, the Vice President slot will have become vacant. I'd like you to take it. 
 (swtich) Player
 Really? Wow! Yes, I'll take it! Thanks!
 (switch) Douglas
@@ -8,4 +8,4 @@ Good. Now finish up here, the festival is only a few days away. Also, prepare yo
 (switch) Player
 Right, I'll get started on that right way, sir. 
 
-(change) SceneWA2a
+(change) SceneWA2a 

@@ -1,5 +1,5 @@
 (switch) Weber
-Character! Wow, it's been such a long time!"
+Fred! Wow, it's been such a long time!
 (switch) Player
 Hi Dr. Weber.
 (switch) Weber

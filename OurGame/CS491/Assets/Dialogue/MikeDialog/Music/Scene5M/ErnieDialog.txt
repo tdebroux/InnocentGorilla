@@ -1,5 +1,5 @@
 (startevents) Ernie
-(swtich) Ernie
+(switch) Ernie
 Hey! Fred! You got my message? 
 (switch) Player
 Yeah, I did. I'm here to help. How can I help?
@@ -9,7 +9,7 @@ Well, we need a few more volunteers to help us set up, and dealing with the sche
 Alright, this is fixable, but it'll take a bit of work. 
 I'd say we offer free admission to the festival plus access to some food once the gallery is closed for the volunteers.
 (switch) Ernie
-That should work, yeah. 
+That should work, yeah.  
 (switch) Player
 I'll begin drumming up some more volunteers in the park.
 (switch) Ernie

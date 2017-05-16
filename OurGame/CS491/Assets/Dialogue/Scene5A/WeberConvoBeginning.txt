@@ -4,7 +4,7 @@ Oh Fred! You came!
 (switch) Player
 Sure did. I always keep my promises. 
 (switch) Weber
-Well, I can assure you that we won't dissapoint. Please, take your seat. 
+Well, I can assure you that we won't disappoint. Please, take your seat. 
 (switch) Player
 Wow, these are front row tickets. Thank you! 
 (switch) Weber
@@ -15,3 +15,4 @@ Well thank you. I appreciate it.
 Now please, find your seat. We'll be starting soon. 
 
 (change) Scene5B
+

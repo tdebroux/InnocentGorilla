@@ -3,7 +3,7 @@
 Wow, it's taken a few days but we've done it! 
 We really owe you a lot, Fred. We do appreciate the help you have us. 
 (switch) Player
-It's really not a problem. I can always find time to help a friend. 
+It's not a problem. I can always find time to help a friend. 
 (switch) Ernie
 Well, hopefully I'll be able to get away to come watch your show with the new volunteers. 
 (switch) Player
@@ -11,4 +11,4 @@ I hope so, it'd mean a lot to have you there. Here's a ticket to the front row.
 (switch) Ernie 
 Wow! Thanks. I'll do my best to be there. 
 (switch) Player
-Will see you there. I need to head to practice at the theater. Bye! 
+I will see you there. I need to head to practice at the theater. Bye!  

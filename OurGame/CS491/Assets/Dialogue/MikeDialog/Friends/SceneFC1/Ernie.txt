@@ -3,7 +3,7 @@ Hey! You finally finish up that work for your old boss?
 (switch) Player
 Yeah, it took a while, sorry. How're things going here? 
 (switch) Ernie
-Great, we've got everything squared away for the festival tommorow. 
+Great, we've got everything squared away for the festival tomorrow. 
 It's a shame you won't have a piece to present though. 
 (switch) Player
 Yeah, sorry about that.
@@ -13,4 +13,4 @@ It's not a problem.
 I just wanted to stop by and check in. 
 Probably going to head home and rest for the festival tomorrow. 
 (switch) Ernie
-We'll see you there! 
+We'll see you there!  

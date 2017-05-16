@@ -13,10 +13,10 @@ And that money has not been accounted for. The money's gone.
 (switch) Player
 What?! This has to be an honest mistake. 
 (switch) Douglas 
-Clearly, though we still have to investigate this. 
+Clearly, though we still must investigate this. 
 While we aren't saying you are guilty, we have to investigate you for embezzlement.
 (switch) Player
-That's ridiculous! You know I would never steal our companies money!
+That's ridiculous! You know I would never steal our company’s money!
 (switch) Douglas
 Until we know for sure, consider yourself suspended until further notice. *click*
 (switch) Null

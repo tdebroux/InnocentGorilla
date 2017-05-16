@@ -1,7 +1,7 @@
 (switch) Ernie
 Hey! We're almost done here, thanks to your awesome skills. 
 Wish I could say the same for everything else though. 
-The band is going to be running a little bit late due to some unforseen circumstances.
+The band is going to be running a little bit late due to some unforeseen circumstances.
 That and the opening of the festival is delayed a bit so vendors can still get set up. 
 (switch) Player
 Wow, that's unfortunate. I'm sure everything will turn out okay though. 
@@ -12,4 +12,4 @@ Well thanks!
 (switch) Ernie
 Now we just wait for it to open. 
 
-(change) SceneFA3
+(change) SceneFA3 

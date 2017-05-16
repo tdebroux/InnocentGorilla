@@ -1,6 +1,6 @@
 (startevents) Weber
 (switch) Null
-After practice ends, Weber stands infront to address everyone. 
+After practice ends, Weber stands in front to address everyone. 
 (switch) Weber
 Great! We are really shaping up for our upcoming performance and I'm sure it'll go off without a hitch.
 And as the date is fast approaching, which means we need to select our first chair. 
@@ -8,10 +8,10 @@ They have put in many, many hours, and dedicated themselves to this group.
 They've shown their skills and their dedication over the last several weeks, please, give a round of applause for Angela!
 (switch) Null
 Everyone on stage applauds. 
-(switch) George
-Congradulations! You've earned it! 
-(switch) Tina
-Thank you! I promise not to spoil the opprtunity! 
+(switch) Gus
+Congratulations! You've earned it! 
+(switch) Tina 
+Thank you! I promise not to spoil the opportunity! 
 (switch) Weber
 I'm sure you won't. 
 Anyhow, that's it for today folks. Our next meeting with be at the festival, so be sure to practice, and I'll see you there!

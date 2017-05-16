@@ -3,7 +3,7 @@ I've managed to raise some more funds for your expenses, you should have everyth
 (switch) Weber
 Amazing! This means so much to all of us, thank you! 
 (switch) Player
-It's no problem. I'm sure you'll put on an amazing show and I'm glad that I was able to be apart of it somehow. 
+It's no problem. I'm sure you'll put on an amazing show and I'm glad that I was able to be a part of it somehow. 
 Anyway, I need to get back to the office. Have a great day. 
 (switch) Weber
-You too! 
+You too!  

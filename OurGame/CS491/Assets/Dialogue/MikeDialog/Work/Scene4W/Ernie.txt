@@ -1,5 +1,5 @@
 (startevents) Ernie
-(swtich) Ernie
+(switch) Ernie
 Hey! Fred! You got my message? 
 (switch) Player
 Yeah, I did. I'm here to help. How can I help?
@@ -17,4 +17,4 @@ Sure thing! And thanks for the help. It means a lot that you'd take some time aw
 (switch) Player
 Don't mention it. Anyway, I'm off to the park. 
 
-(change) SceneWB1
+(change) SceneWB1 

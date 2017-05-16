@@ -9,7 +9,7 @@ We could organize this well enough, but this is what you do.
 We wanted to bring you on to help make sure everything goes smoothly.
 (switch) Player
 Ha! Of course, it's no problem. I can certainly do that, but I'll need your help in all this.
-(switch) Ernie
+(switch) Ernie 
 Don't even worry about it, you know I'll help. I even have a few friends too. 
 (switch) Player
 Awesome, first things first, do you think you'll need help outside of the people presenting to set things up?
@@ -18,7 +18,7 @@ Ernie: Yeah, probably.
 (switch) Player
 Well if that's the case, then you'll probably need to get some volunteers.
 (switch) Ernie
-I can do that, I kinda have a way with people, that and I know a few folks who might be willing to help out.
+I can do that, I kind of have a way with people, that and I know a few folks who might be willing to help out.
 (switch) Player
 Sure thing, then I'll take care of getting schedules organized, organizing jobs, and get a floor plan laid out.
 (switch) Ernie

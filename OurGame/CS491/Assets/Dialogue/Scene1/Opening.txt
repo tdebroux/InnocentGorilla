@@ -4,7 +4,7 @@ This is the worst part of my day. Sorting through our mail.
 It's always such a mess. Why can't someone else do this? 
 (switch) Null
 You continue to sift through the papers. 
-You notice that there are serveral emails asking for help organize a local festival.
+You notice that there are several emails asking for help organize a local festival.
 (event)
 (event)
 (switch) Douglas

@@ -18,7 +18,7 @@ As without him none of this would've been possible.
 Please, give him a round of applause.
 (switch) Null
 The audience applauses. 
-(switch) Player
+(switch) Player 
 I hope you all have a wonderful time!
 (switch) Player
 It's strange how your life can make such drastic changes in such little time. 
@@ -27,5 +27,5 @@ I liked the work, and saw the change that I could make, so after my suspension I
 Now, I've managed to become the new Vice President of the company. 
 I may have messed up those accounts, and mistakes were made. I failed. 
 But just because I failed, it didn't mean it was the end of the world. 
-More opportunities arrose and through hard work and dedication I was able to take control and move forward. 
+More opportunities arose and through hard work and dedication I was able to take control and move forward. 
 

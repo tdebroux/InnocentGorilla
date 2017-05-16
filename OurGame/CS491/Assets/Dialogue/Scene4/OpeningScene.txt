@@ -18,10 +18,10 @@ Likewise.
 (switch) Sarah
 Yeah, you were walking around town earlier today.
 (switch) Player
-So how's it been going Ernie? You mentioned that you are still working as an artist?
+So, how's it been going Ernie? You mentioned that you are still working as an artist?
 (switch) Ernie
 Yeah! It’s had its ups and downs, though I wouldn’t trade it for the world.
-I'm actually trying to organize an open gallery for a festival that's in the works.
+I'm trying to organize an open gallery for a festival that's in the works.
 (switch) Player
 Yeah, I've heard a little about something like that, I told my boss about it and he was going to see if he wanted to organize it.
 (switch) Ernie
@@ -39,7 +39,7 @@ I tended organize larger events, but we have wedding planners and other people f
 (switch) Ernie
 Sounds like you’d be a great help to have helping us.
 (switch) Player
-I’ll have to get back to you on that, I have no idea what’s going on with work but I’ll definitely keep it in mind.
+I’ll have to get back to you on that, I have no idea what’s going on with work but I’ll keep it in mind.
 (switch) Ernie
 That’s all I can really ask for. Anyway, let’s mingle a little.
 A few hours pass as you've gone about the room and talked to everyone. 

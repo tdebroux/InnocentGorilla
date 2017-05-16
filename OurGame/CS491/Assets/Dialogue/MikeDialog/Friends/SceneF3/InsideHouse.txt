@@ -1,7 +1,7 @@
 (switch) Player
 Oh, I've got a few messages, one from Dr. Weber and another from Douglas. 
 (switch) Null
-The first message plays. 
+The first message plays.  
 (switch) Douglas
 Fred, we realize that you've part your ways, though with the circumstances regarding your departure...
 Has left us in a bit of a bind as we don't have someone else with your skill set within the company to organize this festival with your specialty. 
@@ -14,7 +14,7 @@ Sounds like he's in a bit of a bind.
 The next message continues to play. 
 (switch) Weber
 Hi! Sorry to disturb you, though we could really use your help. 
-We're running low on funding for the set up of our stage over at the festival grounds and will need more volunteers.
+We're running low on funding for the setup of our stage over at the festival grounds and will need more volunteers.
 Considering this is what you do, I was wondering if you could help us raise some more funds and finding more volunteers.
 Any help you could give would be appreciated, thanks.
 (switch) Player

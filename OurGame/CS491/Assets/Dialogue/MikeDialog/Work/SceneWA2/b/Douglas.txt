@@ -4,9 +4,9 @@ Hey, Fred. Is your speech done?
 Yeah, took a while but it's done. 
 (switch) Douglas
 There are a few things I'd like you to mention while you're up there. 
-Let the people know that the band performance and the art gallery will be a little delayed due to some unforseen circumstances.
+Let the people know that the band performance and the art gallery will be a little delayed due to some unforeseen circumstances.
 It should be okay though, they just need a bit more time.
 (switch) Player
-Sure thing
+Sure thing.
 (switch) Douglas
 Anyway, you're up. Head up to the microphone when you're ready.
