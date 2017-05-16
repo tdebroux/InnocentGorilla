@@ -1,3 +1,4 @@
+(startevents) Ernie
 (switch) Ernie
 Hey! You finally finish up that work for your old boss? 
 (switch) Player

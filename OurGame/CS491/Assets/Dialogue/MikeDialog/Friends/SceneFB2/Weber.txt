@@ -1,3 +1,4 @@
+(startevents) Weber
 (switch) Weber
 Fred, hi! How's everything going? Haven't heard from you for a few days. 
 (switch) Player

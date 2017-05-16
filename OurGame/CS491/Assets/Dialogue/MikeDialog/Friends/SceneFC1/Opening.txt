@@ -1,5 +1,6 @@
 (switch) Null
 A few days pass, you've been hard at work ironing out the finer details of the plan. 
+(startevents) Douglas
 (switch) Player
 Douglas, I've reorganized the general layout of the festival for maximum effectiveness, ironed out schedule conflicts and added a few more vendors with the new space I made with reorganizing the layout. 
 (switch) Douglas
