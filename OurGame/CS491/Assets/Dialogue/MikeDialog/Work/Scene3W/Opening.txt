@@ -1,7 +1,8 @@
-(startevents) Douglas
-(event)
 (switch) Douglas
+(startevents) Douglas
 Do you have any update on how the festival is coming, Fred?
+(event)
+(event)
 (switch) Player
 I've got a lot of vendors, sponsors, and enough volunteers to man everything.
 Now is time to organize the layout and scheduling of everything.
@@ -21,7 +22,7 @@ No problem, Fred. Head home, you've earned it.
 Thanks! I'm just going to finish up a little more work then I'll head out.
 (switch) Douglas
 Of course. I offer you the rest of the night off, and you're still going to work. 
-(event) Douglas walks out
+(event)
 (switch) Null
 Fred sends a few more emails taking only a few minutes. 
 (switch) Player
