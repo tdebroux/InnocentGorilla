@@ -1,5 +1,4 @@
 (startevents) Ernie
-(switch) Null
 A few days pass as you begin your work on organizing the gallery. 
 (switch) Player
 How has the hunt for volunteers been going? 
