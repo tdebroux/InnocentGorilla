@@ -17,22 +17,22 @@ Platform assembly: C:\Users\robpr\Documents\GitHub\InnocentGorilla\OurGame\CS491
 Loading C:\Users\robpr\Documents\GitHub\InnocentGorilla\OurGame\CS491\LionKingVHSforN64_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\robpr\Documents\GitHub\InnocentGorilla\OurGame\CS491\LionKingVHSforN64_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
 Loading C:\Users\robpr\Documents\GitHub\InnocentGorilla\OurGame\CS491\LionKingVHSforN64_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.026 seconds
+- Completed reload, in  1.039 seconds
 Platform assembly: C:\Users\robpr\Documents\GitHub\InnocentGorilla\OurGame\CS491\LionKingVHSforN64_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\robpr\Documents\GitHub\InnocentGorilla\OurGame\CS491\LionKingVHSforN64_Data\Managed\System.dll (this message is harmless)
 desktop: 3840x2160 60Hz; virtual: 3840x2160 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 2.008890 ms
+UnloadTime: 2.186273 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 30ac -> priority: 1 
-  Thread -> id: 319c -> priority: 1 
+  Thread -> id: 3124 -> priority: 1 
+  Thread -> id: 2990 -> priority: 1 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 4.250867 ms
+UnloadTime: 4.543608 ms
 
 Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 13323.
-Total: 2.237631 ms (FindLiveObjects: 0.552691 ms CreateObjectMapping: 0.128790 ms MarkObjects: 1.294618 ms  DeleteObjects: 0.261531 ms)
+Total: 2.907656 ms (FindLiveObjects: 0.626963 ms CreateObjectMapping: 0.133926 ms MarkObjects: 1.744593 ms  DeleteObjects: 0.401778 ms)
 
 event on: 7
  
@@ -55,56 +55,36 @@ event on: 26
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 33.582642 ms
+UnloadTime: 45.649811 ms
 
 Unloading 515 unused Assets to reduce memory usage. Loaded Objects now: 300.
-Total: 0.951309 ms (FindLiveObjects: 0.043061 ms CreateObjectMapping: 0.043851 ms MarkObjects: 0.166321 ms  DeleteObjects: 0.697679 ms)
+Total: 1.508346 ms (FindLiveObjects: 0.045432 ms CreateObjectMapping: 0.042271 ms MarkObjects: 0.199111 ms  DeleteObjects: 1.221136 ms)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.362666 ms
+UnloadTime: 0.713086 ms
 
 Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 13333.
-Total: 2.306372 ms (FindLiveObjects: 0.598914 ms CreateObjectMapping: 0.137876 ms MarkObjects: 1.548248 ms  DeleteObjects: 0.020938 ms)
+Total: 2.363656 ms (FindLiveObjects: 0.551111 ms CreateObjectMapping: 0.128395 ms MarkObjects: 1.663606 ms  DeleteObjects: 0.019753 ms)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 39.429955 ms
+UnloadTime: 33.349953 ms
 
 Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 13323.
-Total: 3.402274 ms (FindLiveObjects: 0.720198 ms CreateObjectMapping: 0.263901 ms MarkObjects: 2.381433 ms  DeleteObjects: 0.035555 ms)
+Total: 3.563064 ms (FindLiveObjects: 0.847408 ms CreateObjectMapping: 0.253234 ms MarkObjects: 2.428051 ms  DeleteObjects: 0.033580 ms)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 47.971592 ms
+UnloadTime: 43.570599 ms
 
 Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 13331.
-Total: 2.900150 ms (FindLiveObjects: 0.680691 ms CreateObjectMapping: 0.233086 ms MarkObjects: 1.956742 ms  DeleteObjects: 0.029234 ms)
+Total: 2.044446 ms (FindLiveObjects: 0.447605 ms CreateObjectMapping: 0.160000 ms MarkObjects: 1.400099 ms  DeleteObjects: 0.036345 ms)
 
-Initialize engine version: 5.5.0f3 (38b4efef76f0)
-GfxDevice: creating device client; threaded=1
-Direct3D:
-    Version:  Direct3D 11.0 [level 11.0]
-    Renderer: NVIDIA GeForce GTX 960M (ID=0x139b)
-    Vendor:   NVIDIA
-    VRAM:     2018 MB
-    Driver:   21.21.13.6909
-Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\robpr\Documents\GitHub\InnocentGorilla\OurGame\CS491\LionKingVHSforN64_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\robpr\Documents\GitHub\InnocentGorilla\OurGame\CS491\LionKingVHSforN64_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\robpr\Documents\GitHub\InnocentGorilla\OurGame\CS491\LionKingVHSforN64_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\robpr\Documents\GitHub\InnocentGorilla\OurGame\CS491\LionKingVHSforN64_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\robpr\Documents\GitHub\InnocentGorilla\OurGame\CS491\LionKingVHSforN64_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\robpr\Documents\GitHub\InnocentGorilla\OurGame\CS491\LionKingVHSforN64_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\robpr\Documents\GitHub\InnocentGorilla\OurGame\CS491\LionKingVHSforN64_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\robpr\Documents\GitHub\InnocentGorilla\OurGame\CS491\LionKingVHSforN64_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: C:\Users\robpr\Documents\GitHub\InnocentGorilla\OurGame\CS491\LionKingVHSforN64_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
-Loading C:\Users\robpr\Documents\GitHub\InnocentGorilla\OurGame\CS491\LionKingVHSforN64_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.022 seconds
-Platform assembly: C:\Users\robpr\Documents\GitHub\InnocentGorilla\OurGame\CS491\LionKingVHSforN64_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\robpr\Documents\GitHub\InnocentGorilla\OurGame\CS491\LionKingVHSforN64_Data\Managed\System.dll (this message is harmless)
-desktop: 3840x2160 60Hz; virtual: 3840x2160 at 0,0
-<RI> Initializing input.
-<RI> Input initialized.
-<RI> Initialized touch support.
-UnloadTime: 1.259457 ms
-Setting up 2 worker threads for Enlighten.
-  Thread -> id: 80 -> priority: 1 
-  Thread -> id: 328 -> priority: 1 
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 40.985317 ms
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 13316.
+Total: 2.070520 ms (FindLiveObjects: 0.557432 ms CreateObjectMapping: 0.110617 ms MarkObjects: 1.383507 ms  DeleteObjects: 0.018172 ms)
+
+event on: 3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
