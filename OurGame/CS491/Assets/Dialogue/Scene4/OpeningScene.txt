@@ -1,18 +1,14 @@
 (switch) Ernie
 (startevents) Ernie
-Hey you showed up! Here, I’ll introduce you to everyone
-(event)
-(event)
+Hey you showed up! Here, I’ll introduce you to everyone.
 Everyone, this is Freddy! He's an old friend of mine from school that I haven't seen in a while.
-(event)
-Freddy, this is Eric and Sarah
-(event)
+Freddy, this is Eric and Sarah.
 (switch) Eric
 Hi.
 (switch) Sarah
 Hello.
 (switch) Player
-Hi guys, it's a pleasure to meet you. I've seen you a bit around town
+Hi guys, it's a pleasure to meet you. I've seen you a bit around town.
 (switch) Eric
 Likewise.
 (switch) Sarah
